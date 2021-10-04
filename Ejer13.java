@@ -11,19 +11,19 @@ public class Ejer13 {
         System.out.print("Escribe otro número: ");
         int n2 = sc.nextInt();
         
-        System.out.print("Escribe A si prefieres el orden de tus números en ascendente o  B para descendente: ");
-        int opcion = sc.nextInt();
+        System.out.print("Escribe A si prefieres el orden de tus números en ascendente o  D para descendente: ");
+        String orden = sc.next();
         
-        if (n1>n2) {
-            System.out.println(n2);
-            System.out.println(n1);
-        } else {
-            System.out.println(n1);
-            System.out.println(n2);
+        if (orden.equals ("A"))  {
+            System.out.println("n1: " + n1);
+            System.out.println("n2: " + n2);
+        } else if (orden.equals ("D")) {
+            System.out.println("n2: " + n2);
+            System.out.println("n1: " + n1);
+        } else{
+            System.out.println("No has indicado bien el orden");
         }
 
 
         sc.close();
     }
-    
-}
