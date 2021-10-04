@@ -9,5 +9,6 @@ public class Ej4{
 		int n2 = sc.nextInt();
 		
 		System.out.println("El resultado del área de tu cuadrado es: " + (n1*n2));
+		sc.close();
 	}
 }
