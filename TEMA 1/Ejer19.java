@@ -11,21 +11,21 @@ public class Ejer19 {
         float horas = sc.nextFloat();
 
         if (horas <= 35) {
-            System.out.println("Tu salario bruto semanal es de: " + salario * horas + "€");
+            System.out.println("Tu salario bruto mensual es de: " + (salario * horas)*4 + "€");
         } else {
-            System.out.println("Tu salario bruto semanal es de: " + (salario + 1.5) * horas + "€" );
+            System.out.println("Tu salario bruto mensual es de: " + ((salario * 1.5) * horas) * 4 + "€" );
         }
-        
 
-        if (salario <= 500) {
-            System.out.println("No tienes impuestos por lo tanto tu salario es: " + salario*horas + "€");
-        } else if (salario > 500 && salario < 900 ) {
-            System.out.println("Tus impuestos son de: " + (salario + 25)/100 + "€");
-            System.out.println("Por lo tanto tu salario, se queda en: " + salario + "€");
-        } else {
-            System.out.println("Tus impuestos son de: " + (salario + 45)/100 + "€");
-            System.out.println("Por lo tanto tu salario, se queda en: " + salario + "€");
-        }
+     //   if (salario <= 500) {
+     //       System.out.println("No tienes impuestos por lo tanto tu salario al mes es de: " + (salario * horas) + "€");
+     //   } else if (salario > 500 || salario < 900 ) {
+     //       System.out.println("Tus impuestos son de: " + (salario * 25)/100 + "€");
+     //       System.out.println("Por lo tanto tu salario al mes, se queda en: " + salario + "€");
+     //   } else {
+     //       System.out.println("Tus impuestos son de: " + (salario * 45)/100 + "€");
+     //       System.out.println("Por lo tanto tu salario al mes, se queda en: " + salario + "€");
+     //   }
+
 
        sc.close();
 
