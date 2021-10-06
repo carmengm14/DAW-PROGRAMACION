@@ -23,6 +23,6 @@ public class Ejer14 {
         else {
             System.out.println("Tu nota no es valida, escribela del 1 al 10.");   
         }
-        
+        sc.close();
 }
 }

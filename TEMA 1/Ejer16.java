@@ -29,5 +29,6 @@ public class Ejer16 {
                 System.out.println("No has colocado bien el símbolo, vuelve a intentarlo");
                 break;
         }
+        sc.close();
     }
 }

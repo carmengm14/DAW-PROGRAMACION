@@ -27,6 +27,7 @@ public class Ejer15 {
             }else if (numero == 10){
                 System.out.println("El 10 se escibe: diez");
             }
+            sc.close();
         }
 
 }

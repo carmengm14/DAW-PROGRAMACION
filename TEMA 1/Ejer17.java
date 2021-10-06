@@ -47,5 +47,6 @@ public class Ejer17 {
                 System.out.println("No has escrito un mes valido, vuelve a intentarlo");
                 break;
         }
+        sc.close();
     }
 }

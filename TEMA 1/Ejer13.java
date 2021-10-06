@@ -23,8 +23,6 @@ public class Ejer13 {
         } else{
             System.out.println("No has indicado bien el orden");
         }
-
-
         sc.close();
     }
     

@@ -6,6 +6,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch Ejer19",
+            "request": "launch",
+            "mainClass": "Ejer19",
+            "projectName": "DAW-PROGRAMACION_2538b0a9"
+        },
+        {
+            "type": "java",
+            "name": "Launch Ejer14",
+            "request": "launch",
+            "mainClass": "Ejer14",
+            "projectName": "DAW-PROGRAMACION_2538b0a9"
+        },
+        {
+            "type": "java",
             "name": "Launch Ejer10",
             "request": "launch",
             "mainClass": "Ejer10",
