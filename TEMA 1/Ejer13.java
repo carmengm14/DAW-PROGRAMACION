@@ -1,5 +1,4 @@
 import java.util.Scanner;
-import java.util.function.IntFunction;
 
 public class Ejer13 {
     public static void main(String args[]) {
