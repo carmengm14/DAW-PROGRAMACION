@@ -11,13 +11,15 @@ public class Ejer24 {
         int diez = 0;
         int positives = 0;
         while (num != -1){
-            num = sc.nextInt();
-            if (num == 10) {
-               diez = diez +1;
-            } 
-            
+            num = sc.nextInt();         
         }
-        System.out.println("Tu nota media es de: " +  + " puntos." );
+        if (num == 10) {
+            diez = diez +1;
+         }else {
+            System.out.println("No tienes dieces");
+         }
+
+        System.out.println("Tu nota media es de: " +  + " puntos.");
         System.out.println("Tienes: " + diez + " dieces." );
         
         sc.close();
