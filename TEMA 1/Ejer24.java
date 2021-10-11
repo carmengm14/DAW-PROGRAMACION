@@ -11,7 +11,7 @@ public class Ejer24 {
         int num;
         do{
             num = sc.nextInt();
-            total = total +1;
+            total+= num;
             contador ++;
         } while (num !=-1);
 
