@@ -3,21 +3,27 @@ import java.util.Scanner;
 public class Ejer24 {
     public static void main(String[] args) {
        
-        System.out.println("A continuacion, tendrás que escribir tus notas");
-        System.out.println("Escribe la nota, para finalizar tienes que pulsar -1: ");
-        Scanner sc = new Scanner(System.in);
         int contador = 0;
         double total = 0;
-        int num;
-        do{
+        int dieces = 0;
+        System.out.println("A continuacion, tendrás que escribir tus notas");
+        System.out.print("Escribe la nota, para finalizar tienes que pulsar -1: ");
+        Scanner sc = new Scanner(System.in);
+        int num = sc.nextInt();
+        
+       while(num != -1){
+            total += 1; //Cuántos
+            contador += num; //Valores
+            if(num == 10){
+                dieces++;
+            }
+            System.out.print("Escribe la nota, para finalizar tienes que pulsar -1: ");
             num = sc.nextInt();
-            total = total +1;
-            contador ++;
-        } while (num !=-1);
+       } 
 
-        System.out.println("Tu media es de: " + total/contador + " puntos.");
+        System.out.println("Tu media es de: " + contador/total + " puntos.");
 
-        if (num == 10) {
+        if (dieces > 0) {
             System.out.println("Hay 1 o más dieces en tus notas");
         }else{
             System.out.println("No hay dieces en tus notas");
