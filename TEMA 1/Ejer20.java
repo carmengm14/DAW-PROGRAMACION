@@ -17,6 +17,7 @@ public class Ejer20 {
         } else{
             System.out.println("Se te aplica un descuento del 10% por lo que el precio es: " + descuento10 + "€");
         }
-
+        
+        sc.close();
     }
 }
