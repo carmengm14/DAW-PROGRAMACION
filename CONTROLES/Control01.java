@@ -9,7 +9,7 @@ public class Control01 {
 
         if (numlados == 3 || numlados == 4) {
             System.out.print("Dime la longitud del lado del poligono: ");
-            int longitud = sc.nextInt();
+            double longitud = sc.nextDouble();
 
            if (numlados == 3) {
             System.out.println("El perimetro del triangulo es: " + numlados * longitud);
