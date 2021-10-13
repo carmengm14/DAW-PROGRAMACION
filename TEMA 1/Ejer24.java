@@ -32,3 +32,4 @@ public class Ejer24 {
         sc.close();
     }
 }
+
