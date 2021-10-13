@@ -12,7 +12,7 @@ public class Ejer28 {
           divisor++;
       }   
       if (numero % divisor != 0) {
-        System.out.println(numero +"/"+ divisor + " = " +numero + " es compuesto.");
+        System.out.println(numero +"/"+ divisor + " = " +numero + " no es primo.");
       }
       
       
