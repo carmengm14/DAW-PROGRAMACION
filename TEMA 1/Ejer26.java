@@ -1,6 +1,5 @@
 import java.util.Scanner;
 
-
 public class Ejer26 {
     public static void main(String[] args) {
         
@@ -13,7 +12,7 @@ public class Ejer26 {
 
         while(num >= 0 && multiplicacion <= 10){
             resultado = num * multiplicacion;
-            System.out.println("Resultado es de: " + resultado);
+            System.out.println(num + " x " + multiplicacion + " = " + resultado);
             multiplicacion ++;
         }
 
