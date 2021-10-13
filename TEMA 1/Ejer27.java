@@ -11,6 +11,6 @@ public class Ejer27 {
      do {
          System.out.println(nums);
         nums ++;
-     } while (numero > 0 || nums <= numero);
+     } while (numero > 0 || nums < numero);
     }
 }
