@@ -21,7 +21,9 @@ public class Ejer28 {
     }else{
       System.out.println("No es primo");
     }
+    sc.close();
   }
+
 }
   
   

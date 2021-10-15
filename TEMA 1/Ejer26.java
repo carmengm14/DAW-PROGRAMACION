@@ -15,6 +15,6 @@ public class Ejer26 {
             System.out.println(num + " x " + multiplicacion + " = " + resultado);
             multiplicacion ++;
         }
-
+        sc.close();
     }
 }

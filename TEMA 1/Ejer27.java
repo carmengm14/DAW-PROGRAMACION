@@ -5,12 +5,13 @@ public class Ejer27 {
       System.out.print("Escribe un numero entero: ");  
       Scanner sc = new Scanner(System.in);
       int numero = sc.nextInt();
-
-      int nums = 0;
-
-     do {
-         System.out.println(nums);
-        nums ++;
-     } while (numero > 0 && nums <= numero);
-    }
+      sc.close();
+      int i = 1;
+      
+      for(i = 1; i <= numero; i++){
+        System.out.print(i);
+        
+          }
+      }
 }
+
