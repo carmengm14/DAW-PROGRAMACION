@@ -2,9 +2,25 @@ import java.util.Scanner;
 
 public class Ejer29 {
     public static void main(String[] args) {
+        int divisor = 2;
+        boolean esPrimo = true;
+
         System.out.println("Los numeros primos son: ");
-       
-        System.out.println("2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89 y 97.");
+
+        for (int i = 3; i <= 100; i++) {
+            divisor = 2;
+            esPrimo = true;
+            while ((divisor < i) && esPrimo) {
+            
+            if (i % divisor == 0) {
+                esPrimo = false;
+            }
+            divisor++;
+            }
+
+            if (esPrimo == true){
+                System.out.println(i);
+            }
         }
-       
+    }     
 }
