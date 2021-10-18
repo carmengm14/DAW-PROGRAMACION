@@ -7,8 +7,8 @@ public class Ejer20 {
         Scanner sc = new Scanner (System.in);
         double precio = sc.nextDouble();
 
-        double descuento5 = precio * 0.95;
-        double descuento10 = precio * 0.90;
+        double descuento5 = precio * 0.05;
+        double descuento10 = precio * 0.10;
 
         if (precio < 6) {
             System.out.println("No se te aplica ningun descuento por lo que el precio es: " + precio + "€");
