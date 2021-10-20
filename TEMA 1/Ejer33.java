@@ -5,7 +5,7 @@ public class Ejer33 {
         System.out.print("Escribe los numeros de tu DNI sin la letra: ");
         Scanner sc = new Scanner(System.in);
         int dni = sc.nextInt();
-
+        sc.close();
         char[] nums;
         nums = new char[22];
  
