@@ -11,15 +11,17 @@ public class Ejer34 {
         int nie = sc.nextInt();
         sc.close();
         
-        
-      if (letraprincipio == "X") {
-        nie= nie;
-      } else if (letraprincipio == "Y") {
-        nie= nie + 10000000;
+      String aux = "";
+      if (letraprincipio.equals("X")) {
+        aux = Integer.toString(nie);
+      } else if (letraprincipio.equals("Y")) {
+        aux = "1" + Integer.toString(nie);
           
-      }else if (letraprincipio == "Z") {
-       nie = nie + 20000000;
+      }else if (letraprincipio.equals("Z")) {
+        aux = "2" + Integer.toString(nie);
       }
+      
+      //System.out.print("RES: " + aux);
     
         /*  if (letraprincipio == "X") {
             letraprincipio = "0";
@@ -34,7 +36,7 @@ public class Ejer34 {
         
         int letrafinal;
         char [] letrastotales = {'T', 'R', 'W', 'A', 'G', 'M', 'Y', 'F', 'P','D','X','B','N','J','Z','S','Q','V','H','L','T','K','E'};
-        letrafinal = nie % 23;
+        letrafinal = Integer.parseInt(aux) % 23;
         System.out.println(letraprincipio + "" + nie + "" + letrastotales[letrafinal] );
         
     }
