@@ -37,7 +37,7 @@ public class Entrada {
         sc.close();
         return numero;
     }
-    public static void main (String args[]){
+    public static void main (String[] args){
       getDouble();
     }
 }
