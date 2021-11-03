@@ -15,8 +15,10 @@ public class Ejer35 {
 
            if (numeros[i] == 10) {
                hayDiez = true;
-               System.out.println("Hay dieces en tus notas");
            }
+       }
+       if (hayDiez == true) {
+        System.out.println("Hay dieces en tus notas");
        }
        System.out.println("Tu media es: " + total/10);
     sc.close();
