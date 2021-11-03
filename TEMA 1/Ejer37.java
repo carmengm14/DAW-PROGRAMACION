@@ -4,6 +4,7 @@ public class Ejer37 {
     public static void main(String[] args) {
         double[] numeros = new double[10];
         Scanner sc = new Scanner(System.in);
+       
         double max;
         double min;
 
