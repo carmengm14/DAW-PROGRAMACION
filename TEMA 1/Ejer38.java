@@ -10,14 +10,16 @@ public class Ejer38 {
         sc.close();
 
         int tamaño = palabra.length();
-        int limite = tamaño;
+        int numvocal = 0;
 
-        for (int i = 0; i < limite; i++) {
-            int total;
+        for (int i = 0; i < tamaño; i++) {
             char caracter = palabra.charAt(i);
-            if (caracter == vocales (0,1,2,3,4)) {
-                total ++;
+            for (int j = 0; j <= i ; j++) {
+                if (caracter == vocales[i]) {
+                    numvocal++;  
+                } 
             }
-        }               
+        }       
+        System.out.println("Tienes " + numvocal + " vocales");        
     }
 }
