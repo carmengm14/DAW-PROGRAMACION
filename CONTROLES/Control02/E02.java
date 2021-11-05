@@ -7,5 +7,6 @@ public class E02 {
 
         System.out.println("Perimetro: " + 2*Math.PI*radio);
         System.out.println("Área: " + Math.PI*radio*radio);  
+        sc.close();
     }
 }

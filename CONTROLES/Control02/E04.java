@@ -5,6 +5,6 @@ public class E04 {
         Scanner sc = new Scanner(System.in);
         double longitud = sc.nextDouble();
         System.out.println(longitud + " cm = " + longitud/2.54 + " in");
-
+        sc.close();
     }
 }

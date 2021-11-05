@@ -6,5 +6,6 @@ public class E01 {
         String nombre = sc.next();
 
         System.out.println("Hola " + nombre);
+        sc.close();
     }
 }

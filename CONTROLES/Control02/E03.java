@@ -15,5 +15,6 @@ public class E03 {
         Double nota4 = sc.nextDouble();
 
         System.out.println("El promedio es: " + (nota1 + nota2 + nota3 + nota4)/4);
+        sc.close();
     }
 }
