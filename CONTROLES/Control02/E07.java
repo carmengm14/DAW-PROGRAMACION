@@ -11,7 +11,6 @@ public class E07 {
         int calculo = (horassumar * 24 ) % horaactual;
 
         sc.close();
-
         System.out.println("En " + horassumar + " horas, el reloj marcara las " + calculo);
     }
 }
