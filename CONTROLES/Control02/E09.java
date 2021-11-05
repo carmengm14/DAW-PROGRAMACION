@@ -11,6 +11,7 @@ public class E09 {
         System.out.print("Ingrese nota laboratorio: ");
         double notalab = sc.nextDouble();
         sc.close();
+        
 
      double calculo1 = 60-(notalab*0.3)/0.7;
      double calculo2 = (calculo1 * 3) - (certamen1+certamen2);
