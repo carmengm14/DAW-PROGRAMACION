@@ -3,11 +3,15 @@ public class E07 {
     public static void main(String[] args) {
         System.out.print("Hora actual: ");
         Scanner sc = new Scanner(System.in);
-        double horaactual = sc.nextDouble();
+        int horaactual = sc.nextInt();
 
         System.out.print("Cantidad de horas: ");
-        double horassumar = sc.nextDouble();
+        int horassumar = sc.nextInt();
+
+        int calculo = (horassumar * 24 ) % horaactual;
 
         sc.close();
+
+        System.out.println("En " + horassumar + " horas, el reloj marcara las " + calculo);
     }
 }
