@@ -7,12 +7,20 @@ public class E05 {
         Scanner sc = new Scanner (System.in);
         String numero = sc.next();
         sc.close();
+        char[] aux = new char[numero.length()];
+        System.out.print("Cadena aux: " + aux);
+        
  
         int numeroentero;
-        for (int i = 0; i <= 100; i++) {
+        int tamaño = numero.length();
+        for (int i = 0; i < tamaño/2; i++) {
             char caracter1 = numero.charAt(i);
-            numero = Integer.parseInt(numeroentero);
+            char caracter2 = numero.charAt(tamaño-i-1);
+            aux[i] = caracter2;
+            aux[tamaño-i-1] = caracter1;
             System.out.println(numeroentero-1);
         }
+
+        System.out.print("Resultado: " + aux.toString());
       }
     }
