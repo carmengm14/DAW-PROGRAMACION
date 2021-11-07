@@ -8,7 +8,7 @@ public class E07 {
         System.out.print("Cantidad de horas: ");
         int horassumar = sc.nextInt();
 
-        int calculo = (horassumar * 24 ) % horaactual;
+        int calculo = ((horassumar%24)+horaactual)%24;
 
         sc.close();
 
