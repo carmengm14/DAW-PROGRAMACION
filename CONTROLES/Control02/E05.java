@@ -7,12 +7,20 @@ public class E05 {
         Scanner sc = new Scanner (System.in);
         String numero = sc.next();
         sc.close();
+        char[] aux = new char[numero.length()];
+        
  
-        int numeroentero;
-        for (int i = 0; i <= 100; i++) {
+        int tamanyo = numero.length();
+        for (int i = 0; i <= tamanyo/2; i++) {
             char caracter1 = numero.charAt(i);
-            numero = Integer.parseInt(numeroentero);
-            System.out.println(numeroentero-1);
+            char caracter2 = numero.charAt(tamanyo-i-1);
+            aux[i] = caracter2;
+            aux[tamanyo-i-1] = caracter1;
         }
+
+        for(int i=0; i<aux.length;i++){
+          System.out.print(aux[i]);
+        }
+        System.out.println();
       }
     }
