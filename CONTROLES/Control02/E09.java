@@ -13,8 +13,8 @@ public class E09 {
         sc.close();
         
 
-     double calculo1 = 60-(notalab*0.3)/0.7;
-     double calculo2 = (calculo1 * 3) - (certamen1+certamen2);
+     double calculo1 = (60 -(notalab * 0.3)) / 0.7;
+     double calculo2 = (calculo1 * 3) - (certamen1 + certamen2);
      System.out.println("Necesita nota " + calculo2 + " en el certamen 3");
     }
 }
