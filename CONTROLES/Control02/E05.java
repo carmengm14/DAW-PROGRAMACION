@@ -7,9 +7,19 @@ public class E05 {
         Scanner sc = new Scanner (System.in);
         String numero = sc.next();
         sc.close();
+
         System.out.println(numero.charAt(2) + "" + numero.charAt(1) + "" + numero.charAt(0));
         
+        /*
+        //345 numero de ejemplo
+        Int numero = sc.nextInt();
+        int primero = numero % 10; //Obtengo el 5 
+        int segundo = (numero/10) % 10; //Obtengo el 4
+        int tercero = numero / 100; //Obtendo el 3
+        */
         
+        
+        //TENIENDO MAS DE 3 DIGITOS:
         /* String numero = sc.next();
         sc.close();
         char[] aux = new char[numero.length()];
