@@ -7,6 +7,11 @@ public class E05 {
         Scanner sc = new Scanner (System.in);
         String numero = sc.next();
         sc.close();
+        System.out.println(numero.charAt(2) + "" + numero.charAt(1) + "" + numero.charAt(0));
+        
+        
+        /* String numero = sc.next();
+        sc.close();
         char[] aux = new char[numero.length()];
         
  
@@ -22,5 +27,6 @@ public class E05 {
           System.out.print(aux[i]);
         }
         System.out.println();
+        */
       }
     }
