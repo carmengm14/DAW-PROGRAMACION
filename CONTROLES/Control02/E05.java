@@ -20,6 +20,7 @@ public class E05 {
         
         
         //TENIENDO MAS DE 3 DIGITOS:
+        
         /* String numero = sc.next();
         sc.close();
         char[] aux = new char[numero.length()];
