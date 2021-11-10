@@ -1,3 +1,5 @@
+package unpocodetodo;
+
 import java.util.Scanner;
 
 public class Entrada {

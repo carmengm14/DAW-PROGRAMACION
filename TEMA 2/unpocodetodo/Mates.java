@@ -1,3 +1,5 @@
+package unpocodetodo;
+
 public class Mates {
     
     public static double suma(double n1, double n2) {
