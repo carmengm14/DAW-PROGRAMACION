@@ -14,6 +14,6 @@ public class Ejer04funmain {
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
         sc.close();
-        factorial(n);
+        System.out.println(factorial(n));
     }
 }
