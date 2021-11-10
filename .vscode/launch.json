@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch Ejer05funmain",
+            "request": "launch",
+            "mainClass": "Ejer05funmain",
+            "projectName": "DAW-PROGRAMACION_2538b0a9"
+        },
+        {
+            "type": "java",
             "name": "Launch Ejer04funmain",
             "request": "launch",
             "mainClass": "Ejer04funmain",
