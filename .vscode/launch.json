@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch EJER05",
+            "request": "launch",
+            "mainClass": "ACTIVIDADES.EJER05",
+            "projectName": "DAW-PROGRAMACION_2538b0a9"
+        },
+        {
+            "type": "java",
             "name": "Launch EJER04",
             "request": "launch",
             "mainClass": "ACTIVIDADES.EJER04",
