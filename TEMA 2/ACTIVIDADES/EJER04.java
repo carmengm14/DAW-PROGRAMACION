@@ -10,11 +10,18 @@ public class EJER04 {
                 positivos++;
             }
         }
+        System.out.print("Numero total de postivos: ");
         return positivos;
     }
 
     public static void main(String[] args) {
         int [] notas = {5, 10, -4, 3, 5, 7, 8, -5}; 
         System.out.println(positivos(notas));
+
+        int [] notas2 = {-2};
+        System.out.println(positivos(notas2));
+
+        int [] notas3 = {3,4,5};
+        System.out.println(positivos(notas3));
     }
 }
