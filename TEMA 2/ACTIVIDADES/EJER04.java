@@ -1,4 +1,4 @@
-package ACTIVIDADES;
+
 /* Positivos.java  Escribe un método llamado  positivos  que muestre cuántos números de un array son
 positivos.  */
 public class EJER04 {

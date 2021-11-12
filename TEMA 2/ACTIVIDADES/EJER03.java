@@ -1,4 +1,4 @@
-package ACTIVIDADES;
+
 /* Potencia.java  Escribe un método recursivo llamado  potencia  que toma un doble x y un entero n y
 devuelve x^n.  */
 import java.util.Scanner;
