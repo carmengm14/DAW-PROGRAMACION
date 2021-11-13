@@ -1,5 +1,4 @@
 package ESTRUCTURASCONDICIONALES;
-import java.time.Year;
 import java.util.Scanner;
 /* Escriba un programa que pida al usuario dos palabras, y que indique cuál de ellas es la más larga y por cuántas letras lo es. */
 
