@@ -20,12 +20,14 @@ public class Edad {
         sc.close();
 
         Calendar fechaNacimiento = new GregorianCalendar(anno, dia, mes);
-        Calendar ahora = Calendar.getInstance(); //Calendar.getInstance() obtiene la instacia que le pasemos por parametro o la de por defecto.
+        Calendar ahora = Calendar.getInstance(); 
+        //Calendar.getInstance() obtiene la instacia que le pasemos por parametro o la de por defecto.
 
         long edadEnDias = (ahora.getTimeInMillis()- fechaNacimiento.getTimeInMillis()) / 1000 / 60 / 60 / 24;; 
         //.getTimeInMillis devuelve los años en días osea 18 años 6570 días.
 
-        int anos = Double.valueOf(edadEnDias / 365.25).intValue(); //intValue() devuelve el primitivo int
+        int anos = Double.valueOf(edadEnDias / 365.25).intValue(); 
+        //intValue() devuelve el primitivo int
 
         System.out.println(String.format("Usted tiene " + anos + " annos"));
 
