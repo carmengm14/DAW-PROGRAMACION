@@ -1,5 +1,5 @@
 package ESTRUCTURASCONDICIONALES;
-import java.util.GregorianCalendar;
+// import java.util.GregorianCalendar;
 import java.util.Scanner;
 
 /*Cuando la Tierra completa una órbita alrededor del Sol, no han transcurrido exactamente 365 rotaciones sobre sí misma, sino 
@@ -16,18 +16,18 @@ public class Anyobisiesto {
         Scanner sc = new Scanner(System.in);
         int anno = sc.nextInt();
         sc.close();
-      /* if ( ( ( anno % 4 == 0 ) && ( anno % 100 != 0 ) ) || ( anno % 400 == 0 ) ){
+       if ( ( ( anno % 4 == 0 ) && ( anno % 100 != 0 ) ) || ( anno % 400 == 0 ) ){
             System.out.println(anno + " es bisiesto");
         } else {
             System.out.println(anno + " no es bisiesto");
-        }*/
+        }
 
-        GregorianCalendar calendar= new GregorianCalendar();
+      /*  GregorianCalendar calendar= new GregorianCalendar();
         if (calendar.isLeapYear(anno)) {
             System.out.println("El anno es bisiesto");
         } else {
             System.out.println("El anno no es bisiesto");
-        }
+        }*/
 
     }
 }
