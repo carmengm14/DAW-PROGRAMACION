@@ -1,12 +1,17 @@
-
+package ACTIVIDADES;
 /* Potencia.java  Escribe un método recursivo llamado  potencia  que toma un doble x y un entero n y
 devuelve x^n.  */
 import java.util.Scanner;
 
 public class EJER03 {
     public static double potencia(double x, int n){
-        double potencia = Math.pow(x, n);
-        return potencia;
+        // double potencia = Math.pow(x, n);
+        if (n == 0) {
+            return 1;
+        } else {
+            return (x * potencia(x, n-1));
+        }
+        //return potencia;
     }
 
     public static void main(String[] args) {

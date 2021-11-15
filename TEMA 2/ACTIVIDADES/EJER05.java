@@ -1,5 +1,4 @@
-
-
+package ACTIVIDADES;
 import java.util.Scanner;
 
 /* LetraDni.java  Realiza un método llamado  letraDni  que devuelva la letra correspondiente a un DNI

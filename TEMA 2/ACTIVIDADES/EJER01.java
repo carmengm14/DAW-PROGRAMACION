@@ -1,4 +1,4 @@
-
+package ACTIVIDADES;
 /* EsDivisible.java  Escribe un método llamado  esDivisible  que toma dos enteros, n y m, y devuelve
 verdadero si n es divisible por m, y falso en caso contrario. */
 import java.util.Scanner;

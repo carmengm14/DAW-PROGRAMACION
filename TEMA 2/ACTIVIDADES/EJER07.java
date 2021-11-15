@@ -1,4 +1,4 @@
-
+package ACTIVIDADES;
 /* Primos.java Crea un programa que muestre en pantalla todos los números primos entre 3 y 100,
 usando la función creada en el ejercicio anterior. Puedes llamar a la función creada en el ejercicio anterior
 de la siguiente forma: Primo.esPrimo(numero);
