@@ -2,7 +2,7 @@ package ACTIVIDADES;
 /* EsDivisible.java  Escribe un método llamado  esDivisible  que toma dos enteros, n y m, y devuelve
 verdadero si n es divisible por m, y falso en caso contrario. */
 import java.util.Scanner;
-public class EJER01 {
+public class EsDivisible {
     
     public static boolean esDivisible(int n, int m){
         if (n % m == 0 ) {

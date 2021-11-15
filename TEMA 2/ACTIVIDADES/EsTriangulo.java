@@ -7,7 +7,7 @@ Si cualquiera de las tres longitudes es mayor que la suma de las otras dos, no p
 Escribe un método llamado  esTriangulo  que toma tres enteros como argumentos y devuelve true o
 false, dependiendo de si puede o no formar un triángulo a partir de palitos con las longitudes dadas. */ 
 import java.util.Scanner;
-public class EJER02 {
+public class EsTriangulo {
     public static boolean esTriangulo (int x, int y, int z){
         if ( x + y  > z && x + z > y && y + z > x) {
             return true;
