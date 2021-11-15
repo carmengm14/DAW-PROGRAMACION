@@ -3,7 +3,7 @@ package ACTIVIDADES;
 devuelve x^n.  */
 import java.util.Scanner;
 
-public class EJER03 {
+public class Potencia{
     public static double potencia(double x, int n){
         // double potencia = Math.pow(x, n);
         if (n == 0) {
