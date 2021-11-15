@@ -6,6 +6,27 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch PositivosArray",
+            "request": "launch",
+            "mainClass": "ACTIVIDADES.PositivosArray",
+            "projectName": "DAW-PROGRAMACION_2538b0a9"
+        },
+        {
+            "type": "java",
+            "name": "Launch Primo",
+            "request": "launch",
+            "mainClass": "ACTIVIDADES.Primo",
+            "projectName": "DAW-PROGRAMACION_2538b0a9"
+        },
+        {
+            "type": "java",
+            "name": "Launch Primos",
+            "request": "launch",
+            "mainClass": "ACTIVIDADES.Primos",
+            "projectName": "DAW-PROGRAMACION_2538b0a9"
+        },
+        {
+            "type": "java",
             "name": "Launch EJER05",
             "request": "launch",
             "mainClass": "ACTIVIDADES.EJER05",

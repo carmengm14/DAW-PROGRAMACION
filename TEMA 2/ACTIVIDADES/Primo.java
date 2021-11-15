@@ -3,7 +3,7 @@ import java.util.Scanner;
 
 /* Primo.java Crea un método llamado esPrimo que devuelva un booleano para indicar si el número
 pasado como parámetro es primo.*/
-public class EJER06 {
+public class Primo {
 
     public static boolean esPrimo(int numero){
        System.out.println(numero);
