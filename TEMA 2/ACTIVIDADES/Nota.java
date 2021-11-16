@@ -1,4 +1,3 @@
-package ACTIVIDADES;
 import java.util.Scanner;
 /*. Nota.java Realiza un programa que lea un valor numérico entero correspondiente a la nota de un
 examen y muestre su valor en letra:
