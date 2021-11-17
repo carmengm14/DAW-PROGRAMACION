@@ -2,6 +2,8 @@
 /*FIBONACCI Diseña un programa que muestre los primeros 40 términos de la serie de Fibonacci
 Este programa utiliza una técnica usada mucho en programación que se denomina swap y que 
 consiste en intercambiar el valor de dos variables usando una variable auxiliar. */
+
+/**NUMERO FIBONACCI */
 public class Ejer40 {
     public static void main(String[] args) {
         int n1 = 1;
