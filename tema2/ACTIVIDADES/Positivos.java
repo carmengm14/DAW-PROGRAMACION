@@ -1,4 +1,3 @@
-package ACTIVIDADES;
 import java.util.Scanner;
 
 /* Positivos.java Escribe un programa que pida al usuario 10 números y que muestre cuántos son

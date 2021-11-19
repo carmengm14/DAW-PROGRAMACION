@@ -24,7 +24,11 @@ public class Calculadora {
         int multiplicacion = operando1 * operando2;
         double division = operando3/operando4;
         double elevado = Math.pow(operando3, operando4);
-
+       /* int i = 1 ;
+        while (operando4 < i) {
+            double elevado = operando3 * operando4;
+            i++;
+        } */
         switch (operador) {
             case "+":
                 System.out.println(operando1 + " + " + operando2 + " = " + suma);

@@ -1,4 +1,3 @@
-package ACTIVIDADES;
 /*  EsTriangulo.java  Si te dan tres palitos, puedes o no ser capaz de organizarlos en un triángulo. Por
 ejemplo, si uno de los palos mide 12 cm de largo y los otros dos tienen un cm de largo, no podrás hacer que
 los palitos cortos se encuentren en el medio. Para tres longitudes, hay una prueba simple para ver si es
