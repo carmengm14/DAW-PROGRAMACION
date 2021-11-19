@@ -1,5 +1,3 @@
-package unpocodetodo;
-
 import java.util.Scanner;
 public class HOLAMUNDO {
     public static void main(String[] args) {

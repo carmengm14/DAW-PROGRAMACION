@@ -1,5 +1,3 @@
-package unpocodetodo;
-
 public class ArgumentosSuma {
     public static void main(String[] args) {
         double suma= 0;

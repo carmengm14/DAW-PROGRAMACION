@@ -1,5 +1,3 @@
-package unpocodetodo;
-
 public class matespruebadelalibreria {
     public static void main(String[] args) {
         System.out.println("==============================");

@@ -1,4 +1,3 @@
-package repasoexamen.ESTRUCTURASCONDICIONALES;
 /*Escriba un programa que determine si un caracter ingresado es letra, número,
  o ninguno de los dos. En caso que sea letra, determine si es mayúscula o minúscula.*/
 import java.util.Scanner;

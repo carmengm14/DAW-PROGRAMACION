@@ -1,0 +1,15 @@
+{
+    "java.project.sourcePaths": [
+        ".",
+        "tema1",
+        "tema2",
+        "tema2/actividades",
+        "tema2/unpocodetodo",
+        "repasoexamen",
+        "JULIO",
+        "controles",
+        "controles/control02",
+        "repasoexamen",
+        "repasoexamen/estructurascondicionales",
+    ]
+}

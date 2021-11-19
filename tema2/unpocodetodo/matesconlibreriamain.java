@@ -1,5 +1,3 @@
-package unpocodetodo;
-
 public class matesconlibreriamain {
     
     public static double suma(double n1, double n2) {

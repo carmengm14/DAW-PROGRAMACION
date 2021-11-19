@@ -1,4 +1,3 @@
-package CONTROLES.control02;
 import java.util.Scanner;
 public class E09 {
     public static void main(String[] args) {

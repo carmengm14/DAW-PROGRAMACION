@@ -1,4 +1,3 @@
-package repasoexamen.ESTRUCTURASCONDICIONALES;
 import java.util.Scanner;
 /* Escriba un programa que pida dos números enteros y que calcule la división, indicando si la división es exacta o no. */
 
