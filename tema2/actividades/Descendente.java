@@ -1,3 +1,4 @@
+package tema2.actividades;
 
 import java.util.Scanner;
 /* . Descendente.java Realiza un programa que lea dos valores y los muestre en orden ascendente */
