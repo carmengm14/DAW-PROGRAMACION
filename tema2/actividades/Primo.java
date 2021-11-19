@@ -1,4 +1,3 @@
-package tema2.actividades;
 import java.util.Scanner;
 
 /* Primo.java Crea un método llamado esPrimo que devuelva un booleano para indicar si el número

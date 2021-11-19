@@ -1,4 +1,4 @@
-package unpocodetodo;
+package tema2.unpocodetodo;
 
 public class ArgumentosMain {
    public static void main(String[] args) {

@@ -1,4 +1,3 @@
-package tema2.actividades;
 import java.util.Scanner;
 /* MayorDeTres.java Escribe un programa que pida tres números e imprima el mayor de los tres*/
 public class MayorDeTres {

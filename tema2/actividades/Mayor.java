@@ -1,4 +1,3 @@
-package tema2.actividades;
 /*  Mayor.java Realiza un programa que pida la edad al usuario y muestre un mensaje si es mayor de edad */
 import java.util.Scanner;
 public class Mayor {
