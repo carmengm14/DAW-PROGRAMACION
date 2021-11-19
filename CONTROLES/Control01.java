@@ -1,3 +1,5 @@
+package CONTROLES;
+
 import java.util.Scanner;
 
 public class Control01 {

@@ -1,4 +1,4 @@
-package ESTRUCTURASCONDICIONALES;
+package repasoexamen.ESTRUCTURASCONDICIONALES;
 
 import java.util.Scanner;
 

@@ -1,4 +1,4 @@
-package ESTRUCTURASCONDICIONALES;
+package repasoexamen.ESTRUCTURASCONDICIONALES;
 // import java.util.GregorianCalendar;
 import java.util.Scanner;
 
