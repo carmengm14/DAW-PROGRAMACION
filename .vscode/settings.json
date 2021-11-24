@@ -11,6 +11,7 @@
         "controles/control02",
         "repasoexamen",
         "repasoexamen/estructurascondicionales",
-        "tema3arrays"
+        "tema3arrays",
+        "tema3arrays/pruebas",
     ]
 }
