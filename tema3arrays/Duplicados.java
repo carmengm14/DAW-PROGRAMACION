@@ -5,9 +5,11 @@ public class Duplicados {
         int duplicados = 0;
         
         for (int i = 0; i < numeros.length; i++) {
-            for (int j = i  + 1 ; j < numeros.length; j++)
-                if(numeros[i] == numeros[j])
+            for (int j = i  + 1 ; j < numeros.length; j++){
+                if(numeros[i] == numeros[j]){
                     duplicados++;
+                }
+            }
             System.out.print(duplicados + ",");
             duplicados = 0;
         }
