@@ -56,6 +56,9 @@ public class Utilidades {
 				/*EL (INT) TRANSFORMA EL RESULTADO DE MATRIZ[I][J] QUE ES DOUBLE POR CULPA DEL MATH.RANDOM()
 				  A UN ENTERO */
 			    matriz[i][j] = (int) (Math.random() * (max - min + 1) + min);
+
+				/* I Y J MARCAN LA POSICION Y SE RELLENA CON UN NUMERO ALEATORIO, QUE ES LA OPERACION DE 
+				   MATH.RANDOM() * (MAX - MIN + 1) + MIN); */
 			}
 		}
 	}
