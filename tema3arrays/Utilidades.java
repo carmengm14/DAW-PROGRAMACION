@@ -53,6 +53,8 @@ public class Utilidades {
 		//MATRI[0].LENGHT LEE LA LONGITUD DE LA LÍNEA 0 Y ASI SACA LA CANTIDAD DE COLUMNAS QUE TIENE LA FILA.
 		for (int i = 0; i < filas; i++){
 			for (int j = 0; j < columnas; j++){
+				/*EL (INT) TRANSFORMA EL RESULTADO DE MATRIZ[I][J] QUE ES DOUBLE POR CULPA DEL MATH.RANDOM()
+				  A UN ENTERO */
 			    matriz[i][j] = (int) (Math.random() * (max - min + 1) + min);
 			}
 		}
