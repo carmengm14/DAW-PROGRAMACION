@@ -30,11 +30,13 @@ public class Eliminar {
 /*SOLUCION DE JULIO
 public static void main(String[] args) {
     int [] elementos = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
-
+    int elementoBorrar = elemento[indiceBorrar];
     int indiceBorrar = 2;
+    
     for (int i = indiceBorrar + 1; i < elementos.length; i++) {
         elementos[i-1] = elementos[i];
     }
+    elementos[elementos.length - 1] = elementoBorrar;
 }
 
 */
