@@ -4,7 +4,7 @@ decírselo al usuario y volver a pedírselo.*/
 
 public class Eliminar {
     public static void main(String[] args) {
-        int[] numeros = {0,2,10,94,35,74,58,20,18,7,68};
+        int[] numeros = {1,2,10,94,35,74,58,20,18,7,68};
         int posicion;       
         while(true) {
             posicion = Utilidades.leerEntero("Dime que numero quieres eliminar del 0 al 10: ");                   
@@ -21,8 +21,20 @@ public class Eliminar {
         for (int i = 0; i < numeros.length; i++) {
             System.out.print(numeros[i] + " ");
         }
-        System.out.println(" = " + numero);
+        System.out.println(numero);
         System.out.println(" ");
     }
     
 }
+
+/*SOLUCION DE JULIO
+public static void main(String[] args) {
+    int [] elementos = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+
+    int indiceBorrar = 2;
+    for (int i = indiceBorrar + 1; i < elementos.length; i++) {
+        elementos[i-1] = elementos[i];
+    }
+}
+
+*/
