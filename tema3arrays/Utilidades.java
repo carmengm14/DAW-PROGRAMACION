@@ -51,6 +51,7 @@ public class Utilidades {
 		int filas = matriz.length;
 		int columnas = matriz[0].length;
 		//MATRI[0].LENGHT LEE LA LONGITUD DE LA LÍNEA 0 Y ASI SACA LA CANTIDAD DE COLUMNAS QUE TIENE LA FILA.
+		//AHORA RECORREREMOS LA MATRIZ, MIRANDO LAS FILAS Y COLUMNAS.
 		for (int i = 0; i < filas; i++){
 			for (int j = 0; j < columnas; j++){
 				/*EL (INT) TRANSFORMA EL RESULTADO DE MATRIZ[I][J] QUE ES DOUBLE POR CULPA DEL MATH.RANDOM()
@@ -61,6 +62,10 @@ public class Utilidades {
 				   MATH.RANDOM() * (MAX - MIN + 1) + MIN); */
 			}
 		}
+		//EJEMPLO DE COMO SE VERIA ESTO CON 3 COLUMNAS Y 4 FILAS:   0,0  0,1  0,2  0,3  
+															//	    1,0  1,1  1,2  1,3
+															//	    2,0  2,1  2,2  2,3
+		
 	}
 
 	public static void 	mostrarMatriz(int matriz[][]) {
