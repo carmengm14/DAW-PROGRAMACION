@@ -50,6 +50,7 @@ public class Utilidades {
 		
 		int filas = matriz.length;
 		int columnas = matriz[0].length;
+		//MATRI[0].LENGHT LEE LA LONGITUD DE LA LÍNEA 0 Y ASI SACA LA CANTIDAD DE COLUMNAS QUE TIENE LA FILA.
 		for (int i = 0; i < filas; i++){
 			for (int j = 0; j < columnas; j++){
 			    matriz[i][j] = (int) (Math.random() * (max - min + 1) + min);
