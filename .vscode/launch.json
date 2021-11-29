@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch E05Iguales",
+            "request": "launch",
+            "mainClass": "E05Iguales",
+            "projectName": "DAW-PROGRAMACION_2538b0a9"
+        },
+        {
+            "type": "java",
             "name": "Launch E04SumaIgual",
             "request": "launch",
             "mainClass": "E04SumaIgual",
