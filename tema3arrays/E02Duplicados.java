@@ -1,5 +1,5 @@
 /*Escribid un programa Java para encontrar los valores duplicados de un array de valores enteros.*/
-public class Duplicados {
+public class E02Duplicados {
     public static void main(String[] args) {
         int[] numeros = {1, 2, 2, 5, 7, 89, 89, 4}; //creamos el array
         int [] numsduplics = new int [5];

@@ -2,7 +2,7 @@
 por el usuario (moviéndolo al final del mismo). Si el índice es mayor que el tamaño del array, debe
 decírselo al usuario y volver a pedírselo.*/
 
-public class Eliminar {
+public class E01Eliminar {
     public static void main(String[] args) {
         int[] numeros = {1,2,10,94,35,74,58,20,18,7,68};
         int posicion;       

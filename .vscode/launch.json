@@ -6,6 +6,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch E02Duplicados",
+            "request": "launch",
+            "mainClass": "E02Duplicados",
+            "projectName": "DAW-PROGRAMACION_2538b0a9"
+        },
+        {
+            "type": "java",
+            "name": "Launch E01Eliminar",
+            "request": "launch",
+            "mainClass": "E01Eliminar",
+            "projectName": "DAW-PROGRAMACION_2538b0a9"
+        },
+        {
+            "type": "java",
             "name": "Launch EJEMPLOARRAY",
             "request": "launch",
             "mainClass": "EJEMPLOARRAY",
