@@ -7,7 +7,6 @@ public class E02Duplicados {
         for (int i = 0; i < numeros.length; i++) {
             for (int j = i  + 1 ; j < numeros.length; j++){
                 if(numeros[i] == numeros[j]){
-                    //numsduplics[duplicados] = numeros[j];
                     System.out.print(numeros[j] + ", ");
                 }
             }           

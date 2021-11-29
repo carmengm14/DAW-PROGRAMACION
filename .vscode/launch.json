@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch E03Comunes",
+            "request": "launch",
+            "mainClass": "E03Comunes",
+            "projectName": "DAW-PROGRAMACION_2538b0a9"
+        },
+        {
+            "type": "java",
             "name": "Launch E02Duplicados",
             "request": "launch",
             "mainClass": "E02Duplicados",
