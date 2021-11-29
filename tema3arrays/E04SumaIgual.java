@@ -13,7 +13,7 @@ public class E04SumaIgual {
             for (int j = 1; j < numUser; j++) {
                 suma = i + j;
                 if (suma == numUser) {
-                    System.out.println(i + " + " + j + " = " + numUser);
+                    System.out.println(i + " + " + j + " = " + suma);
                 }
             }
         }
