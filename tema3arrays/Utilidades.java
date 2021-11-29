@@ -80,4 +80,12 @@ public class Utilidades {
 			}
 		}
 	}
+
+	public static void 	mostrarArray(int matriz[]) {
+		int i; 
+		int filas = matriz.length;
+		for (i=0; i < filas; i++) {
+			System.out.println("matriz[" + i + "] = " + matriz[i] );
+		}
+	}
 }
