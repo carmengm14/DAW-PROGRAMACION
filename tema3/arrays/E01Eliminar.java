@@ -1,3 +1,4 @@
+
 /*Escribid un programa Java para eliminar de un array un elemento específico (índice) introducido 
 por el usuario (moviéndolo al final del mismo). Si el índice es mayor que el tamaño del array, debe
 decírselo al usuario y volver a pedírselo.*/
