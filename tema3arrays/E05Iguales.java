@@ -22,9 +22,7 @@ public class E05Iguales {
             }else{
                 System.out.println( "DIFERENTES");
             }
-        }
-        
-        System.out.println("FIN");        
+        }      
     }
     
 }

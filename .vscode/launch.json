@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch E06ParesImpares",
+            "request": "launch",
+            "mainClass": "E06ParesImpares",
+            "projectName": "DAW-PROGRAMACION_2538b0a9"
+        },
+        {
+            "type": "java",
             "name": "Launch E05Iguales",
             "request": "launch",
             "mainClass": "E05Iguales",
