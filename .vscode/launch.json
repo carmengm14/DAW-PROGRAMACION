@@ -6,6 +6,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch E09ValoresACero",
+            "request": "launch",
+            "mainClass": "E09ValoresACero",
+            "projectName": "DAW-PROGRAMACION_2538b0a9"
+        },
+        {
+            "type": "java",
+            "name": "Launch E08RellenaMatriz",
+            "request": "launch",
+            "mainClass": "E08RellenaMatriz",
+            "projectName": "DAW-PROGRAMACION_2538b0a9"
+        },
+        {
+            "type": "java",
             "name": "Launch E07MoverCeros",
             "request": "launch",
             "mainClass": "E07MoverCeros",
