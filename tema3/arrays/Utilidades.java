@@ -26,7 +26,7 @@ public class Utilidades {
 	}
 
 	public static String leerCadena(String mensaje) {
-		System.out.println(mensaje);
+		System.out.print(mensaje);
 		return inputValue.nextLine();
 
 	}
