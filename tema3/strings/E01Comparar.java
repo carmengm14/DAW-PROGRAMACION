@@ -1,5 +1,5 @@
 /* Realiza un programa que diga si una cadena es mayor, menor o igual que otra cadena. Funciones a utilizar String.compareTo() */
-public class Comparar {
+public class E01Comparar {
     public static int comparar(String cadena1, String cadena2) {
 		return cadena1.compareTo(cadena2);
 	}

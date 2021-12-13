@@ -1,6 +1,6 @@
 /** Escribe un programa que compruebe si una cadena acaba con el contenido de otra. Funciones a utilizar String.endsWith() */
 
-public class Ends {
+public class E05Ends {
     public static boolean acabaEn(String cadena1, String cadena2) {
 		return cadena1.endsWith(cadena2);
 	}

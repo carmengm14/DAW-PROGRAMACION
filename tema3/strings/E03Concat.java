@@ -1,6 +1,6 @@
 /* Realiza un programa que concatene dos Strings en un tercer String. Funciones a utilizar String.concat() */
 
-public class Concat {
+public class E03Concat {
       
         public static String concatenar(String cadena1, String cadena2) {
             return cadena1.concat(cadena2);

@@ -6,6 +6,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch E09Substring",
+            "request": "launch",
+            "mainClass": "E09Substring",
+            "projectName": "DAW-PROGRAMACION_2538b0a9"
+        },
+        {
+            "type": "java",
+            "name": "Launch E01Comparar",
+            "request": "launch",
+            "mainClass": "E01Comparar",
+            "projectName": "DAW-PROGRAMACION_2538b0a9"
+        },
+        {
+            "type": "java",
             "name": "Launch Concat",
             "request": "launch",
             "mainClass": "Concat",
