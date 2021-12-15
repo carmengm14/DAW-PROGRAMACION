@@ -38,9 +38,11 @@ public class E01Comparar {
 		}
 	}
 	public static void main(String[] args) {
+		int resultado;
+
 		String cadena1 = "Hola pepito";
 		String cadena2 = "Au cacau";
-		int resultado = comparar(cadena1, cadena2);
+		resultado = comparar(cadena1, cadena2);
 		imprimirResultadoComparacion(resultado,cadena1,cadena2);
 
 		cadena1 = "Hola pepito";
