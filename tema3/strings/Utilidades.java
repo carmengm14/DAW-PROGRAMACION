@@ -4,7 +4,7 @@ public class Utilidades {
 	static Scanner inputValue = new Scanner(System.in);
 
 	public static int leerEntero(String mensaje) {
-		System.out.println(mensaje);
+		System.out.print(mensaje);
 		return inputValue.nextInt();
 
 	}

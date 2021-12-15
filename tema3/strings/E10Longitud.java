@@ -2,18 +2,13 @@
 
 public class E10Longitud {
     public static int cuantasDeLongitud(String[] palabras, int longitud) {
+
 		int cuantas = 0;
-		for (String palabra :  palabras) {
-			if (palabra.length() == longitud) {
+		for (int i = 0; i < palabras.length; i++ ) {
+			if (palabras[i].length() == longitud) {
 				cuantas++;
 			}
 		}
-//		cuantas = 0;
-//		for (int i = 0; i < palabras.length; i++ ) {
-//			if (palabras[i].length() == longitud) {
-//				cuantas++;
-//			}
-//		}
 				
 		return cuantas;
 	}
@@ -23,5 +18,6 @@ public class E10Longitud {
 		int longitud = Utilidades.leerEntero("Contar palabras de longitud? ");
 		
 		System.out.printf("La cadena contiene %d palabras de longitud %d", cuantasDeLongitud(palabras, longitud), longitud);
+        System.out.println(" ");
 	}
 }
