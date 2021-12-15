@@ -11,6 +11,7 @@ public class E12Longitud3 {
     }
     public static void main(String[] args) {
         String cadena = Utilidades.leerCadena("Introduce un texto = ");
+        
         String palabras[] = Utilidades.dividirEnPalabras(cadena);
         int longitud = Utilidades.leerEntero("¿Todas las palabras de longitud menor que... ? = ");
 
