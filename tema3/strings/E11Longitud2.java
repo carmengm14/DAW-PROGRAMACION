@@ -3,7 +3,7 @@ public class E11Longitud2 {
         public static boolean tieneAlgunaDeLongitud(String[] palabras, int longitud) {
     		boolean encontrada = false;
 
-            //Un for automatico que recorre toda la palabra solo
+            //Un for automatico que recorre toda la palabra solo (el : )
     		for (String palabra : palabras) {
     			if (palabra.length() == longitud) {
     				encontrada = true;
