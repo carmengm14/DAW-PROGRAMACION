@@ -14,7 +14,7 @@ public class E11Longitud2 {
         }
 
         public static void main(String[] args) {
-            String cadena = Utilidades.leerCadena("Introduce un texto =");
+            String cadena = Utilidades.leerCadena("Introduce un texto = ");
             String palabras[] = Utilidades.dividirEnPalabras(cadena);
             int longitud = Utilidades.leerEntero("Existe alguna palabra de longitud? ");
 
