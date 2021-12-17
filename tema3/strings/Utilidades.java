@@ -10,13 +10,13 @@ public class Utilidades {
 	}
 
 	public static double leerDoble(String mensaje) {
-		System.out.println(mensaje);
+		System.out.print(mensaje);
 		return inputValue.nextDouble();
 
 	}
 
 	public static char leerCaracter(String mensaje) {
-		System.out.println(mensaje);
+		System.out.print (mensaje);
 		// Leemos toda una cadena
 		String cadena = inputValue.next();
 		// y nos quedamos con el carácter 0 (el primero)
