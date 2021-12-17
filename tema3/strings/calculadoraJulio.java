@@ -1,5 +1,3 @@
-import java.util.Scanner;
-
 /**Crea un programa llamado Calculadora.
 
 El programa debe ir leyendo las operaciones que introduce el usuario:
@@ -44,29 +42,35 @@ public class calculadoraJulio {
         return respuesta;
     }
    
+    
 
     public static void main(String[] args) {
 
-        System.out.print("¿Deseas parar el programa? Si es asi, escribe FIN o fin, si quieres continuar, escribe no o NO = ");
-        
-        Scanner sc = new Scanner(System.in);
-        String finals = sc.next();
-        boolean paron = true;
-        sc.close();
-        
-        if (finals == "FIN" || finals == "fin") {
-            paron = false;
-        } else if(finals == "no" || finals == "NO") {
-            paron = true;
-        }
+        boolean stop = true;
+        String paron = Utilidades.leerCadena("Si deseas parar, escribe fin = ");
+            
+        if (paron.equalsIgnoreCase("fin")) {
+            stop = false;
+        } else {
+            stop = true;
+        } 
 
-        do{  
-        double numero1 = Utilidades.leerDoble("Escribe el primer digito = ");
-        double numero2 = Utilidades.leerDoble("Escribe el segundo digito = ");
-        char respuesta = Utilidades.leerCaracter("¿Que operacion deseas hacer? ( ESCRIBE EL SIGNO ) = ");
-        operaciones(respuesta, numero1, numero2);
-        
-        }while(paron == true);
+        do{ 
+            
+            double numero1 = Utilidades.leerDoble("Escribe el primer digito = ");
+            double numero2 = Utilidades.leerDoble("Escribe el segundo digito = ");
+            char respuesta = Utilidades.leerCaracter("¿Que operacion deseas hacer? ( ESCRIBE EL SIGNO ) = ");
+            operaciones(respuesta, numero1, numero2);
+
+            paron = Utilidades.leerCadena("Si deseas parar, escribe fin = ");
+            System.out.println(" ");
+            
+            if (paron.equalsIgnoreCase("fin")) {
+                stop = false;
+            } else {
+                stop = true;
+            } 
+        }while(stop);        
         
         
         
