@@ -1,3 +1,4 @@
+import java.util.Scanner;
 
 /**Crea un programa llamado Calculadora.
 
@@ -42,16 +43,30 @@ public class calculadoraJulio {
     
         return respuesta;
     }
+   
 
     public static void main(String[] args) {
 
-        for (int i = 0; i < 10; i++) {
-            
+        System.out.print("¿Deseas parar el programa? Si es asi, escribe FIN o fin, si quieres continuar, escribe no o NO = ");
+        
+        Scanner sc = new Scanner(System.in);
+        String finals = sc.next();
+        boolean paron = true;
+        sc.close();
+        
+        if (finals == "FIN" || finals == "fin") {
+            paron = false;
+        } else if(finals == "no" || finals == "NO") {
+            paron = true;
+        }
+
+        do{  
         double numero1 = Utilidades.leerDoble("Escribe el primer digito = ");
         double numero2 = Utilidades.leerDoble("Escribe el segundo digito = ");
         char respuesta = Utilidades.leerCaracter("¿Que operacion deseas hacer? ( ESCRIBE EL SIGNO ) = ");
         operaciones(respuesta, numero1, numero2);
-        }
+        
+        }while(paron == true);
         
         
         
