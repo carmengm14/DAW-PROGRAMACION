@@ -1,3 +1,4 @@
+/**Escribe un programa que muestre la cantidad de dígitos que aparecen en una cadena. Por ejemplo, la cadena "un 1 y un 20", tiene 3 dígitos. */
 public class E13Digitos{
     public static int cuantosSonDigitos(String cadena) {
         int contador = 0;
