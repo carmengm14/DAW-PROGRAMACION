@@ -12,7 +12,7 @@ public class E15Invertida {
 	}
 	public static void main(String[] args) {
 			String invertida = invertir(Utilidades.dividirEnPalabras(Utilidades.leerCadena("Introduce texto: ")));
-			System.out.println(invertida);
+			System.out.println("Tu frase invertida es: " + invertida);
 	}
 
 
