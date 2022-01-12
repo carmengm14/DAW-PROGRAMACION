@@ -10,7 +10,7 @@ class Silla {
     private int comodidad;
     private String material;
 
-    public silla(String colorS, int nPatasS, String respaldoS, int comodidadS, String materialS ) {
+    public Silla(String colorS, int nPatasS, String respaldoS, int comodidadS, String materialS ) {
         color = colorS;
         nPatas= nPatasS;
         respaldo= respaldoS;
