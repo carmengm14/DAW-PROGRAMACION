@@ -6,6 +6,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch Alumnotest",
+            "request": "launch",
+            "mainClass": "Alumnotest",
+            "projectName": "DAW-PROGRAMACION_2538b0a9"
+        },
+        {
+            "type": "java",
+            "name": "Launch ej1test",
+            "request": "launch",
+            "mainClass": "ej1test",
+            "projectName": "DAW-PROGRAMACION_2538b0a9"
+        },
+        {
+            "type": "java",
             "name": "Launch Pajaro",
             "request": "launch",
             "mainClass": "Pajaro",
