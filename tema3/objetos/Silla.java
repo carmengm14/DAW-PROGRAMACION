@@ -24,6 +24,7 @@ class Silla {
     public void setColor(String col){
         color = col;
     }
+       
 
     public void imprimeSilla(){
         System.out.println("Atributos Silla: Color:" + color + "\tnPatas: " + nPatas + "\trespaldo: " + respaldo + "\tcomodidad: " + comodidad + "\tmaterial: " + material + "\tlocalizacion: " + "(" + localizacion.getX() + "," + localizacion.getY()+")");
