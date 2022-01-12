@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch Crear",
+            "request": "launch",
+            "mainClass": "Crear",
+            "projectName": "DAW-PROGRAMACION_2538b0a9"
+        },
+        {
+            "type": "java",
             "name": "Launch E16Siglas",
             "request": "launch",
             "mainClass": "E16Siglas",
