@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch E18Pasatiempos",
+            "request": "launch",
+            "mainClass": "E18Pasatiempos",
+            "projectName": "DAW-PROGRAMACION_2538b0a9"
+        },
+        {
+            "type": "java",
             "name": "Launch Sillatest",
             "request": "launch",
             "mainClass": "Sillatest",
