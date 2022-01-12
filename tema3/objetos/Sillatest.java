@@ -13,7 +13,7 @@ public class Sillatest {
             String material = materiales[(int) Math.floor(Math.random() * (materiales.length))];
             int x = (int) Math.floor(Math.random()*50);
             int y = (int) Math.floor(Math.random()*30);
-            
+
             Silla s = new Silla(color, nPatas, respaldo, comodidad, material, x, y);
             s.imprimeSilla();
 

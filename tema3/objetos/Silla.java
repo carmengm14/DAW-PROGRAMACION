@@ -27,7 +27,13 @@ class Silla {
        
 
     public void imprimeSilla(){
-        System.out.println("Atributos Silla: Color:" + color + "\tnPatas: " + nPatas + "\trespaldo: " + respaldo + "\tcomodidad: " + comodidad + "\tmaterial: " + material + "\tlocalizacion: " + "(" + localizacion.getX() + "," + localizacion.getY()+")");
+        String tieneRespaldo;
+        if (respaldo == true) {
+            tieneRespaldo = "si";
+        }else{
+            tieneRespaldo = "no";
+        }
+        System.out.println("Atributos Silla: Color:" + color + "\tNº Patas: " + nPatas + "\tRespaldo: " + tieneRespaldo + "\tComodidad: " + comodidad + "\tMaterial: " + material + "\tLocalizacion: " + "(" + localizacion.getX() + "," + localizacion.getY()+")");
     }
     
 }
