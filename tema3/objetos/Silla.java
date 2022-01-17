@@ -6,21 +6,27 @@ class Silla {
 
     private String color;
     private int nPatas;
-    private String respaldo;
+    private boolean respaldo;
     private int comodidad;
     private String material;
+    private Point localizacion;
 
-    public silla(String colorS, int nPatasS, String respaldoS, int comodidadS, String materialS ) {
+    public Silla(String colorS, int nPatasS, boolean respaldoS, int comodidadS, String materialS, int x, int y ) {
         color = colorS;
         nPatas= nPatasS;
-        respaldo= respaldoS;
+        respaldo = respaldoS;
         comodidad = comodidadS;
         material = materialS;
-
+        localizacion = new Point(x, y);
+        
     }
-    public static void localizacion (Point p) {
 
-        System.out.println ("(" + p.x + "," + p.y + ")");
+    public void setColor(String col){
+        color = col;
+    }
+
+    public void imprimeSilla(){
+        System.out.println("Atributos Silla: Color:" + color + "\tnPatas: " + nPatas + "\trespaldo: " + respaldo + "\tcomodidad: " + comodidad + "\tmaterial: " + material + "\tlocalizacion: " + "(" + localizacion.getX() + "," + localizacion.getY()+")");
+    }
     
-    }
 }
