@@ -35,12 +35,10 @@ class Pajaro2 {
     // ***Aquí irán los demás métodos de la clase ***
    
     public static void main(String[] args) { // metodo main
+      
+     Pajaro2 p1 = new Pajaro2();
    
-     Pajaro2 p1, p2;
-   
-     p1 = new Pajaro2();
-   
-     p2 = new Pajaro2('a', 3);
+     Pajaro2 p2 = new Pajaro2('a', 3);
      
    
     }

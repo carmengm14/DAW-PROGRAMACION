@@ -6,6 +6,27 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch Pajaro2",
+            "request": "launch",
+            "mainClass": "Pajaro2",
+            "projectName": "DAW-PROGRAMACION_2538b0a9"
+        },
+        {
+            "type": "java",
+            "name": "Launch Ventana",
+            "request": "launch",
+            "mainClass": "prueba.Ventana",
+            "projectName": "DAW-PROGRAMACION_2538b0a9"
+        },
+        {
+            "type": "java",
+            "name": "Launch E19SumarBinario",
+            "request": "launch",
+            "mainClass": "E19SumarBinario",
+            "projectName": "DAW-PROGRAMACION_2538b0a9"
+        },
+        {
+            "type": "java",
             "name": "Launch borrar",
             "request": "launch",
             "mainClass": "borrar",
