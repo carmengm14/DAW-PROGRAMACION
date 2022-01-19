@@ -3,22 +3,23 @@ Diseña un programa que ayude al creador de pasatiempos. Recibirá una cadena y 
 
 public class E18Pasatiempos {
     public static void cambiarVocales(String cadena) {
-        //hacer las letras todas minusculas para compararlas bien.
-        cadena.toLowerCase();
-        char punto;
+      
+        String cadenaimp = " ";
+        //char punto;
         for (int i = 0; i < cadena.length(); i++) {
             if (cadena.charAt(i) == 'a' || cadena.charAt(i) == 'e' || cadena.charAt(i) == 'i' || cadena.charAt(i) == 'o' || cadena.charAt(i) == 'u') {
-                punto = cadena.charAt(i);
+               /* punto = cadena.charAt(i);
                 punto = '.';
-                System.out.println(punto);
+                */
+               cadenaimp = cadena.replace('a', '.').replace('e', '.').replace('i', '.').replace('o', '.').replace('u', '.');
             }
-            
         }
-        
+        System.out.println(cadenaimp);
     }
     public static void main(String[] args) {
+        //hacer las letras todas minusculas para compararlas bien y pasarle la cadena al metodo.
 
         String cadena = Utilidades.leerCadena("Escribe tu cadena: ");
-        cambiarVocales(cadena);
+        cambiarVocales(cadena.toLowerCase());
     }
 }
