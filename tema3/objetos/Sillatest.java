@@ -4,6 +4,7 @@ public class Sillatest {
     public static void main(String[] args) {
        String[] colores = {"rojo","azul", "naranja","rosa","negro"}; 
        boolean[] respaldos = {true,false};
+       
        String[] materiales = {"madera","plastico","acero","hierro"}; 
       
        for(int i = 0; i<100; i++){
