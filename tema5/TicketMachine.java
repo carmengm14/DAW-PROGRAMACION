@@ -1,4 +1,4 @@
-package tema5;
+
 
 /**
  * TicketMachine models a naive ticket machine that issues
