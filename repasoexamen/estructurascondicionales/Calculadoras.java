@@ -3,7 +3,7 @@ El programa debe recibir como entrada 2 números reales y un operador, que puede
 La salida del programa debe ser el resultado de la operación.*/
 import java.util.Scanner;
 
-public class Calculadora {
+public class Calculadoras {
     public static void main(String[] args) {
         System.out.print("Operando: ");
         Scanner sc = new Scanner(System.in);

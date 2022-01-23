@@ -6,6 +6,62 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch TestMcdAssertEquals",
+            "request": "launch",
+            "mainClass": "borrar.TestMcdAssertEquals",
+            "projectName": "DAW-PROGRAMACION-1_4a10204b"
+        },
+        {
+            "type": "java",
+            "name": "Launch TestMcd",
+            "request": "launch",
+            "mainClass": "borrar.TestMcd",
+            "projectName": "DAW-PROGRAMACION-1_4a10204b"
+        },
+        {
+            "type": "java",
+            "name": "Launch Pajaro2",
+            "request": "launch",
+            "mainClass": "Pajaro2",
+            "projectName": "DAW-PROGRAMACION_2538b0a9"
+        },
+        {
+            "type": "java",
+            "name": "Launch Ventana",
+            "request": "launch",
+            "mainClass": "prueba.Ventana",
+            "projectName": "DAW-PROGRAMACION_2538b0a9"
+        },
+        {
+            "type": "java",
+            "name": "Launch E19SumarBinario",
+            "request": "launch",
+            "mainClass": "E19SumarBinario",
+            "projectName": "DAW-PROGRAMACION_2538b0a9"
+        },
+        {
+            "type": "java",
+            "name": "Launch borrar",
+            "request": "launch",
+            "mainClass": "borrar",
+            "projectName": "DAW-PROGRAMACION_2538b0a9"
+        },
+        {
+            "type": "java",
+            "name": "Launch E18Pasatiempos",
+            "request": "launch",
+            "mainClass": "E18Pasatiempos",
+            "projectName": "DAW-PROGRAMACION_2538b0a9"
+        },
+        {
+            "type": "java",
+            "name": "Launch Sillatest",
+            "request": "launch",
+            "mainClass": "Sillatest",
+            "projectName": "DAW-PROGRAMACION_2538b0a9"
+        },
+        {
+            "type": "java",
             "name": "Launch Sillatest",
             "request": "launch",
             "mainClass": "Sillatest",

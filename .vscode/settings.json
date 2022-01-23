@@ -13,9 +13,11 @@
         "repasoexamen/estructurascondicionales",
         "tema3",
         "tema3/pruebas",
+        "tema3/prueba",
         "tema3/arrays",
         "tema3/matrices",
         "tema3/strings",
         "tema3/objetos",
+        "tema5",
     ]
 }
