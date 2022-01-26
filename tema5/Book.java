@@ -60,11 +60,11 @@ class Book
     }
     //mutador de borrowed
     public void borrow(){
-        this.borrowed++;
+        this.borrowed ++;
     }
     //el getter de borrowed
     public int getBorrowed(){
-        return borrowed;
+        return this.borrowed;
     }
     //getter de si se esta usando un libro o no
     public boolean isCourseText() {
