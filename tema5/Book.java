@@ -1,5 +1,3 @@
-import javax.swing.text.StyledEditorKit.BoldAction;
-
 /**
  * A class that maintains information on a book.
  * This might form part of a larger application such
@@ -59,12 +57,12 @@ class Book
         return refNumber;
     }
     //mutador de borrowed
-    public void borrow(){
+   /* public void borrow(){
         this.borrowed ++;
-    }
+    }*/
     //el getter de borrowed
     public int getBorrowed(){
-        return this.borrowed;
+        return this.borrowed++;
     }
     //getter de si se esta usando un libro o no
     public boolean isCourseText() {
