@@ -6,6 +6,27 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch TestBook",
+            "request": "launch",
+            "mainClass": "TestBook",
+            "projectName": "DAW-PROGRAMACION_2538b0a9"
+        },
+        {
+            "type": "java",
+            "name": "Launch TestTicketMachine2",
+            "request": "launch",
+            "mainClass": "TestTicketMachine2",
+            "projectName": "DAW-PROGRAMACION_2538b0a9"
+        },
+        {
+            "type": "java",
+            "name": "Launch TicketMachineTest",
+            "request": "launch",
+            "mainClass": "TicketMachineTest",
+            "projectName": "DAW-PROGRAMACION_2538b0a9"
+        },
+        {
+            "type": "java",
             "name": "Launch TestMcdAssertEquals",
             "request": "launch",
             "mainClass": "borrar.TestMcdAssertEquals",
