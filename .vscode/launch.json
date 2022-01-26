@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch TestBanco",
+            "request": "launch",
+            "mainClass": "borrar.TestBanco",
+            "projectName": "DAW-PROGRAMACION-1_4a10204b"
+        },
+        {
+            "type": "java",
             "name": "Launch TestMcdAssertEquals",
             "request": "launch",
             "mainClass": "borrar.TestMcdAssertEquals",
