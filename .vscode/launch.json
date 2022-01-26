@@ -6,10 +6,31 @@
     "configurations": [
         {
             "type": "java",
+<<<<<<< HEAD
             "name": "Launch TestBanco",
             "request": "launch",
             "mainClass": "borrar.TestBanco",
             "projectName": "DAW-PROGRAMACION-1_4a10204b"
+=======
+            "name": "Launch TestBook",
+            "request": "launch",
+            "mainClass": "TestBook",
+            "projectName": "DAW-PROGRAMACION_2538b0a9"
+        },
+        {
+            "type": "java",
+            "name": "Launch TestTicketMachine2",
+            "request": "launch",
+            "mainClass": "TestTicketMachine2",
+            "projectName": "DAW-PROGRAMACION_2538b0a9"
+        },
+        {
+            "type": "java",
+            "name": "Launch TicketMachineTest",
+            "request": "launch",
+            "mainClass": "TicketMachineTest",
+            "projectName": "DAW-PROGRAMACION_2538b0a9"
+>>>>>>> 4cd0d9be78e4718170ba9a71bb5073ba2e7614d6
         },
         {
             "type": "java",
