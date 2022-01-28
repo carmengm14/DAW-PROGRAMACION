@@ -14,22 +14,18 @@ class Heater {
    }
    //setters (warmer y coolers son mutadores con lo cual son setters tmb)
   public void warmer(double temperatura){
-      if (temperatura > max) {
-          System.out.println("No puedes poner una temperatura mayor a la maxima");
-        }else{
+      if (temperatura + increment <= max) {
           temperature = temperatura + increment;
         }
     }
   public void cooler(double temperatura){
-    if (temperatura < min) {
-        System.out.println("No puedes poner una temperatura menor a la minima");
-      }else{
-        temperature = temperatura - increment;
-      }
-  }
+      if (temperatura - increment >= min) {
+          temperature = temperatura - increment;
+        }
+    }
    
   public void setIncrement(double incremento){
-    if (increment >= 0 || increment <= 5) {
+    if (increment >= 1.0 && increment <= 5.0) {
         increment = incremento;
     }
   }

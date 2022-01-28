@@ -1,7 +1,9 @@
 package borrar;
+/*
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
+*/
 
 public class McdAssertEquals {
     
@@ -9,7 +11,7 @@ public class McdAssertEquals {
         private int divisor;
     
     
-        public Mcd (int  dividendo, int divisor){
+        public Mcd(int dividendo, int divisor){
             this.dividendo =  dividendo;
             this.divisor = divisor;
         }
