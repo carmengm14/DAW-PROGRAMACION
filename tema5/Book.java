@@ -3,7 +3,7 @@
  * This might form part of a larger application such
  * as a library system, for instance.
  *
- * @author (Insert your name here.)
+ * @author carmen
  * @version (Insert today's date here.)
  */
 class Book
@@ -14,7 +14,8 @@ class Book
     private String refNumber = "";
     private int borrowed;
     private int pages;
-    private boolean courseText;
+    private final boolean courseText;
+    //el final es para que no se pueda modificar su valor, por lo tanto no tiene setter
     
     /**
      * Set the author and title fields when this object
@@ -47,22 +48,25 @@ class Book
     }
     //mutador de referencia 
     public void setRefNumbre(String ref){
-        if (ref.length() >= 3) {
+        if (ref.length() > 3) { //Mayor estricto
             refNumber = ref;
+        }else{
+            System.out.println("Error, no se ha podido modificar el campo.");
         }
-        System.out.println("Error, no se ha podido modificar el campo.");
     }
     //el getter de referencia
-    public String getRefNumbre(){
+    public String getRefNumber(){
         return refNumber;
     }
+    
     //mutador de borrowed
-   /* public void borrow(){
-        this.borrowed ++;
-    }*/
+    public void borrow(){
+        this.borrowed++;
+    }
+
     //el getter de borrowed
     public int getBorrowed(){
-        return this.borrowed++;
+        return this.borrowed;
     }
     //getter de si se esta usando un libro o no
     public boolean isCourseText() {
