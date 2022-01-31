@@ -11,6 +11,7 @@
  */
 public class NumberDisplay
 {
+    //son atributos de objetos concretos ya que no tiene static
     private int limit;
     private int value;
 
@@ -49,7 +50,8 @@ public class NumberDisplay
 
     /**
      * Set the value of the display to the new specified value. If the new
-     * value is less than zero or over the limit, do nothing.
+     * value is less than zero or over the limit, do nothing. 
+     * Un metodo que nos dice que si el nuevo valor esta entre 0 y el limite,cambia el valor incial al cambiado.
      */
     public void setValue(int replacementValue)
     {
@@ -60,7 +62,8 @@ public class NumberDisplay
 
     /**
      * Increment the display value by one, rolling over to zero if the
-     * limit is reached.
+     * limit is reached. 
+     * Esto es un metodo que no devuelve nada
      */
     public void increment()
     {
