@@ -40,6 +40,8 @@ class Pajaro2 {
    
      Pajaro2 p2 = new Pajaro2('a', 3);
      
+     System.out.println(p1+" "+ p2);
+     
    
     }
    
