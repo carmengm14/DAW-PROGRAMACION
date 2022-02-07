@@ -61,7 +61,7 @@ public class Ordenador {
     }
 
     //metodos
-    public void contadorDeOrdenadores(){
+    public void contarOrdenadores(){
         System.out.println("Hay un total de: " + contador + " ordenadores.");
     }
     //imprimir los resultados

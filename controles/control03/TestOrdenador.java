@@ -16,6 +16,6 @@ public class TestOrdenador {
         //contador
         System.out.println("\n-------------\n");
         t1.contarTeclados();
-        pc1.contadorDeOrdenadores();
+        pc1.contarOrdenadores();
     }   
 }
