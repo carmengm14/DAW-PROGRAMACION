@@ -100,7 +100,7 @@ public class Teclado {
     }
     
     //metodos
-    public void contadorDeTeclados(){
+    public void contarTeclados(){
         System.out.println("Hay un total de: " + contador + " teclados.");
     }
 
