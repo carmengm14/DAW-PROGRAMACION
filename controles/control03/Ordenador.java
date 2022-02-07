@@ -21,6 +21,7 @@ public class Ordenador {
     private String formatoOrdenador;    
     private String colorOrdenador;
     private Teclado teclado;
+    // private Ordenador pcConectado = null;
 
     public static int contador = 0;
     //Constructores
@@ -59,14 +60,28 @@ public class Ordenador {
     public Teclado getTeclado(){
         return teclado;
     }
-
+    //setters
+    public void setTeclado(Teclado teclado){
+        this.teclado = teclado;
+    }
+   /* public void conectar(Ordenador pcConectado) {
+     if (pcConectado != null) {
+         this.pcConectado = pcConectado;
+     }   
+    }
+    */
     //metodos
     public void contarOrdenadores(){
         System.out.println("Hay un total de: " + contador + " ordenadores.");
     }
+    public String toString(){
+        //al poner " - " + teclado estamos llamando a la clase toString ya que juntamos un objeto con un String.
+        return formatoOrdenador + " - " + colorOrdenador + " - " + teclado;
+    }
     //imprimir los resultados
-    public void printOrdenador(){
+    /*public void printOrdenador(){
         System.out.println("Tu ordenador es: \nFormato:" + formatoOrdenador + "\tColor:" + colorOrdenador + "\tTeclado:" + teclado);
     }
+    */
 
 }

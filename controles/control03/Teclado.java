@@ -19,7 +19,7 @@
 public class Teclado {
     //Creamos los atributos.
     private String colorTeclado;    
-    private int Nteclas;
+    private int nteclas;
     private String conectividad;
     private String idioma;
     private String formatoTeclado;
@@ -28,9 +28,9 @@ public class Teclado {
 
     //constructores 
     // Primer constructor con argumentos a los que le pasamos parametros
-    public Teclado(String colorTeclado, int Nteclas, String conectividad, String idioma, String formatoTeclado){
+    public Teclado(String colorTeclado, int nteclas, String conectividad, String idioma, String formatoTeclado){
         this.colorTeclado = colorTeclado;
-        this.Nteclas = Nteclas;
+        this.nteclas = nteclas;
 
         if (conectividad.equalsIgnoreCase("inalambrico") || conectividad.equalsIgnoreCase("por cable")) {
             this.conectividad = conectividad;
@@ -55,7 +55,7 @@ public class Teclado {
     //Segundo constructor sin argumentos
     public Teclado(){
         this.colorTeclado = "Negro";
-        this.Nteclas = 105;
+        this.nteclas = 105;
         
         this.conectividad = "Por cable";
         if (conectividad.equalsIgnoreCase("inalambrico") || conectividad.equalsIgnoreCase("por cable")) {
@@ -86,7 +86,7 @@ public class Teclado {
         return colorTeclado;
     }
     public int getNteclas(){
-        return Nteclas;
+        return nteclas;
     }
     public String getConectividad(){
         return conectividad;
@@ -103,9 +103,13 @@ public class Teclado {
     public void contarTeclados(){
         System.out.println("Hay un total de: " + contador + " teclados.");
     }
+    public String toString(){
+        return colorTeclado + " - " + nteclas + " - " + formatoTeclado;
+    }
 
     //imprimir los resultados
-    public void printTeclado(){
-        System.out.println("Tu teclado es: \n Color:" + colorTeclado + "\tNº teclas:" + Nteclas + "\tConectividad:" + conectividad + "\tIdioma:" + idioma + "\tFormato:" + formatoTeclado);
+    /*public void printTeclado(){
+        System.out.println("Tu teclado es: \n Color:" + colorTeclado + "\tNº teclas:" + nteclas + "\tConectividad:" + conectividad + "\tIdioma:" + idioma + "\tFormato:" + formatoTeclado);
     }
+    */
 }
