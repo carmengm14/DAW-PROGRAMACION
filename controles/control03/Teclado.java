@@ -54,7 +54,7 @@ public class Teclado {
     }
     //Segundo constructor sin argumentos
     public Teclado(){
-        this.colorTeclado = "Negro";
+        this.colorTeclado = "Amarillo";
         this.nteclas = 105;
         
         this.conectividad = "Por cable";
