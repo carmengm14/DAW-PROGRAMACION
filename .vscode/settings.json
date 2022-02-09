@@ -20,5 +20,9 @@
         "tema3/strings",
         "tema3/objetos",
         "tema5",
+    ],
+    "java.project.referencedLibraries": [
+        "lib/**/*.jar",
+        "/home/alumno/Descargas/jl1.0.1.jar"
     ]
 }
