@@ -6,7 +6,14 @@ public class TestMusic2 {
         m1.addFile("Buenas");
         m1.addFile("Tardes");
 
-        m1.listFile(1);
+        m1.listFile(0);
+        m1.listFile(2);
+
         m1.listAllFiles();
+
+        m1.listMatching("CI");
+        m1.getMatching("Hola");
+        m1.playMatching("Buenas");
+       
     }    
 }

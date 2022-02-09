@@ -22,6 +22,44 @@ public class MusicOrganizer2
         files = new ArrayList<>();
         player = new MusicPlayer();
     }
+
+    //metodo match
+    public void listMatching(String match){
+        int contador = 0;
+        for (String elem : files) {
+            if (elem.contains(match)) {
+                System.out.println(elem);
+                contador++;
+            }
+        }
+        if (contador == 0) {
+            System.out.println("No se ha encontrado este match");
+        }
+    }
+
+    //metodo playMatching
+    public void playMatching(String match){
+        int contador = 0;
+        for (String elem : files) {
+            if (elem.contains(match)) {
+                player.playSample(elem);
+            }else{
+                contador++;
+            }
+        }
+        if (contador == 0) {
+            System.out.println(" ");
+        }
+    }
+    //getMatching
+    public void getMatching(String match){
+        ArrayList res = new ArrayList<String>();
+        for (String elem : files) {
+            if (elem.contains(match)) {
+                System.out.println(res);
+            }
+        }
+    }
     
     /**
      * Add a file to the collection.
@@ -53,9 +91,10 @@ public class MusicOrganizer2
         }
     }
     public void listAllFiles(){
-        for (int i = 0; i < files.size(); i++) {
-            System.out.println(files); 
-        }
+       for (String files : files) {
+        System.out.print(files + " "); 
+       }
+       System.out.println(" ");
     }
     /**
      * Remove a file from the collection.
