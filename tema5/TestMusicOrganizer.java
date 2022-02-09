@@ -7,6 +7,8 @@ public class TestMusicOrganizer {
         index1.addFile("Cancion 4");
 
         index1.listFile(4);
-        index1.checkIndex(5);
+        index1.checkIndex(6);
+        System.out.println(index1.validIndex(3));
+        
     }
 }
