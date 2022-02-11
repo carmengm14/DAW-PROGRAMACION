@@ -20,6 +20,7 @@
         "tema3/strings",
         "tema3/objetos",
         "tema5",
+        "tema5/ejer",
     ],
     "java.project.referencedLibraries": [
         "lib/**/*.jar",
