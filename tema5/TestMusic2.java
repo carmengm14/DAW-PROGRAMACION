@@ -10,10 +10,17 @@ public class TestMusic2 {
         m1.listFile(2);
 
         m1.listAllFiles();
+        m1.findFirst("Bu");
+        m1.findFirst("Ca");
 
         m1.listMatching("CI");
+        m1.listMatching("Bu");
+        
         m1.getMatching("Hola");
-        m1.playMatching("Buenas");
+       
+        m1.playMatching("Tardes");
+
+       
        
     }    
 }

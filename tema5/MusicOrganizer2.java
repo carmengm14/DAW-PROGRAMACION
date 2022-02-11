@@ -25,40 +25,60 @@ public class MusicOrganizer2
 
     //metodo match
     public void listMatching(String match){
-        int contador = 0;
-        for (String elem : files) {
-            if (elem.contains(match)) {
-                System.out.println(elem);
+        //EJER5
+        for (String cancion : getMatching(match)) {
+                System.out.println(cancion);
+        }
+        if (getMatching(match).size() == 0) {
+            System.out.println("No se ha encontrado este match");
+        }
+
+       /*
+       EJER 2
+       int contador = 0;
+       for (String cancion : files) {
+            if (cancion.contains(match)) {
+                System.out.println(cancion);
                 contador++;
             }
         }
         if (contador == 0) {
             System.out.println("No se ha encontrado este match");
         }
+        */
     }
 
     //metodo playMatching
     public void playMatching(String match){
-        int contador = 0;
-        for (String elem : files) {
-            if (elem.contains(match)) {
-                player.playSample(elem);
-            }else{
-                contador++;
+       //EJER5
+       for (String cancion : getMatching(match)) {
+        System.out.println(cancion);
+        player.playSample(cancion);
+        }
+        if (getMatching(match).size() == 0) {
+            System.out.println("No se ha encontrado este match");
+        }
+        /* 
+       EJER 2
+       for (String cancion : files) {
+            if (cancion.contains(match)) {
+                System.out.println(cancion);
+                player.playSample(cancion);
             }
         }
-        if (contador == 0) {
-            System.out.println(" ");
-        }
+        */
     }
-    //getMatching
-    public void getMatching(String match){
-        ArrayList res = new ArrayList<String>();
-        for (String elem : files) {
-            if (elem.contains(match)) {
-                System.out.println(res);
+    //getMatching, creamos el ArrayList
+    public ArrayList<String> getMatching(String match){
+        
+        ArrayList<String> resultado = new ArrayList<>();
+        
+        for (String cancion : files) {
+            if (cancion.contains(match)) {
+                resultado.add(cancion);
             }
         }
+        return resultado;
     }
     
     /**
@@ -96,6 +116,22 @@ public class MusicOrganizer2
        }
        System.out.println(" ");
     }
+
+    public int findFirst(String searchString){
+    int indice = 0; 
+    int resultado = -1;
+        while(indice < files.size()) {
+            
+            if (files.get(indice).contains(searchString)){
+                resultado = indice;
+                break;
+            }else{
+            indice ++;
+            }
+        }
+        return resultado;
+    }
+
     /**
      * Remove a file from the collection.
      * @param index The index of the file to be removed.
