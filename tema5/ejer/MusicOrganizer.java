@@ -37,6 +37,10 @@ public class MusicOrganizer
     {
         tracks.add(new Track(filename));
     }
+
+    public void findTitle(String searchString){
+        
+    }
     
     /**
      * Add a track to the collection.
