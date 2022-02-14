@@ -1,3 +1,5 @@
+package repasoexamen;
+
 import java.util.Scanner;
 
     public class Utilidades {
