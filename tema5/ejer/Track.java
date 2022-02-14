@@ -13,6 +13,10 @@ public class Track
     private String title;
     // Where the track is stored.
     private String filename;
+    // Contador 
+    private int playCount;
+     //ejer 5 añadimos el campo album, este almacena a que album pertenece una cancion
+     private String album;
     
     /**
      * Constructor for objects of class Track.
@@ -71,7 +75,6 @@ public class Track
     {
         return artist + ": " + title + "  (file: " + filename + ")";
     }
-    
     /**
      * Set details of the track.
      * @param artist The track's artist.
@@ -84,5 +87,11 @@ public class Track
         this.title = title;
         this.filename = filename;
     }
-    
+    //Setters ejer 2
+    public void resetPLayCount(){
+        playCount = 0;
+    }
+    public void incPlayCount(){
+        playCount++;
+    }
 }
