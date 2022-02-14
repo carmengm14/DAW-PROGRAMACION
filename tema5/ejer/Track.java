@@ -73,7 +73,7 @@ public class Track
      */
     public String getDetails()
     {
-        return artist + ": " + title + "  (file: " + filename + ")";
+        return artist + ": " + title + "  (file: " + filename + ")"+ " album: " + album ;
     }
     /**
      * Set details of the track.
@@ -93,5 +93,12 @@ public class Track
     }
     public void incPlayCount(){
         playCount++;
+    }
+    //setters y getters ejer 4
+    public String getAlbum(){
+        return album;
+    }
+    public void setAlbum(String album){
+        this.album = album;
     }
 }
