@@ -14,7 +14,7 @@ public class E02 {
 		return invertida;
 	}
 	public static void main(String[] args) {
-			String invertida = invertir(Utilidades2.dividirEnPalabras(Utilidades2.leerCadena("Introduce texto")));
+			String invertida = invertir(Utilidades2.dividirEnPalabras(Utilidades2.leerCadena("Introduce texto: ")));
 			System.out.println(invertida);
 	}
 
