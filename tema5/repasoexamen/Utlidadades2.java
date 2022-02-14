@@ -2,7 +2,7 @@ package repasoexamen;
 
 import java.util.Scanner;
 
-    public class Utilidades {
+    public class Utilidades2{
         static Scanner inputValue = new Scanner(System.in);
     
         public static int leerEntero(String mensaje) {
