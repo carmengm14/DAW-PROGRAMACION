@@ -11,6 +11,10 @@ public class MusicOrganizer
     // An ArrayList for storing the file names of music files.
     private ArrayList<String> files;
         
+    /** IMPORTANTE !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+    //un array list es la evolucion de un array y mas facil de usar, es como un objeto, y se va ampliando (Es dinamico) por si solo, mientras que en el array hay que decir su tamaño. Los arraylist tienen metodos por si solos como .add .size etc...
+    
+    
     /**
      * Create a MusicOrganizer
      */
