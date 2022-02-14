@@ -15,6 +15,7 @@ public class MusicOrganizer
     private MusicPlayer player;
     // A reader that can read music files and load them as tracks.
     private TrackReader reader;
+   
 
     /**
      * Create a MusicOrganizer
@@ -57,11 +58,18 @@ public class MusicOrganizer
      */
     public void playTrack(int index)
     {
-        if(indexValid(index)) {
+      /*  if(indexValid(index)) {
             Track track = tracks.get(index);
             player.startPlaying(track.getFilename());
             System.out.println("Now playing: " + track.getArtist() + " - " + track.getTitle());
         }
+        */
+        //EJER 3
+        if(indexValid(index)) {
+            Track track = tracks.get(index);
+            player.startPlaying(track.getFilename());
+            track.incPlayCount();
+            System.out.println("Now playing: " + track.getArtist() + " - " + track.getTitle());
     }
     
     /**
@@ -172,6 +180,16 @@ public class MusicOrganizer
         // Put all thetracks into the organizer.
         for(Track track : tempTracks) {
             addTrack(track);
+        }
+    }
+
+    //metodos
+    public void findlnTitle(String searchString){
+        for (Track cancion : tracks) {
+            //se pone antes el getTitle porque tengo que buscar el titulo de cada Track
+            if (cancion.getTitle().contains(searchString)) {
+                System.out.println(cancion.getTitle());
+            }
         }
     }
 }
