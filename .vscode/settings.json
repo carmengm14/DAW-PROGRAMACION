@@ -21,6 +21,7 @@
         "tema3/objetos",
         "tema5",
         "tema5/ejer",
+        "tema5/repasoexamen",
     ],
     "java.project.referencedLibraries": [
         "lib/**/*.jar",
