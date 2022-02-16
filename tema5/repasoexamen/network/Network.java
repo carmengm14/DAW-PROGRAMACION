@@ -13,4 +13,7 @@ class Network {
         Mensaje mensaje = new Mensaje(nomUser, textMens, fecha);
         publiMensajes.add(mensaje);
     }
+    public void eliminarMensaje(){
+        
+    }
 }

@@ -57,7 +57,12 @@ class Mensaje {
     }
 
     //METODOS.
-    
-
+    public boolean equals(Mensaje otro){
+        if (otro.getNomUser().equals(this.getNomUser()) && otro.getNumMg()== this.getNumMg() && otro.getComentarios().equals(this.getComentarios())) {
+            return true;
+        }else{
+            return false;
+        }
+    }
 
 }
