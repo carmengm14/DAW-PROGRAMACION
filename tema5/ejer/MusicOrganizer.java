@@ -70,8 +70,9 @@ public class MusicOrganizer
             player.startPlaying(track.getFilename());
             track.incPlayCount();
             System.out.println("Now playing: " + track.getArtist() + " - " + track.getTitle());
-    }
     
+        }
+    }
     /**
      * Return the number of tracks in the collection.
      * @return The number of tracks in the collection.
