@@ -22,7 +22,7 @@
         "tema5",
         "tema5/ejer",
         "tema5/repasoexamen",
-        "tema5/network",
+        "tema5/repasoexamen/network",
     ],
     "java.project.referencedLibraries": [
         "lib/**/*.jar",
