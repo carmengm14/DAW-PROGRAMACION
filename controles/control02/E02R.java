@@ -1,5 +1,5 @@
 import java.util.Scanner;
-public class E02 {
+public class E02R {
     public static void main(String[] args) {
         System.out.print("Ingrese el radio: ");
         Scanner sc = new Scanner(System.in);
