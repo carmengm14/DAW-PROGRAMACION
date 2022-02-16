@@ -63,6 +63,23 @@ class Mensaje {
         }else{
             return false;
         }
+        /*
+        asi tambien se podria hacer:
+        return otro.getNomUser().equals(this.getNomUser()) && otro.getNumMg()== this.getNumMg() && otro.getComentarios().equals(this.getComentarios());
+        */
     }
 
+    /*  public boolean iguales(ArrayList<String> a1, ArrayList<String> a2){
+        if(a1.size() != a2.size()){
+            return false;
+        }
+
+        for(int i = 0; i<a1.size(); i++){
+            if(!a1.get(i).equals(a2.get(i))){
+                return false;
+            }
+        }
+        return true;
+    }
+    */
 }
