@@ -71,10 +71,12 @@ public class Track
      * Return details of the track: artist, title and file name.
      * @return The track's details.
      */
+   /* EL EJERCICIO 6 PIDE BORRAR EL GETDETAILS
     public String getDetails()
     {
         return artist + ": " + title + "  (file: " + filename + ")"+ " album: " + album ;
     }
+    */
     /**
      * Set details of the track.
      * @param artist The track's artist.
@@ -100,5 +102,9 @@ public class Track
     }
     public void setAlbum(String album){
         this.album = album;
+    }
+    //metodo ejer6
+    public String toString(){
+        return artist + ": " + title + "  (file: " + filename + ")"+ " album: " + album ;
     }
 }
