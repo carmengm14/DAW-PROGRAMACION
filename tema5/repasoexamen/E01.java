@@ -1,3 +1,5 @@
+package repasoexamen;
+
 /** Crea un array, en las posiciones pares han de aparecer los multiplos de 3 empezando por el 3 y en las impares los multiplos de 7 empezando por el 7, despues de rellenarlo teneis imprimir las posiciones y el contenido del array cuyas posiciones son multiplo de 13 */
 public class E01 {
     public static void main(String[] args) {
