@@ -57,6 +57,7 @@ class Mensaje {
     }
 
     //METODOS.
+    //comparamos si los mensajes son iguales
     public boolean equals(Mensaje otro){
         if (otro.getNomUser().equals(this.getNomUser()) && otro.getNumMg()== this.getNumMg() && otro.getComentarios().equals(this.getComentarios())) {
             return true;
