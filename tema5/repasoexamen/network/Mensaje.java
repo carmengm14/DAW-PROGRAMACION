@@ -13,7 +13,7 @@ class Mensaje {
         this.nomUser = nomUser;
         this.textMens = textMens;
         this.fecha = fecha;
-        //iniamos los mg a 0 ya que al publicar no hay me gustas
+        //iniciamos los mg a 0 ya que al publicar no hay me gustas
         this.numMg = 0;
         //Creamos un arraylist vacio para los comentarios ya que al publicar al principio no hay coments
         this.comentarios = new ArrayList<String>();
