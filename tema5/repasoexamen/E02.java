@@ -1,4 +1,3 @@
-package repasoexamen;
 
 /*
  * Escribe un programa que lea una frase del teclado y 
