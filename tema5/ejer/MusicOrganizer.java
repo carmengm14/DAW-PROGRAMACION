@@ -97,7 +97,7 @@ public class MusicOrganizer
     {
         System.out.print("Track " + index + ": ");
         Track track = tracks.get(index);
-        System.out.println(track.toString());
+        System.out.println(track);
     }
     
     /**
@@ -108,8 +108,8 @@ public class MusicOrganizer
         System.out.println("Track listing: ");
 
         for(Track track : tracks) {
-            //ANTES ESTARIA .GETDETAILS PERO EN EL 6 PIDE BORRARLO
-            System.out.println(track.toString());
+            //ANTES ESTARIA .GETDETAILS PERO EN EL 6 PIDE BORRARLO, no se pone .toString porque java ya coge el toString solo
+            System.out.println(track);
         }
         System.out.println();
     }
@@ -123,7 +123,7 @@ public class MusicOrganizer
         for(Track track : tracks) {
             if(track.getArtist().contains(artist)) {
                 //ANTES ESTARIA .GETDETAILS PERO EN EL 6 PIDE BORRARLO
-                System.out.println(track.toString());
+                System.out.println(track);
             }
         }
     }
