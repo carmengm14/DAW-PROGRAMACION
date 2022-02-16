@@ -9,7 +9,8 @@ class Network {
         this.publiMensajes = new ArrayList<Mensaje>();
     }
     //metodos
-    public void subirMensaje(){
+    public void subirMensaje(String nomUser, String textMens, String fecha){
         Mensaje mensaje = new Mensaje(nomUser, textMens, fecha);
+        publiMensajes.add(mensaje);
     }
 }
