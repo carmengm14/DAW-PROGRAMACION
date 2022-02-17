@@ -1,5 +1,3 @@
-import javax.swing.plaf.synth.SynthSpinnerUI;
-
 /*
  * Un texto está bien parentizado si por cada paréntesis abierto hay
  *  otro detrás que lo cierra. 
