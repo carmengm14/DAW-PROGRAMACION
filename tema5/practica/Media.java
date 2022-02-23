@@ -13,4 +13,17 @@ public class Media {
         this.tipo = tipo;
         this.usuarioId = usuarioId;
     }
+    //getters
+    public String getNombre() {
+        return nombre;
+    }
+    public String getContenido() {
+        return contenido;
+    }
+    public String getTipo() {
+        return tipo;
+    }
+    public String getUsuarioId() {
+        return usuarioId;
+    }
 }
