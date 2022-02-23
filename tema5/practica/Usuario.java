@@ -3,30 +3,57 @@ import java.util.ArrayList;
 public class Usuario {
     //atributos
     private int id;
+    private int idGenerator = 0;
     private String email;
     private String password;
-    ArrayList<Usuario> UsuariosNuevos = new ArrayList<Usuario>();
+    //es un array list static ya que sino lo fuera cada user tendria una lista, y solo queremos una para todos, por esto tmb se inicializa ya al crearla.
+    public static ArrayList<Usuario> UsuariosNuevos = new ArrayList<Usuario>();
 
     //constructor
-    public Usuario(int id, String email, String password){
-        this.id = id;
-        this.email = email;
+    public Usuario(String email, String password){
+        this.id = idGenerator++;
         this.password = password;
-        
-        for (Usuario user : UsuariosNuevos) {
-            if (!UsuariosNuevos.contains(user)) {
+            if (comprobarEmail(email) != "Este correo ya existe") {
+                this.email = email;
                 UsuariosNuevos.add(this);
             }
-        }
     }
     //getters
+
     public int getId() {
         return id;
     }
+
     public String getEmail() {
         return email;
     }
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
     public String getPassword() {
         return password;
     }
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+    public ArrayList<Usuario> getUsuariosNuevos() {
+        return UsuariosNuevos;
+    }
+    public void setUsuariosNuevos(ArrayList<Usuario> usuariosNuevos) {
+        UsuariosNuevos = usuariosNuevos;
+    }
+
+    //metodos
+    public String comprobarEmail(String email){
+        String error = "Este correo ya existe";
+        for (int i = 0; i < UsuariosNuevos.size(); i++) {
+            if (email.equals(getEmail())) {
+                return email;
+            }
+        }
+        return error;
+    }
+    
 }
