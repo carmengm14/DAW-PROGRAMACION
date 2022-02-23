@@ -12,7 +12,12 @@ public class Usuario {
         this.id = id;
         this.email = email;
         this.password = password;
-        UsuariosNuevos.add(this);
+        
+        for (Usuario user : UsuariosNuevos) {
+            if (!UsuariosNuevos.contains(user)) {
+                UsuariosNuevos.add(this);
+            }
+        }
     }
     //getters
     public int getId() {
