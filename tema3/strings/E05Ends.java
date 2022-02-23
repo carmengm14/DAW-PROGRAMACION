@@ -15,5 +15,4 @@ public class E05Ends {
 			System.out.println("'" + cadena1 + "' NO acaba como '" + cadena2 + "'");
 		}
 	}
-    
 }
