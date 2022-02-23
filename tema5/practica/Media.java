@@ -26,4 +26,6 @@ public class Media {
     public String getUsuarioId() {
         return usuarioId;
     }
+    //metodos
+
 }
