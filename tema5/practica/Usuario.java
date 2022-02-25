@@ -55,5 +55,18 @@ public class Usuario {
         }
         return error;
     }
+    //El metodo de julio de comprobarEmail 
+    /*
+    private boolean isEmailAvaible(String email){
+        boolean resultado = true;
+        for (Usuario usuario : UsuariosNuevos) {
+            if(email.equals(email.getEmail())){
+                resultado = false;
+                break;
+            }
+        }
+        return resultado;
+    }
+    */
     
 }
