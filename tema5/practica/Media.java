@@ -42,7 +42,7 @@ public class Media {
         return usuarioId;
     }
     //metodos
-    private boolean comprobarEmail(String email){
+    private boolean comprobarNombre(String nombre){
         boolean resultado = true;
         for (Media media : list) {
             if(nombre.equals(media.getNombre())){
@@ -52,7 +52,22 @@ public class Media {
         }
         return resultado;
     }
-    public void eliminarMedia(String email){
-         
+    //eliminar UN media de la lista 
+    public void eliminarMedia(String nombre){
+        for (Media media : list) {
+            if(media.nombre.equals(nombre)){
+                list.remove(media);
+                break;
+            }
+        }
     }
+     //eliminar TODO media DE UN TIPO 
+     public void eliminarTodosMedia(MediaType tipo){
+        for (Media media : list) {
+            if(media.tipo.equals(tipo)){
+                list.remove(media);
+            }
+        }
+    }
+
 }
