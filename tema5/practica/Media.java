@@ -9,7 +9,6 @@ public class Media {
     private int usuarioId;
 
     public static ArrayList<Media> list = new ArrayList<>();
-    private static int idGenerator = 0;
 
    
     //constructor
@@ -43,7 +42,7 @@ public class Media {
         return usuarioId;
     }
     //metodos
-    private boolean isNameAvaible(String email){
+    private boolean comprobarEmail(String email){
         boolean resultado = true;
         for (Media media : list) {
             if(nombre.equals(media.getNombre())){
@@ -52,5 +51,8 @@ public class Media {
             }
         }
         return resultado;
+    }
+    public void eliminarMedia(String email){
+         
     }
 }
