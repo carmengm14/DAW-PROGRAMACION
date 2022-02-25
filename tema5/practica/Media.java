@@ -62,9 +62,18 @@ public class Media {
         }
     }
      //eliminar TODO media DE UN TIPO 
-     public void eliminarTodosMedia(MediaType tipo){
+     public void eliminarTodosMedia(MediaType tipos){
         for (Media media : list) {
-            if(media.tipo.equals(tipo)){
+            if(media.tipo.equals(tipos)){
+                list.remove(media);
+            }
+        }
+    }
+
+    //eliminar TODO media DE UN USUARIO 
+    public static void eliminarMediaUser(int identidicador){
+        for (Media media : list) {
+            if(media.usuarioId == identidicador){
                 list.remove(media);
             }
         }

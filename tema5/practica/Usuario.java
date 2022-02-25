@@ -68,5 +68,21 @@ public class Usuario {
         return resultado;
     }
     */
-    
+        //eliminar UN usuario mediante el email
+        public void eliminarMediaEmail(String gmail){
+            for (Usuario email : UsuariosNuevos) {
+                if(email.getEmail().equals(gmail)){
+                    UsuariosNuevos.remove(email);
+                    Media.eliminarMediaUser(id);
+                }
+            }
+        }
+        //eliminar UN usuario de un dominio
+        public void eliminarUserDom(String dominio){
+            for (Usuario email : UsuariosNuevos) {
+                if(email.getEmail().contains(dominio)){
+                    UsuariosNuevos.remove(email);
+                }
+            }
+        }
 }
