@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 
-public class Usuario {
+public class Usuario implements ParserXML {
     //atributos
     private int id;
     private int idGenerator = 0;
@@ -85,4 +85,17 @@ public class Usuario {
                 }
             }
         }
+        //PARA LA INTERFAZ ParserXML
+    public String generateXML(){
+        //imprimimos los datos del user
+        String resultado = "";
+        resultado += "<Usuario>\n";
+        resultado += "\t<id>" +this.id + "</id>\n";
+        resultado += "\t<idGenerator>" +this.idGenerator + "</idGenerator>\n";
+        resultado += "\t<email>" +this.email + "</email>\n";
+        resultado += "\t<contrasenya>" +this.password + "</contrasenya>\n";
+        resultado += "</Usuario>\n";
+        return resultado;
+    }
 }
+

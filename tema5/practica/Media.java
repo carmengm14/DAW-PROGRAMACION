@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 
-public class Media {
+public class Media implements ParserXML{
     //atributos
     private String nombre;
     private String contenido;
@@ -78,5 +78,16 @@ public class Media {
             }
         }
     }
-
+    //PARA LA INTERFAZ ParserXML
+    public String generateXML(){
+        //imprimimos los datos del media
+        String resultado = "";
+        resultado += "<Media>\n";
+        resultado += "\t<nombre> " +this.nombre + "</nombre>\n";
+        resultado += "\t<contenido> " +this.contenido + "</contenido>\n";
+        resultado += "\t<tipo> " +this.tipo + "</tipo>\n";
+        resultado += "\t<usuarioId> " +this.usuarioId + "</usuarioId>\n";
+        resultado += "</Media>\n";
+        return resultado;
+    }
 }
