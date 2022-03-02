@@ -65,11 +65,11 @@ public class Media implements ParserXML{
      //2- eliminarTODO media DE UN TIPO 
      public void eliminarTodosMedia(MediaType tipos){
         /** UN ITERADOR ES UN OBJETO QUE RECORRE COLECCIONES COMO EL ARRAYLIST, ASI SE CREA UN ITERADOR Y LO RECORREMOS */
-        Iterator<Media> iterator = list.iterator();
-        //** list.iterator es lo que llama al metodo iterador que esta en la clase Iterator y queremos llamarlo en Media */
-        while (iterator.hasNext()) {
+        Iterator<Media> iter = list.iterator();
+        //** list.iter es lo que llama al metodo iterador que esta en la clase Iter y queremos llamarlo en Media */
+        while (iter.hasNext()) {
             //el .hasNext() es para decir que mientras haya un siguiente objeto en el iterador siga haciendo lo de dentro de este.
-            Media elemento = iterator.next();
+            Media elemento = iter.next();
 
             if (elemento.tipo == tipos) {
                 list.remove(elemento);
@@ -88,11 +88,25 @@ public class Media implements ParserXML{
 
     //eliminarTODO media DE UN USUARIO 
     public static void eliminarMediaUser(int identidicador){
+        /** UN ITERADOR ES UN OBJETO QUE RECORRE COLECCIONES COMO EL ARRAYLIST, ASI SE CREA UN ITERADOR Y LO RECORREMOS */
+        Iterator<Media> iter = list.iterator();
+        //** list.iter es lo que llama al metodo iterador que esta en la clase Iter y queremos llamarlo en Media */
+        while (iter.hasNext()) {
+            //el .hasNext() es para decir que mientras haya un siguiente objeto en el iterador siga haciendo lo de dentro de este.
+            Media media = iter.next();
+            if (media.getUsuarioId() == identidicador) {
+                iter.remove();
+            }
+        }
+        /*
+        CON UN FOREACH DA ERROR ya que cuando se elimina el media de un user el array se disminuye y queremos que no lo haga, PERO SERIA ASI
+        
         for (Media media : list) {
             if(media.usuarioId == identidicador){
                 list.remove(media);
             }
         }
+        */
     }
     //PARA LA INTERFAZ ParserXML
     public String generateXML(){

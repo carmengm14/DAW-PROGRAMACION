@@ -68,7 +68,7 @@ public class Usuario implements ParserXML {
         return resultado;
     }
     */
-        //eliminar UN usuario mediante el email
+        // 3- eliminar UN usuario mediante el email
         public void eliminarMediaEmail(String gmail){
             for (Usuario email : UsuariosNuevos) {
                 if(email.getEmail().equals(gmail)){
