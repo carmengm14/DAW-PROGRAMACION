@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Iterator;
 
 public class Media implements ParserXML{
     //atributos
@@ -63,11 +64,25 @@ public class Media implements ParserXML{
     }
      //2- eliminarTODO media DE UN TIPO 
      public void eliminarTodosMedia(MediaType tipos){
+        /** UN ITERADOR ES UN OBJETO QUE RECORRE COLECCIONES COMO EL ARRAYLIST, ASI SE CREA UN ITERADOR Y LO RECORREMOS */
+        Iterator<Media> iterator = list.iterator();
+
+        while (iterator.hasNext()) {
+            Media elemento = iterator.next();
+
+            if (elemento.tipo == tipos) {
+                list.remove(elemento);
+            }
+        }
+        
+        /*
+        CON UN FOREACH DA ERROR PERO SERIA ASI
         for (Media media : list) {
             if(media.tipo.equals(tipos)){
                 list.remove(media);
             }
         }
+        */
     }
 
     //eliminarTODO media DE UN USUARIO 
