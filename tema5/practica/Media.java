@@ -76,7 +76,7 @@ public class Media implements ParserXML{
         }
         
         /*
-        CON UN FOREACH DA ERROR PERO SERIA ASI
+        CON UN FOREACH DA ERROR ya que cuando se elimina el media de un user el array se disminuye y queremos que no lo haga, PERO SERIA ASI
         for (Media media : list) {
             if(media.tipo.equals(tipos)){
                 list.remove(media);
