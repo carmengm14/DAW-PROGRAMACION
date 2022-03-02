@@ -68,6 +68,7 @@ public class Media implements ParserXML{
         Iterator<Media> iterator = list.iterator();
         //** list.iterator es lo que llama al metodo iterador que esta en la clase Iterator y queremos llamarlo en Media */
         while (iterator.hasNext()) {
+            //el .hasNext() es para decir que mientras haya un siguiente objeto en el iterador siga haciendo lo de dentro de este.
             Media elemento = iterator.next();
 
             if (elemento.tipo == tipos) {
