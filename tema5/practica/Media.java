@@ -67,7 +67,6 @@ public class Media implements ParserXML{
         /** UN ITERADOR ES UN OBJETO QUE RECORRE COLECCIONES COMO EL ARRAYLIST, ASI SE CREA UN ITERADOR Y LO RECORREMOS */
         Iterator<Media> iterator = list.iterator();
         //** list.iterator es lo que llama al metodo iterador que esta en la clase Iterator y queremos llamarlo en Media */
-
         while (iterator.hasNext()) {
             Media elemento = iterator.next();
 
