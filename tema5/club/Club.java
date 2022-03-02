@@ -1,13 +1,16 @@
+import java.util.ArrayList;
+
 /**
  * Store details of club memberships.
  * 
- * @author (your name) 
+ * @author carmen garcia
  * @version (a version number or a date)
  */
 public class Club
 {
     // Define any necessary fields here ...
-    
+    public static ArrayList<String> members = new ArrayList<String>();
+
     /**
      * Constructor for objects of class Club
      */

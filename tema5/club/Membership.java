@@ -20,7 +20,8 @@ public class Membership
      * @param year The year in which they joined.
      */
     public Membership(String name, int month, int year)
-        throws IllegalArgumentException
+    //esto lo que hace es provocar un fallo, para que cuando el if se cumpla, enviar el mensaje de error sin que pete ( moth...)    
+    throws IllegalArgumentException
     {
         if(month < 1 || month > 12) {
             throw new IllegalArgumentException(
