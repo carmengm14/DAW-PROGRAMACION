@@ -53,7 +53,7 @@ public class Media implements ParserXML{
         return resultado;
     }
     //eliminar UN media de la lista 
-    public void eliminarMedia(String nombre){
+    public static void eliminarMedia(String nombre){
         for (Media media : list) {
             if(media.nombre.equals(nombre)){
                 list.remove(media);
@@ -61,7 +61,7 @@ public class Media implements ParserXML{
             }
         }
     }
-     //eliminar TODO media DE UN TIPO 
+     //eliminarTODO media DE UN TIPO 
      public void eliminarTodosMedia(MediaType tipos){
         for (Media media : list) {
             if(media.tipo.equals(tipos)){
@@ -70,7 +70,7 @@ public class Media implements ParserXML{
         }
     }
 
-    //eliminar TODO media DE UN USUARIO 
+    //eliminarTODO media DE UN USUARIO 
     public static void eliminarMediaUser(int identidicador){
         for (Media media : list) {
             if(media.usuarioId == identidicador){
