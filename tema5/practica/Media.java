@@ -127,9 +127,11 @@ public class Media implements ParserXML{
         int contador = 0;
         ArrayList<String> nombrefich = new ArrayList<>();
         String fileName = "ficheroMedia"+ contador +".txt";
-        if (nombrefich.contains(fileName)) {
-            contador = contador + 1;
-           fileName = "ficheroMedia." + contador + ".txt";
+        for (int i = 0; i < nombrefich.size(); i++) {
+            if (nombrefich.get(i).contains(fileName)) {
+                contador = contador +1;
+                fileName = "ficheroUsuario." + contador + ".txt";
+            }   
         }
          try{
             PrintWriter escribir = new PrintWriter("/home/alumno/Documentos/" + fileName);
