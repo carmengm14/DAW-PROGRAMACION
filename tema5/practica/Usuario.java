@@ -1,6 +1,8 @@
-import java.io.File;
+import java.io.FileWriter;
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.ArrayList;
+
 
 public class Usuario implements ParserXML {
     //atributos
@@ -102,18 +104,21 @@ public class Usuario implements ParserXML {
     public void writeXML(){
         String datos = generateXML();
         int contador = 0;
-        File fichero = new File ("/home/alumno/Documentos/fichero" + contador + ".txt");
-        try {
-            // A partir del objeto File creamos el fichero físicamente
-            if (fichero.createNewFile()){
-              System.out.println("El fichero se ha creado correctamente");
-              contador++;
-            }else{
-              System.out.println("No ha podido ser creado el fichero");
-            }
-          } catch (IOException ioe) {
-            ioe.printStackTrace();
-          }
+        String fileName = "ficheroUsuario"+ contador +".txt";
+        try{
+            PrintWriter escribir = new PrintWriter("/home/alumno/Documentos/" + fileName);//para crear el objeto que escribe en el archivo
+            escribir.println(datos);//para escribir en el archivo
+            escribir.flush();
+            escribir.close();
+            escribir.close();
+            contador++;
+            System.out.println("FICHERO CREADO CORRECTAMENTE");
+        }
+        catch (IOException e){
+            System.out.println("An error occurred.");
+            e.printStackTrace();
+        }
     }
-}
+    }
+
 

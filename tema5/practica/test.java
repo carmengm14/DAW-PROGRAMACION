@@ -15,5 +15,8 @@ public class test {
 
        System.out.println(user1.generateXML());
        System.out.println(media1.generateXML());
+
+       user1.writeXML();
+       media1.writeXML();
     }
 }

@@ -1,3 +1,5 @@
+import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.Iterator;
 
@@ -119,5 +121,23 @@ public class Media implements ParserXML{
         resultado += "\t<usuarioId> " +this.usuarioId + "</usuarioId>\n";
         resultado += "</Media>\n";
         return resultado;
+    }
+    public void writeXML(){
+        String datos = generateXML();
+        int contador = 0;
+        String fileName = "ficheroMedia"+ contador +".txt";
+         try{
+            PrintWriter escribir = new PrintWriter("/home/alumno/Documentos/" + fileName);//para crear el objeto que escribe en el archivo
+            escribir.println(datos);//para escribir en el archivo
+            escribir.flush();
+            escribir.close();
+            escribir.close();
+            System.out.println("FICHERO CREADO CORRECTAMENTE");
+        }
+        catch (IOException e){
+            System.out.println("An error occurred.");
+            e.printStackTrace();
+        }
+        
     }
 }
