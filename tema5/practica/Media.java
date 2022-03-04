@@ -125,9 +125,15 @@ public class Media implements ParserXML{
     public void writeXML(){
         String datos = generateXML();
         int contador = 0;
+        ArrayList<String> nombrefich = new ArrayList<>();
         String fileName = "ficheroMedia"+ contador +".txt";
+        if (nombrefich.contains(fileName)) {
+            contador = contador + 1;
+           fileName = "ficheroMedia." + contador + ".txt";
+        }
          try{
-            PrintWriter escribir = new PrintWriter("/home/alumno/Documentos/" + fileName);//para crear el objeto que escribe en el archivo
+            PrintWriter escribir = new PrintWriter("/home/alumno/Documentos/" + fileName);
+            //para crear el objeto que escribe en el archivo
             escribir.println(datos);//para escribir en el archivo
             escribir.flush();
             escribir.close();

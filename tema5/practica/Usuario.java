@@ -104,14 +104,19 @@ public class Usuario implements ParserXML {
     public void writeXML(){
         String datos = generateXML();
         int contador = 0;
+        ArrayList<String> nombrefich = new ArrayList<>();
         String fileName = "ficheroUsuario"+ contador +".txt";
+        if (nombrefich.equals(fileName)) {
+            contador = contador +1;
+            fileName = "ficheroUsuario." + contador + ".txt";
+        }
+        
         try{
             PrintWriter escribir = new PrintWriter("/home/alumno/Documentos/" + fileName);//para crear el objeto que escribe en el archivo
             escribir.println(datos);//para escribir en el archivo
             escribir.flush();
             escribir.close();
             escribir.close();
-            contador++;
             System.out.println("FICHERO CREADO CORRECTAMENTE");
         }
         catch (IOException e){
