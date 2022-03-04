@@ -108,7 +108,7 @@ public class Usuario implements ParserXML {
         String fileName = "ficheroUsuario"+ contador +".txt";
         for (int i = 0; i < nombrefich.size(); i++) {
             if (nombrefich.get(i).contains(fileName)) {
-                contador = contador +1;
+                contador = contador++;
                 fileName = "ficheroUsuario." + contador + ".txt";
             }   
         }

@@ -129,7 +129,7 @@ public class Media implements ParserXML{
         String fileName = "ficheroMedia"+ contador +".txt";
         for (int i = 0; i < nombrefich.size(); i++) {
             if (nombrefich.get(i).contains(fileName)) {
-                contador = contador +1;
+                contador = contador++;
                 fileName = "ficheroUsuario." + contador + ".txt";
             }   
         }
@@ -143,7 +143,7 @@ public class Media implements ParserXML{
             System.out.println("FICHERO CREADO CORRECTAMENTE");
         }
         catch (IOException e){
-            System.out.println("An error occurred.");
+            System.out.println("NO SE HA PODIDO CREAR EL FICHERO CORRECTAMENTE, ERROR: ");
             e.printStackTrace();
         }
         
