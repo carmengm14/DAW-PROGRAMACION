@@ -41,7 +41,6 @@ public class ClubDemo
         try {
             cd.demo();
         } catch (Exception e) {
-            //TODO: handle exception
             System.out.println("No has escrito un mes correcto, error: " + e.getLocalizedMessage());
         }
         
