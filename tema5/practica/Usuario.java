@@ -10,7 +10,7 @@ public class Usuario implements ParserXML {
     private String email;
     private String password;
     //es un array list static ya que sino lo fuera cada user tendria una lista, y solo queremos una para todos, por esto tmb se inicializa ya al crearla.
-    public static ArrayList<Usuario> UsuariosNuevos = new ArrayList<Usuario>();
+    public static ArrayList<Usuario> usuariosNuevos = new ArrayList<Usuario>();
 
     //constructor
     public Usuario(String email, String password){
@@ -18,7 +18,7 @@ public class Usuario implements ParserXML {
         this.password = password;
             if (comprobarEmail(email) != "Este correo ya existe") {
                 this.email = email;
-                UsuariosNuevos.add(this);
+                usuariosNuevos.add(this);
             }
     }
     //getters
@@ -41,17 +41,17 @@ public class Usuario implements ParserXML {
         this.password = password;
     }
 
-    public ArrayList<Usuario> getUsuariosNuevos() {
-        return UsuariosNuevos;
+    public ArrayList<Usuario> getusuariosNuevos() {
+        return usuariosNuevos;
     }
-    public void setUsuariosNuevos(ArrayList<Usuario> usuariosNuevos) {
-        UsuariosNuevos = usuariosNuevos;
+    public void setusuariosNuevos(ArrayList<Usuario> usuariosNuevos) {
+        this.usuariosNuevos = usuariosNuevos;
     }
 
     //metodos
     public String comprobarEmail(String email){
         String error = "Este correo ya existe";
-        for (int i = 0; i < UsuariosNuevos.size(); i++) {
+        for (int i = 0; i < usuariosNuevos.size(); i++) {
             if (email.equals(getEmail())) {
                 return email;
             }
@@ -62,7 +62,7 @@ public class Usuario implements ParserXML {
     /*
     private boolean isEmailAvaible(String email){
         boolean resultado = true;
-        for (Usuario usuario : UsuariosNuevos) {
+        for (Usuario usuario : usuariosNuevos) {
             if(email.equals(email.getEmail())){
                 resultado = false;
                 break;
@@ -73,18 +73,18 @@ public class Usuario implements ParserXML {
     */
         // 3- eliminar UN usuario mediante el email
         public void eliminarMediaEmail(String gmail){
-            for (Usuario email : UsuariosNuevos) {
+            for (Usuario email : usuariosNuevos) {
                 if(email.getEmail().equals(gmail)){
-                    UsuariosNuevos.remove(email);
+                    usuariosNuevos.remove(email);
                     Media.eliminarMediaUser(id);
                 }
             }
         }
         //eliminar UN usuario de un dominio
         public void eliminarUserDom(String dominio){
-            for (Usuario email : UsuariosNuevos) {
+            for (Usuario email : usuariosNuevos) {
                 if(email.getEmail().contains(dominio)){
-                    UsuariosNuevos.remove(email);
+                    usuariosNuevos.remove(email);
                 }
             }
         }
@@ -102,16 +102,7 @@ public class Usuario implements ParserXML {
     }
     public void writeXML(){
         String datos = generateXML();
-        int contador = 0;
-        ArrayList<String> nombrefich = new ArrayList<>();
-        String fileName = "ficheroUsuario"+ contador +".txt";
-        for (int i = 0; i < nombrefich.size(); i++) {
-            if (nombrefich.get(i).contains(fileName)) {
-                contador = contador++;
-                fileName = "ficheroUsuario." + contador + ".txt";
-            }   
-        }
-        
+        String fileName = "ficheroUsuario"+ this.idGenerator +".txt";
         try{
             PrintWriter escribir = new PrintWriter("/home/alumno/Documentos/" + fileName);//para crear el objeto que escribe en el archivo
             escribir.println(datos);//para escribir en el archivo
@@ -121,7 +112,7 @@ public class Usuario implements ParserXML {
             System.out.println("FICHERO CREADO CORRECTAMENTE");
         }
         catch (IOException e){
-            System.out.println("An error occurred.");
+            System.out.println("NO SE HA PODIDO CREAR EL FICHERO CORRECTAMENTE, ERROR: ");
             e.printStackTrace();
         }
     }

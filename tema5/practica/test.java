@@ -1,11 +1,13 @@
 public class test {
    public static void main(String[] args) {
        Usuario user1 = new Usuario("maria@gmail.com", "contraseña321");
-       Media media1 = new Media("Carlos", "Hola", MediaType.audio, 1);
+       Usuario user2 = new Usuario("mari@gmail.com", "contraseña123");
+       Media media1 = new Media("Carlos", "Hola", MediaType.audio, 0);
+       Media media2 = new Media("Carls", "Ha", MediaType.audio, 1);
 
-       
-       for (int i = 0; i < Usuario.UsuariosNuevos.size(); i++) {
-        System.out.println(Usuario.UsuariosNuevos.get(i));   
+       //imprimir todos los usuarios
+       for (int i = 0; i < Usuario.usuariosNuevos.size(); i++) {
+        System.out.println(Usuario.usuariosNuevos.get(i));   
        }
 
       /* user1.comprobarEmail("maria@gmail.com");
@@ -17,6 +19,8 @@ public class test {
        System.out.println(media1.generateXML());
 
        user1.writeXML();
+       user2.writeXML();
        media1.writeXML();
+       media2.writeXML();
     }
 }

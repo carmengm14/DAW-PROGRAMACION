@@ -12,6 +12,7 @@ public class Media implements ParserXML{
     private int usuarioId;
 
     public static ArrayList<Media> list = new ArrayList<>();
+    public static ArrayList<String> nombrefich = new ArrayList<>();
 
    
     //constructor
@@ -124,15 +125,7 @@ public class Media implements ParserXML{
     }
     public void writeXML(){
         String datos = generateXML();
-        int contador = 0;
-        ArrayList<String> nombrefich = new ArrayList<>();
-        String fileName = "ficheroMedia"+ contador +".txt";
-        for (int i = 0; i < nombrefich.size(); i++) {
-            if (nombrefich.get(i).contains(fileName)) {
-                contador = contador++;
-                fileName = "ficheroUsuario." + contador + ".txt";
-            }   
-        }
+        String fileName = "ficheroMedia"+ this.usuarioId +".txt";
          try{
             PrintWriter escribir = new PrintWriter("/home/alumno/Documentos/" + fileName);
             //para crear el objeto que escribe en el archivo
