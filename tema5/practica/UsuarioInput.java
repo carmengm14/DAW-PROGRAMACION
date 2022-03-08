@@ -16,8 +16,10 @@ public class UsuarioInput {
          Usuario user = new Usuario(email, contraseña);
          user.generateXML();
          user.writeXML();
-     }else{
+     }else if (respuesta ==0) {
          System.out.println("Adiós!");
+     }else{
+         System.out.println("No es una respuesta válida");
      }
      sc.close();
  }   
