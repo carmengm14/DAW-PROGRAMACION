@@ -1,3 +1,5 @@
+package practica;
+
 public class test {
    public static void main(String[] args) {
        Usuario user1 = new Usuario("maria@gmail.com", "contraseña321");

@@ -1,3 +1,5 @@
+package practica;
+
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.ArrayList;
@@ -53,10 +55,10 @@ public class Usuario implements ParserXML {
         String error = "Este correo ya existe";
         for (int i = 0; i < usuariosNuevos.size(); i++) {
             if (email.equals(getEmail())) {
-                return email;
+                return error;
             }
         }
-        return error;
+        return email;
     }
     //El metodo de julio de comprobarEmail 
     /*
@@ -104,7 +106,8 @@ public class Usuario implements ParserXML {
         String datos = generateXML();
         String fileName = "ficheroUsuario"+ this.idGenerator +".txt";
         try{
-            PrintWriter escribir = new PrintWriter("/home/alumno/Documentos/" + fileName);//para crear el objeto que escribe en el archivo
+           // PrintWriter escribir = new PrintWriter("/home/alumno/Documentos/" + fileName);//para crear el objeto que escribe en el archivo
+           PrintWriter escribir = new PrintWriter("C:/Users/CGM1414/OneDrive/Escritorio/CARMEN/java/" + fileName);
             escribir.println(datos);//para escribir en el archivo
             escribir.flush();
             escribir.close();
