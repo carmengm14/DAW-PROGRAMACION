@@ -1,5 +1,3 @@
-package practica;
-
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.ArrayList;
@@ -95,7 +93,6 @@ public class Usuario implements ParserXML {
         //imprimimos los datos del user
         String resultado = "";
         resultado += "<Usuario>\n";
-        resultado += "\t<id>" +this.id + "</id>\n";
         resultado += "\t<idGenerator>" +this.idGenerator + "</idGenerator>\n";
         resultado += "\t<email>" +this.email + "</email>\n";
         resultado += "\t<contrasenya>" +this.password + "</contrasenya>\n";
@@ -106,8 +103,8 @@ public class Usuario implements ParserXML {
         String datos = generateXML();
         String fileName = "ficheroUsuario"+ this.idGenerator +".txt";
         try{
-           // PrintWriter escribir = new PrintWriter("/home/alumno/Documentos/" + fileName);//para crear el objeto que escribe en el archivo
-           PrintWriter escribir = new PrintWriter("C:/Users/CGM1414/OneDrive/Escritorio/CARMEN/java/" + fileName);
+           PrintWriter escribir = new PrintWriter("/home/alumno/Documentos/" + fileName);//para crear el objeto que escribe en el archivo
+           //PrintWriter escribir = new PrintWriter("C:/Users/CGM1414/OneDrive/Escritorio/CARMEN/java/" + fileName);
             escribir.println(datos);//para escribir en el archivo
             escribir.flush();
             escribir.close();

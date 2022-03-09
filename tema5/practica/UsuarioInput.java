@@ -1,5 +1,3 @@
-package practica;
-
 import java.util.Scanner;
 
 public class UsuarioInput {
