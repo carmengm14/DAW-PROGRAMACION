@@ -5,7 +5,7 @@ import java.util.ArrayList;
 
 public class Usuario implements ParserXML {
     //atributos
-    private int id;
+    private static int id;
     private static int idGenerator = 1;
     private String email;
     private String password;
@@ -17,9 +17,7 @@ public class Usuario implements ParserXML {
         this.id = idGenerator++; 
         this.password = password;
         this.email = email;
-        if(comprobarEmail(email) != "Este correo ya existe" && comprobarId(id)!= 0){
-            usuariosNuevos.add(this);
-        }
+        usuariosNuevos.add(this);
     }
     //getters
 
@@ -117,7 +115,6 @@ public class Usuario implements ParserXML {
            //PrintWriter escribir = new PrintWriter("C:/Users/CGM1414/OneDrive/Escritorio/CARMEN/java/" + fileName);
             escribir.println(datos);//para escribir en el archivo
             escribir.flush();
-            escribir.close();
             escribir.close();
             System.out.println("FICHERO CREADO CORRECTAMENTE");
         }
