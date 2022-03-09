@@ -116,6 +116,10 @@ public class Usuario implements ParserXML {
             e.printStackTrace();
         }
     }
+
+    public void nUsers(){
+     System.out.println(usuariosNuevos.size());       
+    }
     }
 
 
