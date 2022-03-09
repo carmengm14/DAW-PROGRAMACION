@@ -93,7 +93,7 @@ public class Usuario implements ParserXML {
         //imprimimos los datos del user
         String resultado = "";
         resultado += "<Usuario>\n";
-        resultado += "\t<idGenerator>" +this.idGenerator + "</idGenerator>\n";
+        resultado += "\t<id>" +this.id+ "</id>\n";
         resultado += "\t<email>" +this.email + "</email>\n";
         resultado += "\t<contrasenya>" +this.password + "</contrasenya>\n";
         resultado += "</Usuario>\n";
@@ -101,7 +101,7 @@ public class Usuario implements ParserXML {
     }
     public void writeXML(){
         String datos = generateXML();
-        String fileName = "ficheroUsuario"+ this.idGenerator +".txt";
+        String fileName = "ficheroUsuario"+ this.id +".txt";
         try{
            PrintWriter escribir = new PrintWriter("/home/alumno/Documentos/" + fileName);//para crear el objeto que escribe en el archivo
            //PrintWriter escribir = new PrintWriter("C:/Users/CGM1414/OneDrive/Escritorio/CARMEN/java/" + fileName);
