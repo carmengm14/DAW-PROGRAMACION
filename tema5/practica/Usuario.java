@@ -52,7 +52,7 @@ public class Usuario implements ParserXML {
     public String comprobarEmail(String email){
         String error = "Este correo ya existe";
         for (int i = 0; i < usuariosNuevos.size(); i++) {
-            if (email.equals(getEmail())) {
+            if (email.equals(usuariosNuevos.get(i).getEmail())) {
                 return error;
             }
         }
