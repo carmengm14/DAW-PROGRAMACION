@@ -6,20 +6,20 @@ import java.util.ArrayList;
 public class Usuario implements ParserXML {
     //atributos
     private int id;
-    private int idGenerator = 0;
+    private static int idGenerator = 1;
     private String email;
     private String password;
     //es un array list static ya que sino lo fuera cada user tendria una lista, y solo queremos una para todos, por esto tmb se inicializa ya al crearla.
     public static ArrayList<Usuario> usuariosNuevos = new ArrayList<Usuario>();
 
     //constructor
-    public Usuario(String email, String password){
-        this.id = idGenerator++;
+    public Usuario(String email, String password){ 
+        this.id = idGenerator++; 
         this.password = password;
-            if (comprobarEmail(email) != "Este correo ya existe") {
-                this.email = email;
-                usuariosNuevos.add(this);
-            }
+        this.email = email;
+        if(comprobarEmail(email) != "Este correo ya existe" && comprobarId(id)!= 0){
+            usuariosNuevos.add(this);
+        }
     }
     //getters
 
@@ -57,6 +57,16 @@ public class Usuario implements ParserXML {
             }
         }
         return email;
+    } 
+
+    public int comprobarId(int id){
+        int error = 0;
+        for (int i = 0; i < usuariosNuevos.size(); i++) {
+            if (id == usuariosNuevos.get(i).getId()) {
+                return error;
+            }
+        }
+        return id;
     }
     //El metodo de julio de comprobarEmail 
     /*
