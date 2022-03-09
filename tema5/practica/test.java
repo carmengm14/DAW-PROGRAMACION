@@ -22,5 +22,7 @@ public class test {
        user2.writeXML();
        media1.writeXML();
        media2.writeXML();
+
+       user1.leerFichero("/home/alumno/Documentos/ficheroUsuario2.txt");
     }
 }

@@ -1,3 +1,5 @@
+import java.io.BufferedReader;
+import java.io.FileReader;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.ArrayList;
@@ -5,7 +7,7 @@ import java.util.ArrayList;
 
 public class Usuario implements ParserXML {
     //atributos
-    private static int id;
+    private int id;
     private static int idGenerator = 1;
     private String email;
     private String password;
@@ -124,8 +126,21 @@ public class Usuario implements ParserXML {
         }
     }
 
-    public void nUsers(){
-     System.out.println(usuariosNuevos.size());       
+    public void leerFichero(String file){
+     try {
+        String cadena; 
+        FileReader fr = new FileReader(file); 
+        BufferedReader br = new BufferedReader(fr); 
+        while((cadena = br.readLine())!=null) { 
+            System.out.println(cadena); 
+        } 
+        br.close(); 
+        System.out.println("FICHERO LEIDO CORRECTAMENTE");
+     } catch (IOException e) {
+        System.out.println("NO SE HA PODIDO LEER EL FICHERO CORRECTAMENTE, ERROR: ");
+        e.printStackTrace();
+     }   
+
     }
     }
 
