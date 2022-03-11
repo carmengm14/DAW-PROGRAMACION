@@ -111,7 +111,7 @@ public class Usuario implements ParserXML {
     }
     public void writeXML(){
         String datos = generateXML();
-        String fileName = "ficheroUsuario"+ this.id +".txt";
+        String fileName = "ficheroUsuario"+ this.id +".xml";
         try{
            PrintWriter escribir = new PrintWriter("/home/alumno/Documentos/" + fileName);//para crear el objeto que escribe en el archivo
            //PrintWriter escribir = new PrintWriter("C:/Users/CGM1414/OneDrive/Escritorio/CARMEN/java/" + fileName);
