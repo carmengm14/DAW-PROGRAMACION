@@ -16,10 +16,17 @@ public class Usuario implements ParserXML {
 
     //constructor
     public Usuario(String email, String password){ 
-        this.id = idGenerator++; 
+       
         this.password = password;
-        this.email = email;
-        usuariosNuevos.add(this);
+
+        if (this.comprobarEmail(email)){
+            this.id = idGenerator++;
+            this.email = email;
+            usuariosNuevos.add(this);
+        }else{
+            this.id = -1;
+            this.email = "Correo duplicado: " + email;
+        }
     }
     //getters
 
@@ -49,14 +56,17 @@ public class Usuario implements ParserXML {
     }
 
     //metodos
-    public String comprobarEmail(String email){
-        String error = "Este correo ya existe";
-        for (int i = 0; i < usuariosNuevos.size(); i++) {
-            if (email.equals(usuariosNuevos.get(i).getEmail())) {
-                return error;
+    public boolean comprobarEmail(String email){
+        boolean resultado = true;
+
+        for (Usuario usuario : usuariosNuevos) {
+            if(email.equals(usuario.getEmail())){
+                resultado = false;
+                break;
             }
         }
-        return email;
+
+        return resultado;
     } 
 
     public int comprobarId(int id){
