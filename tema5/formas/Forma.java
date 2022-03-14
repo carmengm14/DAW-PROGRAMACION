@@ -4,16 +4,16 @@ public class Forma {
     private String color;
     private Point centro;
     private String nombre;
-
+//constructor
     public Forma(String color,int x, int y, String nombre) {
         this.color = color;
         this.centro = new Point(x,y);
         this.nombre = nombre;
     }
-    
-    public void Imprimir(){
+//funciones
+    public void imprimir(){
         System.out.println("Color: " + color );
-        System.out.printf("Centro: (%d, %d)\n " + centro.x, centro.y);
+        System.out.println("Centro: (" + centro.x + "," + centro.y + ")");
         System.out.println("Nombre: " + nombre);
     }
 
