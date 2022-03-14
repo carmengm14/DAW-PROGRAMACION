@@ -4,7 +4,10 @@ public class testForma {
         r.mover(2, 6);
         r.cambiarTamaño(2);
 
-        System.out.println("===========");
+        Elipse e = new Elipse("Rojo", 5, 6, "Elipse 1", 3, 2);
+
         r.imprimir();
+        System.out.println("===========");
+        e.imprimir();
     }
 }
