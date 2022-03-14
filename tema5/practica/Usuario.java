@@ -1,8 +1,17 @@
-import java.io.BufferedReader;
-import java.io.FileReader;
+import java.io.File;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.ArrayList;
+import java.util.Iterator;
+
+import javax.xml.parsers.DocumentBuilder;
+import javax.xml.parsers.DocumentBuilderFactory;
+import javax.xml.parsers.ParserConfigurationException;
+
+import org.w3c.dom.Document;
+import org.xml.sax.SAXException;
+import org.xml.sax.SAXParseException;
 
 
 public class Usuario implements ParserXML {
@@ -136,22 +145,34 @@ public class Usuario implements ParserXML {
         }
     }
 
-    public void leerFichero(String file){
-     try {
-        String cadena; 
-        FileReader fr = new FileReader(file); 
-        BufferedReader br = new BufferedReader(fr); 
-        while((cadena = br.readLine())!=null) { 
-            System.out.println(cadena); 
-        } 
-        br.close(); 
-        System.out.println("FICHERO LEIDO CORRECTAMENTE");
-     } catch (IOException e) {
-        System.out.println("NO SE HA PODIDO LEER EL FICHERO CORRECTAMENTE, ERROR: ");
-        e.printStackTrace();
-     }   
-
-    }
+    private static Usuario leerFichero(File xmlfile){
+            DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
+            DocumentBuilder dBuilder;
+            Document doc;
+            Usuario newUser = null;
+    
+            try {
+                dBuilder = dbFactory.newDocumentBuilder();
+                doc = dBuilder.parse(xmlfile);
+                String email = doc.getElementsByTagName("email").item(0).getTextContent();
+                String password = doc.getElementsByTagName("password").item(0).getTextContent();
+                newUser = new Usuario(email, password);
+            } catch (ParserConfigurationException e) {
+                // TODO Auto-generated catch block
+                e.printStackTrace();
+            } catch (SAXParseException e) {
+                // TODO Auto-generated catch block
+                e.printStackTrace();
+            } catch (IOException e) {
+                // TODO Auto-generated catch block
+                e.printStackTrace();
+            } catch (SAXException e) {
+                // TODO Auto-generated catch block
+                e.printStackTrace();
+            }
+            
+            return newUser;
+        }
     }
 
 
