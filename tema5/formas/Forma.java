@@ -27,7 +27,6 @@ public class Forma {
     }
 
     public void mover(int x, int y){
-        this.centro.x = x;
-        this.centro.y = y;
+        this.centro = new Point(x,y);
     }
 }
