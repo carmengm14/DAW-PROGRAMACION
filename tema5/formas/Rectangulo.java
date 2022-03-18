@@ -1,34 +1,31 @@
-public class Rectangulo extends Forma {
-    private double lmayor;
-    private double lmenor;
 
-    //constructor
-    public Rectangulo(String color,int x, int y, String nombre, double lmayor, double lmenor){
+public class Rectangulo extends Forma{
+
+    private double ladoMayor;
+    private double ladoMenor;
+
+    public Rectangulo(String color, int x, int y, String nombre, double ladoMayor, double ladoMenor) {
         super(color, x, y, nombre);
-        this.lmayor = lmayor;
-        this.lmenor = lmenor;
+        this.ladoMayor = ladoMayor;
+        this.ladoMenor = ladoMenor;
     }
-    //funciones
+
     public void imprimir(){
         super.imprimir();
-        System.out.println("Lado mayor:" + this.lmayor + "\nLado menor:" + this.lmenor);
+        System.out.println("Lado mayor: " + ladoMayor);
+        System.out.println("Lado menor: " + ladoMenor);
     }
 
-    public double area(){
-        if (this.lmayor > this.lmenor) {
-            return lmayor*lmenor;
-        }else{
-            return lmenor*lmayor;
-        }
+    public double getPerimetro(){
+        return 2 * ladoMayor + 2 * ladoMenor;
+    }
+    
+    public double getArea(){
+        return ladoMayor * ladoMenor;
     }
 
-    public double perimetro(){
-        double calculo = (2 * lmenor) + (2 * lmayor);
-        return calculo;
-    }
-
-    public void cambiarTamaño(double valor){
-        this.lmayor = lmayor * valor;
-        this.lmenor = lmenor * valor;
+    public void escalar(double factor){
+        this.ladoMayor *= factor;
+        this.ladoMenor *= factor;
     }
 }
