@@ -13,8 +13,4 @@ public class Elipse extends Forma {
         double operacion = Math.PI*(rmayor*rmenor);
         return operacion;
     }
-    public void imprimir(){
-        super.imprimir();
-        System.out.println("Área Elipse: " + area());
-    }
 }

@@ -4,9 +4,4 @@ public class Cuadrado extends Rectangulo{
         super(color, x, y, nombre, lmayor, lmenor);
     }
 
-    public void imprimir(){
-        super.imprimir();
-        
-    }
-    
 }
