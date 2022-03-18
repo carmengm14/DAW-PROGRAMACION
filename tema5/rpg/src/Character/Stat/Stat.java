@@ -1,6 +1,6 @@
 package src.Character.Stat;
 
-public class Stat {
+public abstract class Stat {
     //ATRIBUTOS
     private int value;
     //CONSTRUCTOR
