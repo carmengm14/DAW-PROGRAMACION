@@ -53,8 +53,8 @@ public class Personaje{
         return poder;
     }
      //valor base inteligencia + bonif. raza + bonif. trabajo + 2
-     public double inteligencia(){
-        double inteligen = (inteligencia.getValue() + raza.modifier(inteligencia) + trabajo.modifier(inteligencia))+2;
-        return inteligen;
+     public double magia(){
+        double magia = (inteligencia.getValue() + raza.modifier(inteligencia) + trabajo.modifier(inteligencia))+2;
+        return magia;
     }
 }
