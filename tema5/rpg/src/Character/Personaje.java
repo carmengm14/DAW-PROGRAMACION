@@ -65,18 +65,14 @@ public class Personaje{
     public String toString(){
         String personaje = "";
         personaje += "Personaje:\n";
-        personaje += "\tNombre: " + nombre + "\n";
-        personaje += "\tTrabajo: " + trabajo + "\n";
-        personaje += "\tRaza: " + raza +"\n";
-        personaje += "\tDestreza: " + velocity() +"\n";
-        personaje += "\tPoder: " + poder() +"\n";
-        personaje += "\tMagia: " + magia();
+        personaje += "My name is " + nombre + ". I'm an " + raza + " " + trabajo;
+        personaje += " My stats are, Fuerza " + fuerza.getValue() + " Destreza: "+destreza.getValue() + " Constitucion: "+constitucion.getValue()+ " Inteligencia: "+ inteligencia.getValue() + " Velocidad: " + velocity() + " Poder: " + poder()+ " Magia: " + magia();
         return  personaje;
     }
 
-  /*  public static void main(String[] args) {
+ /* public static void main(String[] args) {
         Personaje p1 = new Personaje("Caca", new Mago() , new Elfo(), new Fuerza(2), new Constitucion(1), new Destreza(0), new Inteligencia(2));
         System.out.println(p1.toString());
     }
-    */
+  */
 }
