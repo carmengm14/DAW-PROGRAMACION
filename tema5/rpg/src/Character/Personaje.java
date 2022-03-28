@@ -1,16 +1,12 @@
 package src.Character;
-
 import src.Character.Job.Jobs;
-import src.Character.Job.Mago;
-import src.Character.Race.Elfo;
 import src.Character.Race.Race;
 import src.Character.Stat.Constitucion;
 import src.Character.Stat.Destreza;
 import src.Character.Stat.Fuerza;
 import src.Character.Stat.Inteligencia;
-import src.Character.Stat.Stat;
 
-public class Personaje{
+public class Personaje implements IDamageable{
     //ATRIBUTOS
     private String nombre;
     private Jobs trabajo;
@@ -68,6 +64,45 @@ public class Personaje{
         personaje += "My name is " + nombre + ". I'm an " + raza + " " + trabajo;
         personaje += " My stats are, Fuerza " + fuerza.getValue() + " Destreza: "+destreza.getValue() + " Constitucion: "+constitucion.getValue()+ " Inteligencia: "+ inteligencia.getValue() + " Velocidad: " + velocity() + " Poder: " + poder()+ " Magia: " + magia();
         return  personaje;
+    }
+
+    //Valor base Constitution + bonif. raza + bonif.profesion +25
+    @Override
+    public double maxHealth() {
+        // TODO Auto-generated method stub
+        double salud = (constitucion.getValue() + raza.modifier(constitucion) + trabajo.modifier(constitucion))+25;
+        return salud;
+    }
+
+    //Devuelve el valor actual
+    @Override
+    public double health() {
+        // TODO Auto-generated method stub
+        return maxHealth();
+    }
+
+    //Devuelve true si el daño es mayor o igual a la vida
+    @Override
+    public boolean isDead(int danyo) {
+        // TODO Auto-generated method stub
+        if (danyo  == health()) {
+            return true;
+        }else{
+            return false;
+        }
+    }
+
+    //Aumenta el daño recibido
+    @Override
+    public void receivesDamage(double amount) {
+        // TODO Auto-generated method stub
+        
+    }
+    //Disminuye el daño recibido
+    @Override
+    public void heals(double amount) {
+        // TODO Auto-generated method stub
+        
     }
 
  /* public static void main(String[] args) {
