@@ -74,8 +74,9 @@ public class Personaje{
         return  personaje;
     }
 
-    public static void main(String[] args) {
+  /*  public static void main(String[] args) {
         Personaje p1 = new Personaje("Caca", new Mago() , new Elfo(), new Fuerza(2), new Constitucion(1), new Destreza(0), new Inteligencia(2));
         System.out.println(p1.toString());
     }
+    */
 }
