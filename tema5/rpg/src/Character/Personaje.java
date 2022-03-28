@@ -1,6 +1,8 @@
 package src.Character;
 
 import src.Character.Job.Jobs;
+import src.Character.Job.Mago;
+import src.Character.Race.Elfo;
 import src.Character.Race.Race;
 import src.Character.Stat.Constitucion;
 import src.Character.Stat.Destreza;
@@ -56,5 +58,24 @@ public class Personaje{
      public double magia(){
         double magia = (inteligencia.getValue() + raza.modifier(inteligencia) + trabajo.modifier(inteligencia))+2;
         return magia;
+    }
+
+    @Override
+    //Muestra toda la informacion de un personaje
+    public String toString(){
+        String personaje = "";
+        personaje += "Personaje:\n";
+        personaje += "\tNombre: " + nombre + "\n";
+        personaje += "\tTrabajo: " + trabajo + "\n";
+        personaje += "\tRaza: " + raza +"\n";
+        personaje += "\tDestreza: " + velocity() +"\n";
+        personaje += "\tPoder: " + poder() +"\n";
+        personaje += "\tMagia: " + magia();
+        return  personaje;
+    }
+
+    public static void main(String[] args) {
+        Personaje p1 = new Personaje("Caca", new Mago() , new Elfo(), new Fuerza(2), new Constitucion(1), new Destreza(0), new Inteligencia(2));
+        System.out.println(p1.toString());
     }
 }
