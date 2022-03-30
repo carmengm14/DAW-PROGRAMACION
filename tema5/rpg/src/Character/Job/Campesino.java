@@ -8,15 +8,15 @@ public class Campesino extends Jobs{
 
     @Override
     public int modifier(Stat stat) {
-        if (stat instanceof Constitucion) {
-            return 3;
+        int resultado = 0;
+        
+        if (stat instanceof Constitucion){
+            resultado = 3;
+        }else if (stat instanceof Fuerza){
+            resultado = 2;
         }
-        if (stat instanceof Fuerza) {
-            return 2;
-        }
-        else{
-            return 0;
-        }
+        
+        return resultado;
     }
     
 }

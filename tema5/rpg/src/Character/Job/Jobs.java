@@ -11,11 +11,13 @@ public abstract class Jobs {
     @Override
     //Devuelve true si son la misma clase
     public boolean equals(Object obj){
-        if (obj.getClass().getSimpleName() == toString()) {
+       /* if (obj.getClass().getSimpleName() == toString()) {
             return true;
         }else{
             return false;
         }
+        */
+        return getClass().getName().equals(obj.getClass().getName());
     }
     @Override
     //Devuelve el nombre simple de la clase

@@ -9,18 +9,15 @@ public class Gigante extends Race{
 
     @Override
     public int modifier(Stat stat) {
+        int resultado = 0;
         if (stat instanceof Constitucion) {
-            return 4;
+            resultado = 4;
+        }else if (stat instanceof Destreza) {
+            resultado = -2;
+        }else if (stat instanceof Fuerza) {
+            resultado = 3;
         }
-        if (stat instanceof Destreza) {
-            return -2;
-        }
-        if (stat instanceof Fuerza) {
-            return 3;
-        }
-        else{
-            return 0;
-        }
+       return resultado;
     }
     
 }

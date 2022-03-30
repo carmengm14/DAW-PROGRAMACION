@@ -9,18 +9,15 @@ public class Asesino extends Jobs{
 
     @Override
     public int modifier(Stat stat) {
+        int resultado = 0;
         if (stat instanceof Constitucion) {
-            return 1;
+            resultado = 1;
+        }else if (stat instanceof Fuerza) {
+            resultado = 1;
+        }else if (stat instanceof Destreza) {
+            resultado = 3;
         }
-        if (stat instanceof Fuerza) {
-            return 1;
-        }
-        if (stat instanceof Destreza) {
-            return 3;
-        }
-        else{
-            return 0;
-        }
+        return resultado;
     }
     
 }

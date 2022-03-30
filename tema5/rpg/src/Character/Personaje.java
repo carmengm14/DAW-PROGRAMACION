@@ -11,6 +11,7 @@ public class Personaje implements IDamageable{
     private String nombre;
     private Jobs trabajo;
     private Race raza;
+    private double health;
     private Fuerza fuerza;
     private Constitucion constitucion;
     private Inteligencia inteligencia;
@@ -42,17 +43,17 @@ public class Personaje implements IDamageable{
     //METODOS
     //valor base destreza + bonif. raza + bonif. trabajo + 2
     public double velocity(){
-        double velocidad = (destreza.getValue() + raza.modifier(destreza) + trabajo.modifier(destreza))+2;
+        double velocidad = (destreza.getValue() + raza.modifier(destreza) + trabajo.modifier(destreza))*2.0f;
         return velocidad;
     }
     //valor base poder + bonif. raza + bonif. trabajo + 2
     public double poder(){
-        double poder = (fuerza.getValue() + raza.modifier(fuerza) + trabajo.modifier(fuerza))+2;
+        double poder = (fuerza.getValue() + raza.modifier(fuerza) + trabajo.modifier(fuerza))*2.0f;
         return poder;
     }
      //valor base inteligencia + bonif. raza + bonif. trabajo + 2
      public double magia(){
-        double magia = (inteligencia.getValue() + raza.modifier(inteligencia) + trabajo.modifier(inteligencia))+2;
+        double magia = (inteligencia.getValue() + raza.modifier(inteligencia) + trabajo.modifier(inteligencia))*2.0f;
         return magia;
     }
 
@@ -70,7 +71,7 @@ public class Personaje implements IDamageable{
     @Override
     public double maxHealth() {
         // TODO Auto-generated method stub
-        double salud = (constitucion.getValue() + raza.modifier(constitucion) + trabajo.modifier(constitucion))+25;
+        double salud = (constitucion.getValue() + raza.modifier(constitucion) + trabajo.modifier(constitucion))*25.0f;
         return salud;
     }
 
@@ -78,31 +79,34 @@ public class Personaje implements IDamageable{
     @Override
     public double health() {
         // TODO Auto-generated method stub
-        return maxHealth();
+        return health();
     }
 
     //Devuelve true si el daño es mayor o igual a la vida
     @Override
     public boolean isDead(int danyo) {
         // TODO Auto-generated method stub
-        if (danyo  == health()) {
-            return true;
-        }else{
-            return false;
-        }
+       return health() <= 0;
     }
 
     //Aumenta el daño recibido
     @Override
     public void receivesDamage(double amount) {
         // TODO Auto-generated method stub
+        health -= amount;
+        if (health < 0){
+            health = 0;
+        }
         
     }
     //Disminuye el daño recibido
     @Override
     public void heals(double amount) {
         // TODO Auto-generated method stub
-        
+        health += amount;
+        if (health > maxHealth()) {
+            health = maxHealth();
+        }        
     }
 
  /* public static void main(String[] args) {

@@ -8,15 +8,15 @@ public class Mago extends Jobs{
 
     @Override
     public int modifier(Stat stat) {
-        if (stat instanceof Inteligencia) {
-            return 4;
+        int resultado = 0;
+        
+        if (stat instanceof Inteligencia){
+            resultado = 4;
+        }else if (stat instanceof Destreza){
+            resultado = 1;
         }
-        if (stat instanceof Destreza) {
-            return 1;
-        }
-        else{
-            return 0;
-        }
+        
+        return resultado;
     }
     
 }

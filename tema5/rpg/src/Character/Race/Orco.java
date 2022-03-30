@@ -9,17 +9,16 @@ public class Orco extends Race{
 
     @Override
     public int modifier(Stat stat) {
+        int resultado = 0;
         if (stat instanceof Constitucion) {
-            return 3;
+            resultado = 3;
         }
         if (stat instanceof Fuerza) {
-            return 5;
+            resultado = 5;
         }
         if (stat instanceof Inteligencia) {
-            return -3;
+            resultado = -3;
         }
-        else{
-            return 0;
-        }
+        return resultado;
     }
 }

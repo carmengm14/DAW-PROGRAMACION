@@ -8,15 +8,16 @@ public class Guerrero extends Jobs{
 
     @Override
     public int modifier(Stat stat) {
-        if (stat instanceof Constitucion) {
-            return 2;
+
+        int resultado = 0;
+        
+        if (stat instanceof Fuerza){
+            resultado = 3;
+        }else if (stat instanceof Constitucion){
+            resultado = 2;
         }
-        if (stat instanceof Fuerza) {
-            return 3;
-        }
-        else{
-            return 0;
-        }
+        
+        return resultado;
     }
     
 }
