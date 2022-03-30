@@ -6,7 +6,7 @@ import src.Character.Stat.Destreza;
 import src.Character.Stat.Fuerza;
 import src.Character.Stat.Inteligencia;
 
-public class Personaje implements IDamageable{
+public class Character implements IDamageable{
     //ATRIBUTOS
     private String nombre;
     private Jobs trabajo;
@@ -18,14 +18,14 @@ public class Personaje implements IDamageable{
     private Destreza destreza;
 
     //Constructor
-    public Personaje(String nombre, Jobs trabajo, Race raza, Fuerza fuerza, Constitucion constitucion, Destreza destreza, Inteligencia inteligencia) {
+    public Character(String nombre, Jobs trabajo, Race raza, int fuerza, int constitucion, int destreza, int inteligencia) {
         this.nombre = nombre;
         this.trabajo = trabajo;
         this.raza = raza;
-        this.fuerza = fuerza;
-        this.constitucion = constitucion;
-        this.destreza = destreza;
-        this.inteligencia = inteligencia;
+        this.fuerza = new Fuerza(fuerza);
+        this.constitucion = new Constitucion(constitucion);
+        this.destreza = new Destreza(destreza);
+        this.inteligencia = new Inteligencia(inteligencia);
         
     }
  
