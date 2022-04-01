@@ -1,4 +1,6 @@
 import java.io.File;
+import java.text.DateFormat;
+import java.util.Locale;
 import java.util.Scanner;
 
 public class E2 {
@@ -43,12 +45,18 @@ public class E2 {
                     permisos += "-";
                 }
 
-                double tamaño = elemento.getTotalSpace();
-                System.out.println(n + " .- " + "\t" + tipo + permisos+ "\t" + tamaño + "\t" + elemento);
+                int tamaño = (int) elemento.length();
+
+                DateFormat formatter;
+                formatter = DateFormat.getDateTimeInstance(DateFormat.MEDIUM, DateFormat.MEDIUM, Locale.getDefault());
+                //....
+                String ultMod = formatter.format(elemento.lastModified());
+                
+                System.out.println(n + " .- " + "\t" + tipo + permisos+ "\t" + tamaño + "\t" + ultMod + "\t" + elemento);
                 permisos = "";
                 n++;   
             }
-            System.out.print("Introduce la opcion -1 para salir o el numero de directorio para ver su contenido");
+            System.out.print("Introduce la opcion -1 para salir o el numero de directorio para ver su contenido: ");
             r = sc.nextInt();
             n = 1;
             if(r == 0){
