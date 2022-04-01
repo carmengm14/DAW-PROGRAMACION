@@ -7,9 +7,10 @@ public class ejemplo2 {
         FileInputStream f_in = new FileInputStream("/home/alumno/Documentos/f/" + nomFich);
         int c = f_in.read();
         while (c != -1) {
-            System.out.println((char) c);
+            System.out.print((char) c);
             c = f_in.read();
         }
+        System.out.println("");
         f_in.close();
     }    
 }
