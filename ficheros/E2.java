@@ -52,7 +52,7 @@ public class E2 {
                 //....
                 String ultMod = formatter.format(elemento.lastModified());
                 
-                System.out.println(n + " .- " + "\t" + tipo + permisos+ "\t" + tamaño + "\t" + ultMod + "\t" + elemento);
+                System.out.println(n + " .- " + "\t" + tipo + permisos+ "\t" + tamaño + "\t" + ultMod + "\t" + elemento.getName());
                 permisos = "";
                 n++;   
             }
