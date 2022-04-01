@@ -19,6 +19,7 @@ public class E1 {
             }else{
                 System.out.println(0 + " - " + f.getParent());
             }
+
             for (File elemento : directorio) {
                 if(elemento.isDirectory()){
                     tipo = " <Directorio>";
@@ -28,6 +29,7 @@ public class E1 {
                 System.out.println(n + " - " + elemento + tipo);
                 n++;   
             }
+            System.out.print("Introduce la opcion -1 para salir o el numero de directorio para ver su contenido");
             r = sc.nextInt();
             n = 1;
             if(r == 0){

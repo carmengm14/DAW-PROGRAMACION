@@ -9,24 +9,43 @@ public class E2 {
         Scanner sc = new Scanner(System.in);
         int r = 0;
         int n = 1;
-        String tipo="";
+        String  permisos = "";
+        String tipo = "";
         do{
             System.out.println("Lista de ficheros y directorios de: " + f);
             System.out.println("-----------------------------------");
 
             if(f.getParent()==null){
-                System.out.println("0 - Directorio padre");
+                System.out.println("0.- Directorio padre");
             }else{
-                System.out.println(0 + " - " + f.getParent());
+                System.out.println(0 + ".- " + f.getParent());
             }
 
             for (File elemento : directorio) {
                 if(elemento.isDirectory()){
-                    tipo = " <Directorio>";
+                    tipo = "d";
                 }else{
-                    tipo = "";
+                    tipo = "-";
                 }
-                System.out.println(n + " - " + elemento + tipo);
+                if(elemento.canExecute()){
+                    permisos += "x";
+                }else{
+                    permisos += "-";
+                }
+                if(elemento.canRead()){
+                    permisos += "r";
+                }else{
+                    permisos += "-";
+                }
+                if(elemento.canWrite()){
+                    permisos += "w";
+                }else{
+                    permisos += "-";
+                }
+
+                int tamaño = elemento.getTotalSpace();
+                System.out.println(n + " .- " + "\t" + tipo + permisos+ "\t" + tamaño + "\t" + elemento);
+                permisos = "";
                 n++;   
             }
             System.out.print("Introduce la opcion -1 para salir o el numero de directorio para ver su contenido");
