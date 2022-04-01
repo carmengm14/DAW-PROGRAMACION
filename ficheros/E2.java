@@ -43,7 +43,7 @@ public class E2 {
                     permisos += "-";
                 }
 
-                int tamaño = elemento.getTotalSpace();
+                double tamaño = elemento.getTotalSpace();
                 System.out.println(n + " .- " + "\t" + tipo + permisos+ "\t" + tamaño + "\t" + elemento);
                 permisos = "";
                 n++;   
