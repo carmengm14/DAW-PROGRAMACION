@@ -6,6 +6,7 @@ public class Ejemplo5 {
     
             String text = "Contenido para el fichero.";
             String nomFich = "f4.txt";
+            //si ponemos true no se sobreescribe sino que se añade al final el texto de nuevo.
             FileOutputStream f_out = new FileOutputStream("/home/alumno/Documentos/f/" + nomFich, true);
             for (int i = 0; i < text.length(); i++) {
                 f_out.write(text.charAt(i));
