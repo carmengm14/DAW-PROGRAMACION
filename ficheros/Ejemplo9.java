@@ -1,3 +1,4 @@
+//lee el archivo f8.txt y lo enseña
 import java.io.FileReader;
 import java.io.IOException;
 
