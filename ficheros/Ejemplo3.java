@@ -1,3 +1,4 @@
+// SequenceInputStream sirve para poder pegar de forma secuencial diferentes InputStream. Este codigo lo que hace es mirar el contenido de ent_1 y los enseña
 import java.io.ByteArrayInputStream;
 import java.io.FileInputStream;
 import java.io.IOException;

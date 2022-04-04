@@ -1,3 +1,4 @@
+//lee el fichero f3.txt y lo muestra, en filas de 30 caracteres (al ser bytes no consigue coger los caracteres especiales)
 import java.io.FileInputStream;
 import java.io.IOException;
 
