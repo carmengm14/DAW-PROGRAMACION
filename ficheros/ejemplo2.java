@@ -1,12 +1,15 @@
-import java.io.FileInputStream;
+import java.io.ByteArrayInputStream;
 import java.io.IOException;
 
 public class ejemplo2 {
     public static void main(String[] args) throws IOException {
-        String nomFich = "fichero.txt";
-        FileInputStream f_in = new FileInputStream("/home/alumno/Documentos/f/" + nomFich);
+        String ent_1 = "Esto es un array de bytes con caracteres raros: á ç ñ";
+        byte[] ent = ent_1.getBytes();
+
+        ByteArrayInputStream f_in = new ByteArrayInputStream(ent);
         int c = f_in.read();
-        while (c != -1) {
+
+        while(c != -1){
             System.out.print((char) c);
             c = f_in.read();
         }
