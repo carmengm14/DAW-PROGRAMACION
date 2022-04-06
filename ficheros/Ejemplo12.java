@@ -1,3 +1,5 @@
+//Lee el contenido de f11entrada y lo copia con un estilo en f11salida 
+//(teoricamente deberia leerlo y ya pero como elimina el contenido al ejecutar, escribo el contenido con codigo y ya)
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.FileWriter;
