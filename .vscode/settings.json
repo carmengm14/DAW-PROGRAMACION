@@ -29,6 +29,8 @@
         "tema5/rpg",
         "ficheros",
         "ficheros/ejemplos",
+        "ficheros/actividades",
+
         
     ],
     "java.project.referencedLibraries": [
