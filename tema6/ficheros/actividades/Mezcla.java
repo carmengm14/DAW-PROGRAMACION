@@ -9,6 +9,9 @@ import java.util.Scanner;
 
 public class Mezcla {
     public static void main(String[] args) {
+      /*
+      PARA PASARLO COMO PARAMETRO QUE PONGA EL USER
+      
         Scanner sc = new Scanner(System.in);
         System.out.print("1º fichero = ");
         String f1 = sc.nextLine();
@@ -16,6 +19,7 @@ public class Mezcla {
         String f2 = sc.nextLine();
         System.out.print("Nombre fichero a guardar= ");
         String ffinal = sc.nextLine();
+        */
 
 
         FileReader fileReader1;
@@ -27,24 +31,24 @@ public class Mezcla {
         FileWriter f_out; 
 
         try {
-            fileReader1 = new FileReader("./ff/f1.txt" );
-            fileReader2 = new FileReader("./ff/f2.txt" );
+            fileReader1 = new FileReader("/home/alumno/Documentos/ff/f1.txt" );
+            fileReader2 = new FileReader("/home/alumno/Documentos/ff/f2.txt" );
 
             reader1 = new BufferedReader(fileReader1);
             reader2 = new BufferedReader(fileReader2);
 
-            f_out = new FileWriter("./ff/ftotal.txt");
+            f_out = new FileWriter("/home/alumno/Documentos/ff/ftotal.txt");
 
             String car1 = reader1.readLine();
             String car2 = reader2.readLine();
 
             while (car1 != null || car2 != null) {
               if (car1 != null) {
-                f_out.write(car1);
+                f_out.write(car1 + "\n");
                 car1 = reader1.readLine();
               }
               if (car2 != null) {
-                f_out.write(car2);  
+                f_out.write(car2 + "\n");  
                 car2 = reader2.readLine();
               }
                 
