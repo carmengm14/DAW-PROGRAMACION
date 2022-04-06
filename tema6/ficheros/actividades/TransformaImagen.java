@@ -1,4 +1,3 @@
-package tema6.ficheros.actividades;
 import java.io.File;
 import java.io.IOException;
 

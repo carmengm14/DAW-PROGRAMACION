@@ -30,9 +30,7 @@
         "tema6",
         "tema6/ficheros",
         "tema6/ficheros/ejemplos",
-        "tema6/ficheros/actividades",
-
-        
+        "tema6/ficheros/actividades"        
     ],
     "java.project.referencedLibraries": [
         "lib/**/*.jar",
