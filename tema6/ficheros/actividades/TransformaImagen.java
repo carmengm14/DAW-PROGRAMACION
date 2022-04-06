@@ -1,5 +1,6 @@
 package tema6.ficheros.actividades;
 import java.io.File;
+import java.io.IOException;
 
 public class TransformaImagen {
         File f = null;
@@ -34,9 +35,9 @@ public class TransformaImagen {
     
         }
     
-        private String getNombreSinExtension() {
+        /*private String getNombreSinExtension() {
+            
     
             //Devuelve el nombre del archivo f sin extensión
-    
-        }
+        }*/
 }
