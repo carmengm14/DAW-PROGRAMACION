@@ -1,4 +1,3 @@
-package ejemplos;
 import java.io.FileReader;
 import java.io.IOException;
 

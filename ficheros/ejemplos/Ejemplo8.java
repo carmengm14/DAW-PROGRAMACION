@@ -1,4 +1,3 @@
-package ejemplos;
 //lo mismo q en el ejemplo 2 pero mas corto ya q lo hacemos con StringReader y no con ByteArrayInputStream
 import java.io.IOException;
 import java.io.StringReader;

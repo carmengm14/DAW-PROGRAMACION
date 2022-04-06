@@ -1,4 +1,3 @@
-package ejemplos;
 //Lee el contenido del fichero f12 y lo copia con otro formato en el fichero f12_ISO
 import java.io.FileInputStream;
 import java.io.FileOutputStream;

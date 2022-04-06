@@ -1,4 +1,3 @@
-package ejemplos;
 //copia lo que hay en el fichero f5.txt en el fichero f6.txt
 
 import java.io.FileInputStream;

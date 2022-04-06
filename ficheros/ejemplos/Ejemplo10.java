@@ -1,4 +1,3 @@
-package ejemplos;
 //Guarda text en el fichero f9 que se creara al momento de ejecutar programa
 import java.io.FileWriter;
 import java.io.IOException;

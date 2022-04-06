@@ -1,4 +1,3 @@
-package ejemplos;
 //Copia el contenido de f13 en un fichero que crea con otro formato.
 import java.io.BufferedReader;
 import java.io.FileOutputStream;

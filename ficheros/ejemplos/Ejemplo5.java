@@ -1,4 +1,3 @@
-package ejemplos;
 //escribe el contenido de texto en el fichero f4.txt
 import java.io.FileOutputStream;
 import java.io.IOException;
