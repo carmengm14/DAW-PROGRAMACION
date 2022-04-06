@@ -4,11 +4,10 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.io.PrintStream;
-import java.util.Scanner;
+//import java.util.Scanner;
 
 public class Mezcla {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
       /*
       PARA PASARLO COMO PARAMETRO QUE PONGA EL USER
       
@@ -60,6 +59,6 @@ public class Mezcla {
             // TODO Auto-generated catch block
             e.printStackTrace();
         }
-        sc.close();
+        //sc.close();
     }
 }
