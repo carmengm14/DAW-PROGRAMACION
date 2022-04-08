@@ -1,4 +1,3 @@
-package tema6.ficheros.ejemplos;
 import java.io.File;
 import java.text.DateFormat;
 import java.util.Locale;

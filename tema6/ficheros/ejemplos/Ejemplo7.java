@@ -1,4 +1,3 @@
-package tema6.ficheros.ejemplos;
 import java.io.FileReader;
 import java.io.IOException;
 

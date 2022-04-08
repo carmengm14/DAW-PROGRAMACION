@@ -1,4 +1,3 @@
-package tema6.ficheros.ejemplos;
 //EScribe en el fichero f10 loas argumentos que hemos escrito en f_out
 import java.io.IOException;
 import java.io.PrintStream;

@@ -1,4 +1,3 @@
-package tema6.ficheros.actividades;
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
@@ -47,7 +46,7 @@ public class Mezcla {
                 car1 = reader1.readLine();
               }
               if (car2 != null) {
-                f_out.write(car2 + "\n");  
+                f_out.write(car2 + "\n");
                 car2 = reader2.readLine();
               }
                 
