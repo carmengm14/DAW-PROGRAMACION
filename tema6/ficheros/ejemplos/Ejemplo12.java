@@ -14,14 +14,14 @@ public class Ejemplo12 {
         String nomFich2 = "f11entrada.text";
 
         BufferedReader f_ent = new 
-        BufferedReader(new FileReader("/home/alumno/Documentos/f/" + nomFich));
+        BufferedReader(new FileReader("./tema6/ficheros/f/" + nomFich));
 
-        PrintStream f_out = new PrintStream("/home/alumno/Documentos/f/" + nomFich);
+        PrintStream f_out = new PrintStream("./tema6/ficheros/f/" + nomFich);
         f_out.println("Primera");
         f_out.println("Segunda");
         f_out.println("Tercera");
 
-        PrintWriter f_sal = new PrintWriter(new FileWriter("/home/alumno/Documentos/f/" + nomFich2));
+        PrintWriter f_sal = new PrintWriter(new FileWriter("./tema6/ficheros/f/" + nomFich2));
 
         String cad = f_ent.readLine();
         int i = 0;

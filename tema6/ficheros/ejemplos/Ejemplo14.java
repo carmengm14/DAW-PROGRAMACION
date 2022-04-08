@@ -11,9 +11,9 @@ public class Ejemplo14 {
         String nomFich = "f13.txt";
         String nomFich2 = "f13_ISO.txt";
 
-        BufferedReader f_ent = new BufferedReader(new FileReader("/home/alumno/Documentos/f/" + nomFich));
+        BufferedReader f_ent = new BufferedReader(new FileReader("./tema6/ficheros/f/" + nomFich));
         
-        PrintWriter f_sal = new PrintWriter(new OutputStreamWriter(new FileOutputStream("/home/alumno/Documentos/f/" + nomFich2), "ISO-8859-1"));
+        PrintWriter f_sal = new PrintWriter(new OutputStreamWriter(new FileOutputStream("./tema6/ficheros/f/" + nomFich2), "ISO-8859-1"));
 
         String cad = f_ent.readLine();
         while (cad != null) {

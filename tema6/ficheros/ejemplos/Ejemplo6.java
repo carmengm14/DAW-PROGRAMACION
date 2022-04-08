@@ -10,8 +10,8 @@ public class Ejemplo6 {
         String nomFich = "f5.txt";
         String nomFich2 = "f6.txt";
 
-        FileInputStream f_in = new FileInputStream("/home/alumno/Documentos/f/" + nomFich);
-        FileOutputStream f_out = new FileOutputStream("/home/alumno/Documentos/f/" + nomFich2);
+        FileInputStream f_in = new FileInputStream("./tema6/ficheros/f/" + nomFich);
+        FileOutputStream f_out = new FileOutputStream("./tema6/ficheros/f/" + nomFich2);
         
         byte[] buffer = new byte[30];
         int num = f_in.read(buffer);

@@ -6,7 +6,7 @@ public class Ejemplo4 {
     public static void main(String[] args) throws IOException{
         
         String nomFich = "f3.txt";
-        FileInputStream f_in = new FileInputStream("/home/alumno/Documentos/f/" + nomFich);
+        FileInputStream f_in = new FileInputStream("./tema6/ficheros/f/" + nomFich);
         byte[] buffer = new byte[30];
         int c = f_in.read(buffer);
         while (c != -1) {

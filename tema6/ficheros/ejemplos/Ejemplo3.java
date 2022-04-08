@@ -9,7 +9,7 @@ public class Ejemplo3 {
     public static void main(String[] args) throws IOException{
         
         String nomFich = "f1.txt";
-        FileInputStream f1 = new FileInputStream("/home/alumno/Documentos/f/" + nomFich);
+        FileInputStream f1 = new FileInputStream("./tema6/ficheros/f/" + nomFich);
         String ent_1 = "Esto es un array de bytes con caracteres raros: á ç ñ";
         ByteArrayInputStream f2 = new ByteArrayInputStream(ent_1.getBytes());
         SequenceInputStream f_in = new SequenceInputStream(f1,f2);

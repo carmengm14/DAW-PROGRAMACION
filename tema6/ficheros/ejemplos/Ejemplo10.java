@@ -9,7 +9,7 @@ public class Ejemplo10 {
         String nomFich = "f9.txt";
 
         try {
-            f_out = new FileWriter("/home/alumno/Documentos/f/" + nomFich) ;
+            f_out = new FileWriter("./tema6/ficheros/f/" + nomFich) ;
             for (int i = 0; i < text.length(); i++) {
                 f_out.write(text.charAt(i));
             }

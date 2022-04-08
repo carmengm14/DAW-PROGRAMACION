@@ -10,8 +10,8 @@ public class Ejemplo13 {
         String nomFich = "f12.txt";
         String nomFich2 = "f12_ISO.txt";
 
-        InputStreamReader f_ent = new InputStreamReader(new FileInputStream("/home/alumno/Documentos/f/" + nomFich), "UTF-8");
-        OutputStreamWriter f_sal = new OutputStreamWriter(new FileOutputStream("/home/alumno/Documentos/f/" + nomFich2), "ISO-8859-1");
+        InputStreamReader f_ent = new InputStreamReader(new FileInputStream("./tema6/ficheros/f/" + nomFich), "UTF-8");
+        OutputStreamWriter f_sal = new OutputStreamWriter(new FileOutputStream("./tema6/ficheros/f/" + nomFich2), "ISO-8859-1");
 
         int car = f_ent.read();
         while (car != -1) {

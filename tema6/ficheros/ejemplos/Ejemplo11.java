@@ -5,7 +5,7 @@ import java.io.PrintStream;
 public class Ejemplo11 {
     public static void main(String[] args) throws IOException{
         String nomFich = "f10.text";
-        PrintStream f_out = new PrintStream("/home/alumno/Documentos/f/" + nomFich);
+        PrintStream f_out = new PrintStream("./tema6/ficheros/f/" + nomFich);
         
         float a = (float) 5.25;
         String b = "Hola.";

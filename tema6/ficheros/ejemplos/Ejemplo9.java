@@ -6,7 +6,7 @@ public class Ejemplo9 {
     public static void main(String[] args) throws IOException{
 
         String nomFich = "f8.txt";
-        FileReader f_in = new FileReader("/home/alumno/Documentos/f/" + nomFich);        
+        FileReader f_in = new FileReader("./tema6/ficheros/f/" + nomFich);        
         char[] buffer = new char[30];
         int n = f_in.read(buffer);
         
