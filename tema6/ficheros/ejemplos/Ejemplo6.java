@@ -13,7 +13,7 @@ public class Ejemplo6 {
         FileInputStream f_in = new FileInputStream("./tema6/ficheros/f/" + nomFich);
         FileOutputStream f_out = new FileOutputStream("./tema6/ficheros/f/" + nomFich2);
         
-        byte[] buffer = new byte[30];
+        byte[] buffer = new byte[1];
         int num = f_in.read(buffer);
         while (num != -1){
             f_out.write(buffer);

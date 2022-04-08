@@ -9,16 +9,16 @@ public class Ejer28 {
     boolean esPrimo = true;
 
     while ((divisor < numero) && esPrimo) {
-       
+
       if (numero % divisor == 0) {
         esPrimo = false;
       }
       divisor++;
     }
 
-    if (esPrimo == true){
+    if (esPrimo == true) {
       System.out.println("Es primo");
-    }else{
+    } else {
       System.out.println("No es primo");
     }
     sc.close();
