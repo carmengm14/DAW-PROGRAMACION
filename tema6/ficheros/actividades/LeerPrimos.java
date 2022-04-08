@@ -1,3 +1,4 @@
+/*Realiza un programa que lea el fichero "primos.dat" y muestre los números primos en el terminal.*/
 import java.io.FileInputStream;
 import java.io.IOException;
 
