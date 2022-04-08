@@ -4,8 +4,13 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 
 public class TransformaImagen {
+    //ATRIBUTOS
     File f = null;
-    public TransformaImagen(File fEnt) {        
+    //CONSTRUCTOR
+    public TransformaImagen(File fEnt) {  
+        //substring lee caracter por caracter a partir de donde le digas por lo que en esta parte del codigo lo que le estamos diciendo es:
+        //SI el nombre de fEnt NO es igual a .bmp a partir del . (esto se lo decimos gracias a substring que comprara el nombre con el indexOf que dice donde
+        //empezar a comparar con el equals) NO se inicializara el file f pero si si es igual si que lo hará.
         if(!fEnt.getName().substring(fEnt.getName().indexOf(".")).equals(".bmp")) {
                 
         }
@@ -13,11 +18,11 @@ public class TransformaImagen {
             f = fEnt;
         }
     }
-
+    //METODOS
     public void transformaNegativo() throws IOException {
         FileInputStream reader = new FileInputStream(this.f);
-        File fOut = new File("./tema6/ficheros/fotos/ficheroFotoNeg.bmp");
-        FileOutputStream writer = new FileOutputStream(fOut);
+        File f_Out = new File("./tema6/ficheros/fotos/ficheroFotoNeg.bmp");
+        FileOutputStream writer = new FileOutputStream(f_Out);
 
         byte[] cabecera = new byte[54];
         
@@ -38,8 +43,8 @@ public class TransformaImagen {
 
     public void transformaOscuro() throws IOException {
         FileInputStream reader = new FileInputStream(this.f);
-        File fOut = new File("./tema6/ficheros/fotos/ficheroFotoOsc.bmp");
-        FileOutputStream writer = new FileOutputStream(fOut);
+        File f_Out = new File("./tema6/ficheros/fotos/ficheroFotoOsc.bmp");
+        FileOutputStream writer = new FileOutputStream(f_Out);
 
         byte[] cabecera = new byte[54];
         
@@ -59,8 +64,8 @@ public class TransformaImagen {
     }
     public void transformaNegroBlanco() throws IOException {
         FileInputStream reader = new FileInputStream(this.f);
-        File fOut = new File("./tema6/ficheros/fotos/ficheroFotoBlanNeg.bmp");
-        FileOutputStream writer = new FileOutputStream(fOut);
+        File f_Out = new File("./tema6/ficheros/fotos/ficheroFotoBlanNeg.bmp");
+        FileOutputStream writer = new FileOutputStream(f_Out);
 
         byte[] cabecera = new byte[54];
         
