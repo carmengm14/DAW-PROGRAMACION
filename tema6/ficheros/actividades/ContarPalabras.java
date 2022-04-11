@@ -32,7 +32,7 @@ public class ContarPalabras {
         System.out.println("===================");
         System.out.println("Contenido del fichero: \n" + cadena);
         System.out.println("===================");
-        System.out.println("En el fichero: " + fichero + "\n" + "La palabra: " + palabra + ", se encuentra: " + contador + " veces.");
+        System.out.println("En el fichero: " + fichero + "\n" + "La palabra: " + palabra.toLowerCase() + ", se encuentra: " + contador + " veces.");
        
         reader.close();
         sc.close();
