@@ -20,7 +20,7 @@ public class ContarPalabras {
        String cadena = reader.readLine();
 
        String[] cadenaSeparada = cadena.toLowerCase().split(" ");
-
+    
        int contador = 0;
 
        for (int i = 0; i < cadenaSeparada.length; i++) {
