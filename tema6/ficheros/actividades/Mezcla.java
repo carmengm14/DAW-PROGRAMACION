@@ -38,25 +38,25 @@ public class Mezcla {
         FileWriter f_out; 
 
         try {
-            fileReader1 = new FileReader("/home/alumno/Documentos/ff/f1.txt" );
-            fileReader2 = new FileReader("/home/alumno/Documentos/ff/f2.txt" );
+            fileReader1 = new FileReader("./tema6/ficheros/ff/f1.txt" );
+            fileReader2 = new FileReader("./tema6/ficheros/ff/f2.txt" );
 
             reader1 = new BufferedReader(fileReader1);
             reader2 = new BufferedReader(fileReader2);
 
-            f_out = new FileWriter("/home/alumno/Documentos/ff/ftotal.txt");
+            f_out = new FileWriter("./tema6/ficheros/ff/ftotal.txt");
 
-            String car1 = reader1.readLine();
-            String car2 = reader2.readLine();
+            String lineaPrimerFichero = reader1.readLine();
+            String lineaSegundoFichero = reader2.readLine();
 
-            while (car1 != null || car2 != null) {
-              if (car1 != null) {
-                f_out.write(car1 + "\n");
-                car1 = reader1.readLine();
+            while (lineaPrimerFichero != null || lineaSegundoFichero != null) {
+              if (lineaPrimerFichero != null) {
+                f_out.write(lineaPrimerFichero + "\n");
+                lineaPrimerFichero = reader1.readLine();
               }
-              if (car2 != null) {
-                f_out.write(car2 + "\n");
-                car2 = reader2.readLine();
+              if (lineaSegundoFichero != null) {
+                f_out.write(lineaSegundoFichero + "\n");
+                lineaSegundoFichero = reader2.readLine();
               }
                 
             }
