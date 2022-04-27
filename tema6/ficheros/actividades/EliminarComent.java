@@ -25,7 +25,7 @@ public class EliminarComent {
         if (lineaFinal.contains(comentario)) {
             salidaFich.write(cadena + System.getProperty("comentario"));
         }
-       lectorFich.readLine();
+      cadena =  lectorFich.readLine();
     }
    
 fileReader.close();
