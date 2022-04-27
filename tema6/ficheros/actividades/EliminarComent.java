@@ -15,23 +15,22 @@ public class EliminarComent {
 
     fileReader = new FileReader("./tema6/ficheros/actividades/eliminarcomentariocodigo.java");
     lectorFich = new BufferedReader(fileReader);
-    salidaFich = new BufferedWriter(new FileWriter("./tema6/ficheros/actividades/eliminarcomentariocodigo.java"));
+    salidaFich = new BufferedWriter(new FileWriter("./tema6/ficheros/actividades/eliminarsincomentariocodigo.java"));
     
     String cadena = lectorFich.readLine();
+    String comentario = "//";
        
-    while (cadena != null) {
-        if (cadena.startsWith("//")) {
-            salidaFich.write("");
-            cadena = lectorFich.readLine();
+    while (cadena != null ) {
+        String lineaFinal = comentario.trim();
+        if (lineaFinal.contains(comentario)) {
+            salidaFich.write(cadena + System.getProperty("comentario"));
         }
-        salidaFich.write(cadena);
-        cadena = lectorFich.readLine();
+        lectorFich.readLine();
     }
-    
-    
+   
 fileReader.close();
 lectorFich.close();
 salidaFich.close();
 }
-    
 }
+
