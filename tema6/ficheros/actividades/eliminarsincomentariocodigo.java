@@ -3,12 +3,9 @@ en Java. Solo los comentarios que empiezan por */
 
 import java.io.IOException;
 
-public class eliminarsincomentariocodigo{
+public class eliminarsincomentariocodigo {
     public static void main(String[] args) throws IOException {
-        //atributos
         System.out.println("Hola Mundo!");
-    //coment
-    //coment
 
 }
 }
