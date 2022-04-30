@@ -1,13 +1,25 @@
+/*import java.util.ArrayList;
+import java.util.List;*/
 
 public class Cliente extends Persona {
     //Atrbutos
     private int id;
+  //  protected List<Integer> numeros = new ArrayList<>();
     private String email;
 
     //constructor
     public Cliente(String nombre, String apellidos, String nif, int id, String email) {
         super(nombre, apellidos, nif);
         //TODO Auto-generated constructor stub
+      /*  for (int i = 0; i < numeros.size(); i++) {
+            if (numeros.get(i) == id) {
+                System.out.println("Id no disponible");
+            }else{
+                numeros.add(id);
+                this.id = id;
+            }
+        }
+        */
         this.id = id;
         this.email = email;
     }
@@ -31,6 +43,7 @@ public class Cliente extends Persona {
     }
 
     //metodos
+    
     public String toString(){
         String resultado = "";
         resultado += "Nombre:\t\t" + getNombre() + "\n";

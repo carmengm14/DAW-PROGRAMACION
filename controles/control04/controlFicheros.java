@@ -29,12 +29,7 @@ public class controlFicheros {
 
         listado.add(cliente1);
         listado.add(cliente2);
-      /*  Cliente cliente3 = new Cliente("Marta", "Lopez Cordoba", "20452679J",2, "caca@gmail.com");
-        System.out.println(cliente3);
 
-        Cliente cliente4 = new Cliente("Marta", "Lopez Cordoba", "20452433J",2, "pis@gmail.com");
-        System.out.println(cliente4);
-        */
         
         PersistenciaCliente pCliente1  = new PersistenciaCliente(listado);
         try {

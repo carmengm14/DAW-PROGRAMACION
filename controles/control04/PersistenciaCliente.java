@@ -9,31 +9,32 @@ import java.util.List;
 
 public class PersistenciaCliente {
     //Atributos
-    private List<Cliente> clientes;
+    private List<Cliente> listado;
 
     //Constructor
-    public PersistenciaCliente(List<Cliente> clientes){
-        this.clientes = new ArrayList<Cliente>();
-        clientes.addAll(clientes);
+    public PersistenciaCliente(List<Cliente> listado){
+        this.listado = new ArrayList<Cliente>();
+        listado.addAll(listado);
     }
 
     //getters and setters
-    public List<Cliente> getclientes() {
-        return clientes;
+    public List<Cliente> getlistado() {
+        return listado;
     }
 
-    public void setclientes(List<Cliente> clientes) {
-        this.clientes = clientes;
+    public void setlistado(List<Cliente> listado) {
+        this.listado = listado;
     }
 
     //Metodos
     String separador = File.separator;
     public void write() throws IOException{
-        BufferedWriter writer = new BufferedWriter(new FileWriter("C:"+separador+"Users"+separador+"CGM1414"+separador+"OneDrive"+separador+"Escritorio"+separador+"CARMEN"+separador+"java"+separador+"DAW-PROGRAMACION-1"+separador+"controles" + separador + "control04" + separador + "CLIENTES.dat"));
+        BufferedWriter writer = new BufferedWriter(new FileWriter("C:"+separador+"Users"+separador+"CGM1414"+separador+"OneDrive"+separador+"Escritorio"+separador
+        +"CARMEN"+separador+"java"+separador+"DAW-PROGRAMACION-1"+separador+"controles" + separador + "control04" + separador + "CLIENTES.dat"));
       /*  C:\Users\CGM1414\OneDrive\Escritorio\CARMEN\java\DAW-PROGRAMACION-1\controles\control04*/
         String linea = " ";
-        for (int i = 0; i < clientes.size(); i++) {
-            Cliente cliente = clientes.get(i);
+        for (int i = 0; i < listado.size(); i++) {
+            Cliente cliente = listado.get(i);
             linea += cliente.getId() + ", " + cliente.getNif() + ", " + cliente.getNombre() + ", " + cliente.getApellidos() + ", " + cliente.getEmail() + ".";
             writer.write(linea);
         }
