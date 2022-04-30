@@ -1,38 +1,41 @@
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
+import java.io.File;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
 
-public abstract class PersistenciaCliente extends Cliente {
+public class PersistenciaCliente {
     //Atributos
-    private List<Cliente> listaClientes;
-    
+    private List<Cliente> clientes;
+
     //Constructor
-    public PersistenciaCliente(String nombre, String apellidos, String nif, int id, String email) {
-        super(nombre, apellidos, nif, id, email);
-        //TODO Auto-generated constructor stub
-        listaClientes.add(this);
+    public PersistenciaCliente(List<Cliente> clientes){
+        this.clientes = new ArrayList<Cliente>();
+        clientes.addAll(clientes);
     }
 
     //getters and setters
-    public List<Cliente> getListaClientes() {
-        return listaClientes;
+    public List<Cliente> getclientes() {
+        return clientes;
     }
 
-    public void setListaClientes(List<Cliente> listaClientes) {
-        this.listaClientes = listaClientes;
+    public void setclientes(List<Cliente> clientes) {
+        this.clientes = clientes;
     }
 
     //Metodos
-   
+    String separador = File.separator;
     public void write() throws IOException{
-        BufferedWriter writer = new BufferedWriter(new FileWriter("./control04/CLIENTES.dat"));
-        String cliente = " ";
-        while (!listaClientes.isEmpty()) {
-            cliente += getId() + ", " + getNif() + ", " + getNombre() + ", " + getApellidos() + ", " + getEmail() + ".";
-            writer.write(cliente);
+        BufferedWriter writer = new BufferedWriter(new FileWriter("C:"+separador+"Users"+separador+"CGM1414"+separador+"OneDrive"+separador+"Escritorio"+separador+"CARMEN"+separador+"java"+separador+"DAW-PROGRAMACION-1"+separador+"controles" + separador + "control04" + separador + "CLIENTES.dat"));
+      /*  C:\Users\CGM1414\OneDrive\Escritorio\CARMEN\java\DAW-PROGRAMACION-1\controles\control04*/
+        String linea = " ";
+        for (int i = 0; i < clientes.size(); i++) {
+            Cliente cliente = clientes.get(i);
+            linea += cliente.getId() + ", " + cliente.getNif() + ", " + cliente.getNombre() + ", " + cliente.getApellidos() + ", " + cliente.getEmail() + ".";
+            writer.write(linea);
         }
         writer.close();
     }

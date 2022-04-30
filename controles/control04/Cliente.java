@@ -1,3 +1,4 @@
+
 public class Cliente extends Persona {
     //Atrbutos
     private int id;
@@ -32,11 +33,12 @@ public class Cliente extends Persona {
     //metodos
     public String toString(){
         String resultado = "";
-        resultado += "Nombre:\t" + getNombre() + "\n";
+        resultado += "Nombre:\t\t" + getNombre() + "\n";
         resultado += "Apellidos:\t" + getApellidos() + "\n";
-        resultado += "NIF:\t" + getNif() + "\n";
-        resultado += "ID:\t" + getId() + "\n";
-        resultado += "Email:\t" + getEmail() + "\n";
+        resultado += "NIF:\t\t" + getNif() + "\n";
+        resultado += "ID:\t\t" + getId() + "\n";
+        resultado += "Email:\t\t" + getEmail() + "\n";
+        resultado += "====================";
 
         return resultado;
     }

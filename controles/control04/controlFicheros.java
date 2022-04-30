@@ -1,3 +1,6 @@
+import java.util.ArrayList;
+import java.util.List;
+
 /*Crea una aplicacion con las siguientes caracteristicas:
     Una clase PERSONA con los atributos: NIF, NOMBRE Y APELLIDOS
         Estos atributos deben ser accesibles para las clases hijas y no accesibles para el resto de clases
@@ -15,13 +18,32 @@
 
 public class controlFicheros {
     public static void main(String[] args) {
+        List<Cliente> listado = new ArrayList<>();
+
         Cliente cliente1 = new Cliente("Carmen", "García Monreal", "20919132M",0, "carmen@gmail.com");
         System.out.println(cliente1);
         
         
         Cliente cliente2 = new Cliente("Marta", "Lopez Cordoba", "20452679J",1, "marta@gmail.com");
         System.out.println(cliente2);
+
+        listado.add(cliente1);
+        listado.add(cliente2);
+      /*  Cliente cliente3 = new Cliente("Marta", "Lopez Cordoba", "20452679J",2, "caca@gmail.com");
+        System.out.println(cliente3);
+
+        Cliente cliente4 = new Cliente("Marta", "Lopez Cordoba", "20452433J",2, "pis@gmail.com");
+        System.out.println(cliente4);
+        */
         
+        PersistenciaCliente pCliente1  = new PersistenciaCliente(listado);
+        try {
+            pCliente1.write();
+        } catch (Exception e) {
+            //TODO: handle exception
+            System.out.println( e.getLocalizedMessage());
+        }
+       
     }
 }
 

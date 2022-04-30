@@ -1,7 +1,7 @@
 public abstract class Persona {
     //Atributos
-    private String nombre;
-    private String apellidos;
+    protected String nombre;
+    protected String apellidos;
     private String nif;
 
     //constructor
