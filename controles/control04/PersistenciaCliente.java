@@ -4,7 +4,6 @@ import java.io.File;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.util.ArrayList;
 import java.util.List;
 
 public class PersistenciaCliente {
@@ -13,17 +12,12 @@ public class PersistenciaCliente {
 
     //Constructor
     public PersistenciaCliente(List<Cliente> listado){
-        this.listado = new ArrayList<Cliente>();
-        listado.addAll(listado);
+        this.listado = listado;
     }
 
     //getters and setters
     public List<Cliente> getlistado() {
         return listado;
-    }
-
-    public void setlistado(List<Cliente> listado) {
-        this.listado = listado;
     }
 
     //Metodos
@@ -35,8 +29,8 @@ public class PersistenciaCliente {
         String linea = " ";
         for (int i = 0; i < listado.size(); i++) {
             Cliente cliente = listado.get(i);
-            linea += cliente.getId() + ", " + cliente.getNif() + ", " + cliente.getNombre() + ", " + cliente.getApellidos() + ", " + cliente.getEmail() + ".";
-            writer.write(linea);
+            linea = cliente.getId() + ", " + cliente.getNif() + ", " + cliente.getNombre() + ", " + cliente.getApellidos() + ", " + cliente.getEmail() + ".";
+            writer.write(linea + "\n");
         }
         writer.close();
     }

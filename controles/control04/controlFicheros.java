@@ -20,15 +20,18 @@ public class controlFicheros {
     public static void main(String[] args) {
         List<Cliente> listado = new ArrayList<>();
 
-        Cliente cliente1 = new Cliente("Carmen", "García Monreal", "20919132M",0, "carmen@gmail.com");
+        Cliente cliente1 = new Cliente("Carmen", "Garcia Monreal", "20919132M", "carmen@gmail.com");
         System.out.println(cliente1);
         
-        
-        Cliente cliente2 = new Cliente("Marta", "Lopez Cordoba", "20452679J",1, "marta@gmail.com");
+        Cliente cliente2 = new Cliente("Marta", "Lopez Cordoba", "20452679J", "marta@gmail.com");
         System.out.println(cliente2);
+
+        Cliente cliente3 = new Cliente("Carla", "Caca Pis", "20452679J", "marta@gmail.com");
+        System.out.println(cliente3);
 
         listado.add(cliente1);
         listado.add(cliente2);
+        listado.add(cliente3);
 
         
         PersistenciaCliente pCliente1  = new PersistenciaCliente(listado);
@@ -39,6 +42,6 @@ public class controlFicheros {
             System.out.println( e.getLocalizedMessage());
         }
        
-    }
+        }
 }
 

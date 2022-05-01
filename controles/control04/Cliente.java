@@ -1,37 +1,26 @@
-/*import java.util.ArrayList;
-import java.util.List;*/
-
 public class Cliente extends Persona {
-    //Atrbutos
-    private int id;
-  //  protected List<Integer> numeros = new ArrayList<>();
+    //Atributos
+    private int idCliente;
+    /*static sirve para todas las instancias de la clase 
+    no local de cada cliente, por lo que se iran sumando y no empezaran cada vez que se llame a esta*/
+    private static int idUltimo = 0;
     private String email;
 
     //constructor
-    public Cliente(String nombre, String apellidos, String nif, int id, String email) {
+    public Cliente(String nombre, String apellidos, String nif, String email) {
         super(nombre, apellidos, nif);
         //TODO Auto-generated constructor stub
-      /*  for (int i = 0; i < numeros.size(); i++) {
-            if (numeros.get(i) == id) {
-                System.out.println("Id no disponible");
-            }else{
-                numeros.add(id);
-                this.id = id;
-            }
-        }
-        */
-        this.id = id;
         this.email = email;
+        setId();
     }
 
     //getters and setters
-    
-    public int getId() {
-        return id;
+    public void setId(){
+        idCliente = idUltimo + 1;
+        idUltimo++;
     }
-
-    public void setId(int id) {
-        this.id = id;
+    public int getId(){
+        return idCliente;
     }
 
     public String getEmail() {
@@ -43,7 +32,7 @@ public class Cliente extends Persona {
     }
 
     //metodos
-    
+
     public String toString(){
         String resultado = "";
         resultado += "Nombre:\t\t" + getNombre() + "\n";
