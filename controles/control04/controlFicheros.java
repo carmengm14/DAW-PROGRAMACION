@@ -26,7 +26,7 @@ public class controlFicheros {
         Cliente cliente2 = new Cliente("Marta", "Lopez Cordoba", "20452679J", "marta@gmail.com");
         System.out.println(cliente2);
 
-        Cliente cliente3 = new Cliente("Carla", "Caca Pis", "20452679J", "marta@gmail.com");
+        Cliente cliente3 = new Cliente("Carla", "Caca Pis", "20782659J", "carla@gmail.com");
         System.out.println(cliente3);
 
         listado.add(cliente1);
