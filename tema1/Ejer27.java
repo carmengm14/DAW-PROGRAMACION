@@ -7,9 +7,8 @@ public class Ejer27 {
       Scanner sc = new Scanner(System.in);
       int numero = sc.nextInt();
       sc.close();
-      int i = 1;
       
-      for(i = 1; i <= numero; i++){
+      for(int i = 1; i <= numero; i++){
         for (int j=1;j<=i;j++) {
             System.out.print(j + "");
         }
