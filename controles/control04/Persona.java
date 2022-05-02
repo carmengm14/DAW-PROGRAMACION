@@ -1,20 +1,21 @@
 public abstract class Persona {
-    //Atributos
+    // Atributos
     protected String nombre;
     protected String apellidos;
     private String nif;
 
-    //constructor
-    public Persona(String nombre, String apellidos, String nif){
+    // constructor
+    public Persona(String nombre, String apellidos, String nif) {
         this.nombre = nombre;
         this.apellidos = apellidos;
         this.nif = nif;
     }
 
-    //getters y setters
+    // getters y setters
     public String getNombre() {
         return nombre;
     }
+
     public void setNombre(String nombre) {
         this.nombre = nombre;
     }
@@ -22,6 +23,7 @@ public abstract class Persona {
     public String getApellidos() {
         return apellidos;
     }
+
     public void setApellidos(String apellidos) {
         this.apellidos = apellidos;
     }
@@ -29,6 +31,7 @@ public abstract class Persona {
     public String getNif() {
         return nif;
     }
+
     public void setNif(String nif) {
         this.nif = nif;
     }

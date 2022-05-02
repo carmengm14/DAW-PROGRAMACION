@@ -22,7 +22,7 @@ public class controlFicheros {
 
         Cliente cliente1 = new Cliente("Carmen", "Garcia Monreal", "20919132M", "carmen@gmail.com");
         System.out.println(cliente1);
-        
+
         Cliente cliente2 = new Cliente("Marta", "Lopez Cordoba", "20452679J", "marta@gmail.com");
         System.out.println(cliente2);
 
@@ -33,16 +33,14 @@ public class controlFicheros {
         listado.add(cliente2);
         listado.add(cliente3);
 
-        
-        PersistenciaCliente pCliente1  = new PersistenciaCliente(listado);
+        PersistenciaCliente pCliente1 = new PersistenciaCliente(listado);
         try {
             pCliente1.write();
             pCliente1.read();
         } catch (Exception e) {
-            //TODO: handle exception
-            System.out.println( e.getLocalizedMessage());
+            // TODO: handle exception
+            System.out.println(e.getLocalizedMessage());
         }
-       
-        }
-}
 
+    }
+}
