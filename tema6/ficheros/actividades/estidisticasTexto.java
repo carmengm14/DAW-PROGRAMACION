@@ -1,7 +1,6 @@
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
-import java.util.StringTokenizer;
 
 /**
  * Crea un programa que analice un fichero de texto plano y que muestre las
@@ -20,45 +19,64 @@ public class estidisticasTexto {
         int contadorConsonantes = 0;
         int contadorEspacios = 0;
         int contadorTabuladores = 0;
+
+        boolean palabra = false;
+
         // Lector del fichero
         BufferedReader lectorFich = new BufferedReader(new FileReader("tema6/ficheros/actividades/fichero.txt"));
         String cadena = lectorFich.readLine().toLowerCase();
 
+        int finDeLinea = cadena.length() - 1;
+
         try {
             while (cadena != null) {
-                // Contador de lineas
+                // CONTADOR LINEAS
                 contadorLineas++;
                 // recorremos la cadena para analizarla y poder contar
-                // Contador palabras
                 for (int i = 0; i < cadena.length(); i++) {
                     char caracter = cadena.charAt(i);
-
+                    // CONTADOR LETRAS
                     if (Character.isLetter(cadena.charAt(i))) {
                         contadorLetras++;
                     }
+                    // CONTADOR VOCALES Y CONSONANTES
                     if (caracter == 'a' || caracter == 'e' || caracter == 'i' || caracter == 'o' || caracter == 'u') {
                         contadorVocales++;
                     } else if (caracter != ' ' || caracter != 'a' || caracter != 'e' || caracter != 'i'
                             || caracter != 'o' || caracter != 'u') {
                         contadorConsonantes++;
                     }
+                    // CONTADOR ESPACIOS
                     if (caracter == ' ') {
                         contadorEspacios++;
                     }
 
-                }
+                    // CONTADOR DE PALABRAS
+                    if (Character.isLetter(cadena.charAt(i)) && i != finDeLinea) {
+                        palabra = true;
+                        // Si el char no es una letra y aún hay más letras,
+                        // el contador continua.
+                    } else if (!Character.isLetter(cadena.charAt(i)) && palabra) {
+                        contadorPalabras++;
+                        palabra = false;
+                        // última palabra de la cadena; si no termina con una no letra ,
+                    } else if (Character.isLetter(cadena.charAt(i)) && i == finDeLinea) {
+                        contadorPalabras++;
+                    }
 
+                }
                 cadena = lectorFich.readLine();
             }
-
-            System.out.println("Letras:\t\t" + contadorLetras + " \n"
+            System.out.println("===========================\n"
+                    + "ESTADISTICAS DE TU FICHERO:\n"
+                    + "===========================\n"
+                    + "Letras:\t\t" + contadorLetras + " \n"
                     + "Palabras:\t" + contadorPalabras + " \n"
                     + "Lineas:\t\t" + contadorLineas + " \n"
                     + "Vocales:\t" + contadorVocales + " \n"
                     + "Consonantes:\t" + contadorConsonantes + " \n"
                     + "Espacios:\t" + contadorEspacios + " \n"
                     + "Tabuladores:\t" + contadorTabuladores + " \n");
-
         } catch (Exception e) {
             // TODO: handle exception
             System.out.println(e.getLocalizedMessage());

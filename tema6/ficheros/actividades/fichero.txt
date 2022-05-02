@@ -1,2 +1,2 @@
-Hola buenos dias, me llamo Carmen y este es un fichero para el ejercicio    EstadisticasTexto
+Hola, me llamo Carmen y este es un fichero para el ejercicio	EstadisticasTexto
 Tiene que contar lineas, tabuladores letras, etc...
