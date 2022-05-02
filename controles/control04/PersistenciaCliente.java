@@ -1,6 +1,6 @@
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
-import java.io.File;
+//import java.io.File;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
@@ -21,11 +21,14 @@ public class PersistenciaCliente {
     }
 
     //Metodos
-    String separador = File.separator;
+    //String separador = File.separator;
     public void write() throws IOException{
-        BufferedWriter writer = new BufferedWriter(new FileWriter("C:"+separador+"Users"+separador+"CGM1414"+separador+"OneDrive"+separador+"Escritorio"+separador
+       /* BufferedWriter writer = new BufferedWriter(new FileWriter("C:"+separador+"Users"+separador+"CGM1414"+separador+"OneDrive"+separador+"Escritorio"+separador
         +"CARMEN"+separador+"java"+separador+"DAW-PROGRAMACION-1"+separador+"controles" + separador + "control04" + separador + "CLIENTES.dat"));
-      /*  C:\Users\CGM1414\OneDrive\Escritorio\CARMEN\java\DAW-PROGRAMACION-1\controles\control04*/
+      RUTA WINDOWS
+        C:\Users\CGM1414\OneDrive\Escritorio\CARMEN\java\DAW-PROGRAMACION-1\controles\control04*/
+      BufferedWriter writer = new BufferedWriter(new FileWriter("/home/alumno/Desktop/discoExtra/DAW-PROGRAMACION/controles/control04/CLIENTES.dat"));
+    
         String linea = " ";
         for (int i = 0; i < listado.size(); i++) {
             Cliente cliente = listado.get(i);
@@ -35,7 +38,7 @@ public class PersistenciaCliente {
         writer.close();
     }
     public void read() throws IOException{
-        FileReader fileReader = new FileReader("./control04/CLIENTES.dat");
+        FileReader fileReader = new FileReader("/home/alumno/Desktop/discoExtra/DAW-PROGRAMACION/controles/control04/CLIENTES.dat");
         BufferedReader lectorFich = new BufferedReader(fileReader);
         String cadena = lectorFich.readLine();
         

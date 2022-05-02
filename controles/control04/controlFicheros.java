@@ -37,6 +37,7 @@ public class controlFicheros {
         PersistenciaCliente pCliente1  = new PersistenciaCliente(listado);
         try {
             pCliente1.write();
+            pCliente1.read();
         } catch (Exception e) {
             //TODO: handle exception
             System.out.println( e.getLocalizedMessage());
