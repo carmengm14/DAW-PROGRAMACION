@@ -92,7 +92,7 @@ public class estidisticasTexto {
                     + "Vocales:\t" + porcentajeVocales + "% \n"
                     + "Consonantes:\t" + porcentajeConsonantes + "% \n"
                     + "Espacios:\t" + porcentajeEspacios + "% \n"
-                    + "Tabuladores:\t" + porcentajeTabuladores+ "% " + contadorTabuladores+ " \n");
+                    + "Tabuladores:\t" + porcentajeTabuladores+ "% \n");
         } catch (Exception e) {
             // TODO: handle exception
             System.out.println(e.getLocalizedMessage());
