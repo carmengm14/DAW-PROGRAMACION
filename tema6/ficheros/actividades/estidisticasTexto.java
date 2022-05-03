@@ -68,6 +68,11 @@ public class estidisticasTexto {
                         contadorPalabras++;
                     }
 
+                    //CONTADOR DE TABS
+                    if (!Character.isLetter(cadena.charAt(i)) && caracter != ' ') {
+                        contadorTabuladores++;
+                    }
+
                 }
                 cadena = lectorFich.readLine();
             }
@@ -87,7 +92,7 @@ public class estidisticasTexto {
                     + "Vocales:\t" + porcentajeVocales + "% \n"
                     + "Consonantes:\t" + porcentajeConsonantes + "% \n"
                     + "Espacios:\t" + porcentajeEspacios + "% \n"
-                    + "Tabuladores:\t" + porcentajeTabuladores+ "% \n");
+                    + "Tabuladores:\t" + porcentajeTabuladores+ "% " + contadorTabuladores+ " \n");
         } catch (Exception e) {
             // TODO: handle exception
             System.out.println(e.getLocalizedMessage());
