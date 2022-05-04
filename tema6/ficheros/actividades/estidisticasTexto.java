@@ -19,7 +19,7 @@ public class estidisticasTexto {
         double porcentajeVocales;
         int contadorConsonantes = 0;
         double porcentajeConsonantes;
-        int contadorEspacios = 0;       
+        int contadorEspacios = 0;
         double porcentajeEspacios;
         int contadorTabuladores = 0;
         double porcentajeTabuladores;
@@ -53,6 +53,7 @@ public class estidisticasTexto {
                     // CONTADOR ESPACIOS
                     if (caracter == ' ') {
                         contadorEspacios++;
+
                     }
 
                     // CONTADOR DE PALABRAS
@@ -68,21 +69,21 @@ public class estidisticasTexto {
                         contadorPalabras++;
                     }
 
-                    //CONTADOR DE TABS
-                    if (!Character.isLetter(cadena.charAt(i)) && caracter != ' ') {
+                    // CONTADOR DE TABS
+                    if (caracter == '\t') {
                         contadorTabuladores++;
                     }
 
                 }
                 cadena = lectorFich.readLine();
             }
-            //CALCULAMOS PORCENTAJES:
+            // CALCULAMOS PORCENTAJES:
             porcentajeVocales = (contadorVocales * contadorLetras) / 100;
             porcentajeConsonantes = (contadorConsonantes * contadorLetras) / 100;
             porcentajeEspacios = (contadorEspacios * contadorLetras) / 100;
             porcentajeTabuladores = (contadorTabuladores * contadorLetras) / 100;
 
-            //IMPRESION FINAL
+            // IMPRESION FINAL
             System.out.println("===========================\n"
                     + "ESTADISTICAS DE TU FICHERO:\n"
                     + "===========================\n"
@@ -92,7 +93,7 @@ public class estidisticasTexto {
                     + "Vocales:\t" + porcentajeVocales + "% \n"
                     + "Consonantes:\t" + porcentajeConsonantes + "% \n"
                     + "Espacios:\t" + porcentajeEspacios + "% \n"
-                    + "Tabuladores:\t" + porcentajeTabuladores+ "% \n");
+                    + "Tabuladores:\t" + porcentajeTabuladores + "% \n");
         } catch (Exception e) {
             // TODO: handle exception
             System.out.println(e.getLocalizedMessage());
