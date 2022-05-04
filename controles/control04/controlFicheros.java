@@ -44,8 +44,8 @@ public class controlFicheros {
         System.out.println("\n=====================\n Peristencia 2: \n=====================\n");
         PersistenciaCliente2 pCliente2 = new PersistenciaCliente2(listado);
         try {
-            pCliente1.write();
-            pCliente1.read();
+            pCliente2.write();
+            pCliente2.read();
         } catch (Exception e) {
             // TODO: handle exception
             System.out.println(e.getLocalizedMessage());
