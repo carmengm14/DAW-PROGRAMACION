@@ -1,8 +1,8 @@
-import java.io.BufferedReader;
-import java.io.BufferedWriter;
-//import java.io.File;
-import java.io.FileReader;
-import java.io.FileWriter;
+
+import java.io.DataInputStream;
+import java.io.DataOutputStream;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
 import java.io.IOException;
 import java.util.List;
 
@@ -33,34 +33,25 @@ public class PersistenciaCliente2 {
          * C:\Users\CGM1414\OneDrive\Escritorio\CARMEN\java\DAW-PROGRAMACION-1\controles
          * \control04
          */
-        BufferedWriter writer = new BufferedWriter(
-                new FileWriter("controles/control04/CLIENTES2.dat"));
+        DataOutputStream writer = new DataOutputStream(
+                new FileOutputStream("controles/control04/CLIENTES2.dat"));
 
         String linea = " ";
         for (int i = 0; i < listado.size(); i++) {
             Cliente cliente = listado.get(i);
             linea = cliente.toString();
-            writer.write(linea + "\n");
+            writer.writeUTF(linea);
         }
         writer.close();
     }
 
     public void read() throws IOException {
-        FileReader fileReader = new FileReader(
-                "controles/control04/CLIENTES2.dat");
-        BufferedReader lectorFich = new BufferedReader(fileReader);
-        String cadena = lectorFich.readLine();
+        DataInputStream f = new DataInputStream(new FileInputStream(
+                "controles/control04/CLIENTES2.dat"));
 
-        while (cadena != null) {
-
-            String lineaFinal = cadena.trim();
-
-            if (lineaFinal.endsWith(".")) {
-                System.out.println(cadena);
-            }
-
-            cadena = lectorFich.readLine();
+        while (f.available() > 0) {
+            System.out.println(f.readUTF());
         }
-        lectorFich.close();
+        f.close();
     }
 }
