@@ -39,8 +39,7 @@ public class PersistenciaCliente2 {
         String linea = " ";
         for (int i = 0; i < listado.size(); i++) {
             Cliente cliente = listado.get(i);
-            linea = cliente.getId() + ", " + cliente.getNif() + ", " + cliente.getNombre() + ", "
-                    + cliente.getApellidos() + ", " + cliente.getEmail() + ".";
+            linea = cliente.toString();
             writer.write(linea + "\n");
         }
         writer.close();
