@@ -4,6 +4,9 @@ import java.io.DataOutputStream;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutput;
+import java.io.ObjectOutputStream;
 import java.util.List;
 
 public class PersistenciaCliente2 {
@@ -33,24 +36,34 @@ public class PersistenciaCliente2 {
          * C:\Users\CGM1414\OneDrive\Escritorio\CARMEN\java\DAW-PROGRAMACION-1\controles
          * \control04
          */
-        DataOutputStream writer = new DataOutputStream(
+        try (DataOutputStream writer = new DataOutputStream(
                 new FileOutputStream("controles/control04/CLIENTES2.dat"));
+                ObjectOutputStream salida = new ObjectOutputStream(writer)) {
 
-        String linea = " ";
-        for (int i = 0; i < listado.size(); i++) {
-            Cliente cliente = listado.get(i);
-            linea = cliente.toString();
-            writer.writeUTF(linea);
+            salida.writeObject(listado);
+            /*
+             * for (int i = 0; i < listado.size(); i++) {
+             * writer.writeUTF("Nombre" + getlistado());
+             * }
+             */
+            writer.close();
+        } catch (Exception e) {
+            // TODO: handle exception
         }
-        writer.close();
+        /*
+         * DataOutputStream writer = new DataOutputStream(
+         * new FileOutputStream("controles/control04/CLIENTES2.dat"));
+         */
+
     }
 
-    public void read() throws IOException {
+    public void read() throws IOException, ClassNotFoundException {
         DataInputStream f = new DataInputStream(new FileInputStream(
                 "controles/control04/CLIENTES2.dat"));
+        ObjectInputStream entrada = new ObjectInputStream(f);
 
         while (f.available() > 0) {
-            System.out.println(f.readUTF());
+            System.out.println(entrada.readObject());
         }
         f.close();
     }

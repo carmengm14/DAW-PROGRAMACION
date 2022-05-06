@@ -1,5 +1,9 @@
-public abstract class Persona {
+import java.io.Serializable;
+
+public abstract class Persona implements Serializable {
     // Atributos
+    private static final long serialVersionUID = 1L;
+
     protected String nombre;
     protected String apellidos;
     private String nif;
