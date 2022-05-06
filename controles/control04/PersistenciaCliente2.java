@@ -40,12 +40,10 @@ public class PersistenciaCliente2 {
                 new FileOutputStream("controles/control04/CLIENTES2.dat"));
                 ObjectOutputStream salida = new ObjectOutputStream(writer)) {
 
-            salida.writeObject(listado);
-            /*
-             * for (int i = 0; i < listado.size(); i++) {
-             * writer.writeUTF("Nombre" + getlistado());
-             * }
-             */
+            for (int i = 0; i < listado.size(); i++) {
+                salida.writeObject(listado.get(i));
+            }
+
             writer.close();
         } catch (Exception e) {
             // TODO: handle exception
