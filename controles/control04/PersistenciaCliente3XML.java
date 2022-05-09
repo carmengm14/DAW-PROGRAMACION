@@ -1,4 +1,3 @@
-
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
 import java.io.FileInputStream;
@@ -8,12 +7,12 @@ import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.util.List;
 
-public class PersistenciaCliente2 {
+public class PersistenciaCliente3XML {
     // Atributos
     private List<Cliente> listado;
 
     // Constructor
-    public PersistenciaCliente2(List<Cliente> listado) {
+    public PersistenciaCliente3XML(List<Cliente> listado) {
         this.listado = listado;
     }
 
@@ -30,13 +29,13 @@ public class PersistenciaCliente2 {
          * FileWriter("C:"+separador+"Users"+separador+"CGM1414"+separador+"OneDrive"+
          * separador+"Escritorio"+separador
          * +"CARMEN"+separador+"java"+separador+"DAW-PROGRAMACION-1"+separador+
-         * "controles" + separador + "control04" + separador + "CLIENTES.dat"));
+         * "controles" + separador + "control04" + separador + "CLIENTES.xml"));
          * RUTA WINDOWS
          * C:\Users\CGM1414\OneDrive\Escritorio\CARMEN\java\DAW-PROGRAMACION-1\controles
          * \control04
          */
         try (DataOutputStream writer = new DataOutputStream(
-                new FileOutputStream("controles/control04/CLIENTES2.dat"));
+                new FileOutputStream("controles/control04/CLIENTES2.xml"));
                 ObjectOutputStream salida = new ObjectOutputStream(writer)) {
 
             for (int i = 0; i < listado.size(); i++) {
@@ -56,7 +55,7 @@ public class PersistenciaCliente2 {
 
     public void read() throws IOException, ClassNotFoundException {
         DataInputStream f = new DataInputStream(new FileInputStream(
-                "controles/control04/CLIENTES2.dat"));
+                "controles/control04/CLIENTES2.xml"));
         ObjectInputStream entrada = new ObjectInputStream(f);
 
         while (f.available() > 0) {
