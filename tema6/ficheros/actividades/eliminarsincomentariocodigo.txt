@@ -6,6 +6,5 @@ import java.io.IOException;
 public class eliminarcomentariocodigo {
     public static void main(String[] args) throws IOException {
         System.out.println("Hola Mundo!");
-
     }
 }
