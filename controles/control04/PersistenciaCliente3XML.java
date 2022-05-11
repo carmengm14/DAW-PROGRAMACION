@@ -1,18 +1,19 @@
-import java.io.DataInputStream;
 import java.io.EOFException;
 import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.util.List;
 
-import javax.xml.parsers.DocumentBuilderFactory;
+import javax.xml.parsers.*;
 import javax.xml.parsers.ParserConfigurationException;
 import javax.xml.transform.*;
 import javax.xml.transform.dom.DOMSource;
 import javax.xml.transform.stream.StreamResult;
 
 import org.w3c.dom.*;
+import org.xml.sax.SAXException;
 
 public class PersistenciaCliente3XML {
     // Atributos
@@ -86,14 +87,30 @@ public class PersistenciaCliente3XML {
         transformador.transform(source, resultado);
     }
 
-    public void read() throws IOException, ClassNotFoundException {
-        DataInputStream f = new DataInputStream(new FileInputStream(
-                "controles/control04/CLIENTES2.xml"));
-        ObjectInputStream entrada = new ObjectInputStream(f);
+    public void read() throws ParserConfigurationException, FileNotFoundException, IOException, SAXException {
+        Document doc = DocumentBuilderFactory.newInstance().newDocumentBuilder()
+                .parse(new FileInputStream("controles/control04/CLIENTESXML.dat"));
+        Element raiz = (Element) doc.getChildNodes().item(0);
+        NodeList clientes = raiz.getElementsByTagName("cliente");
 
-        while (f.available() > 0) {
-            System.out.println(entrada.readObject());
+        for (int i = 0; i < clientes.getLength(); i++) {
+            Element elemento = (Element) clientes.item(i);
+            System.out.println(elemento.getNodeName() + " " + (i + 1));
+
+            System.out.println("Nombre: "
+                    + elemento.getElementsByTagName("nombre").item(0).getChildNodes().item(0).getNodeValue());
+
+            System.out.println("Apellidos: "
+                    + elemento.getElementsByTagName("apellidos").item(0).getChildNodes().item(0).getNodeValue());
+
+            System.out.println("Nif: "
+                    + elemento.getElementsByTagName("nif").item(0).getChildNodes().item(0).getNodeValue());
+
+            System.out.println("Email: "
+                    + elemento.getElementsByTagName("email").item(0).getChildNodes().item(0).getNodeValue());
+
+            System.out.println(" ");
         }
-        f.close();
+
     }
 }
