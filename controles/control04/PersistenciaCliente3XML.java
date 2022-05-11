@@ -1,14 +1,17 @@
 import java.io.DataInputStream;
 import java.io.EOFException;
 import java.io.FileInputStream;
+import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.util.List;
 
-import javax.lang.model.*;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
-import javax.xml.transform.TransformerException;
+import javax.xml.transform.*;
+import javax.xml.transform.dom.DOMSource;
+import javax.xml.transform.stream.StreamResult;
+
 import org.w3c.dom.*;
 
 public class PersistenciaCliente3XML {
@@ -27,10 +30,11 @@ public class PersistenciaCliente3XML {
 
     // Metodos
     public void write() throws IOException, ClassNotFoundException, ParserConfigurationException, TransformerException {
-        ObjectInputStream fichero = new ObjectInputStream(new FileInputStream("controles/control04/CLIENTEScopia.dat"));
+        ObjectInputStream fichero = new ObjectInputStream(
+                new FileInputStream("controles/control04/CLIENTES2copia.dat"));
         Document doc = DocumentBuilderFactory.newInstance().newDocumentBuilder().newDocument();
-        Element root = doc.createElement("clientes");
-        doc.appendChild(root);
+        Element clientes = doc.createElement("clientes");
+        doc.appendChild(clientes);
 
         Cliente cliente;
 
@@ -57,13 +61,18 @@ public class PersistenciaCliente3XML {
                 hijo4.appendChild(doc.createTextNode(cliente.getEmail()));
                 cliElement.appendChild(hijo4);
 
-                root.appendChild(cliElement);
+                clientes.appendChild(cliElement);
             }
         } catch (EOFException eof) {
             // TODO: handle exception
             fichero.close();
         }
 
+        Transformer transformador = TransformerFactory.newInstance().newTransformer();
+        DOMSource source = new DOMSource(doc);
+        StreamResult resultado = new StreamResult(new FileOutputStream("controles/control04/CLIENTESXML.dat"));
+
+        transformador.transform(source, resultado);
     }
 
     public void read() throws IOException, ClassNotFoundException {

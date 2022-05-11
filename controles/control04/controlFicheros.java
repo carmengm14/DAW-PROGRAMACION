@@ -20,6 +20,7 @@ public class controlFicheros {
     public static void main(String[] args) {
         List<Cliente> listado = new ArrayList<>();
 
+        System.out.println("\n=====================\n CLIENTES: \n=====================\n");
         Cliente cliente1 = new Cliente("Carmen", "Garcia Monreal", "20919132M", "carmen@gmail.com");
         System.out.println(cliente1);
 
@@ -33,6 +34,7 @@ public class controlFicheros {
         listado.add(cliente2);
         listado.add(cliente3);
 
+        System.out.println("\n=====================\n Peristencia 1: \n=====================\n");
         PersistenciaCliente pCliente1 = new PersistenciaCliente(listado);
         try {
             pCliente1.write();
@@ -46,6 +48,16 @@ public class controlFicheros {
         try {
             pCliente2.write();
             pCliente2.read();
+        } catch (Exception e) {
+            // TODO: handle exception
+            System.out.println(e.getLocalizedMessage());
+        }
+
+        System.out.println("\n=====================\n Peristencia 3 XML: \n=====================\n");
+        PersistenciaCliente3XML pCliente3 = new PersistenciaCliente3XML(listado);
+        try {
+            pCliente3.write();
+            pCliente3.read();
         } catch (Exception e) {
             // TODO: handle exception
             System.out.println(e.getLocalizedMessage());
