@@ -30,21 +30,29 @@ public class PersistenciaCliente3XML {
 
     // Metodos
     public void write() throws IOException, ClassNotFoundException, ParserConfigurationException, TransformerException {
+        // Leemos el fichero con los objetos que queremos poner en el XML
         ObjectInputStream fichero = new ObjectInputStream(
                 new FileInputStream("controles/control04/CLIENTES2copia.dat"));
+        // Creamos el doc que empezara con el nodo raiz
         Document doc = DocumentBuilderFactory.newInstance().newDocumentBuilder().newDocument();
         Element clientes = doc.createElement("clientes");
         doc.appendChild(clientes);
-
+        // creamos la variable cliente donde iremos metiendo los clientes 1 a 1
         Cliente cliente;
 
         try {
             while (true) {
+                // Leemos los datos del fichero que hemos cogido anteriormente y lo guardamos en
+                // cliente
                 cliente = (Cliente) fichero.readObject();
 
+                // creamos el nombre del nodo padre , y le ponemos un atributo al cual le
+                // ponemos texto (El id en este caso)
                 Element cliElement = doc.createElement("cliente");
                 cliElement.setAttribute("id", Integer.toString(cliente.getId()));
 
+                // creamos los hijos del nodo padre y les ponemos texto, luego los añadiremos al
+                // nodo padre para decir que son hijos de ese nodo y no de otro padre
                 Element hijo = doc.createElement("nombre");
                 hijo.appendChild(doc.createTextNode(cliente.getNombre()));
                 cliElement.appendChild(hijo);
@@ -61,13 +69,16 @@ public class PersistenciaCliente3XML {
                 hijo4.appendChild(doc.createTextNode(cliente.getEmail()));
                 cliElement.appendChild(hijo4);
 
+                // Guarda todos los nodos del cliente creado y asi cuando pase al siguiente
+                // cliente se mantendran almacenados en vez de superponerse
                 clientes.appendChild(cliElement);
             }
         } catch (EOFException eof) {
             // TODO: handle exception
             fichero.close();
         }
-
+        // Creamos el transformador, el source y el Stream que seran los encargados de
+        // escribir todo lo que hayamos hecho anteriormente.
         Transformer transformador = TransformerFactory.newInstance().newTransformer();
         DOMSource source = new DOMSource(doc);
         StreamResult resultado = new StreamResult(new FileOutputStream("controles/control04/CLIENTESXML.dat"));
