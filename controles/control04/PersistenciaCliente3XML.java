@@ -1,11 +1,15 @@
 import java.io.DataInputStream;
-import java.io.DataOutputStream;
+import java.io.EOFException;
 import java.io.FileInputStream;
-import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.ObjectInputStream;
-import java.io.ObjectOutputStream;
 import java.util.List;
+
+import javax.lang.model.*;
+import javax.xml.parsers.DocumentBuilderFactory;
+import javax.xml.parsers.ParserConfigurationException;
+import javax.xml.transform.TransformerException;
+import org.w3c.dom.*;
 
 public class PersistenciaCliente3XML {
     // Atributos
@@ -22,34 +26,43 @@ public class PersistenciaCliente3XML {
     }
 
     // Metodos
-    // String separador = File.separator;
-    public void write() throws IOException {
-        /*
-         * BufferedWriter writer = new BufferedWriter(new
-         * FileWriter("C:"+separador+"Users"+separador+"CGM1414"+separador+"OneDrive"+
-         * separador+"Escritorio"+separador
-         * +"CARMEN"+separador+"java"+separador+"DAW-PROGRAMACION-1"+separador+
-         * "controles" + separador + "control04" + separador + "CLIENTES.xml"));
-         * RUTA WINDOWS
-         * C:\Users\CGM1414\OneDrive\Escritorio\CARMEN\java\DAW-PROGRAMACION-1\controles
-         * \control04
-         */
-        try (DataOutputStream writer = new DataOutputStream(
-                new FileOutputStream("controles/control04/CLIENTES2.xml"));
-                ObjectOutputStream salida = new ObjectOutputStream(writer)) {
+    public void write() throws IOException, ClassNotFoundException, ParserConfigurationException, TransformerException {
+        ObjectInputStream fichero = new ObjectInputStream(new FileInputStream("controles/control04/CLIENTEScopia.dat"));
+        Document doc = DocumentBuilderFactory.newInstance().newDocumentBuilder().newDocument();
+        Element root = doc.createElement("clientes");
+        doc.appendChild(root);
 
-            for (int i = 0; i < listado.size(); i++) {
-                salida.writeObject(listado.get(i));
+        Cliente cliente;
+
+        try {
+            while (true) {
+                cliente = (Cliente) fichero.readObject();
+
+                Element cliElement = doc.createElement("cliente");
+                cliElement.setAttribute("id", Integer.toString(cliente.getId()));
+
+                Element hijo = doc.createElement("nombre");
+                hijo.appendChild(doc.createTextNode(cliente.getNombre()));
+                cliElement.appendChild(hijo);
+
+                Element hijo2 = doc.createElement("apellidos");
+                hijo2.appendChild(doc.createTextNode(cliente.getApellidos()));
+                cliElement.appendChild(hijo2);
+
+                Element hijo3 = doc.createElement("nif");
+                hijo3.appendChild(doc.createTextNode(cliente.getNif()));
+                cliElement.appendChild(hijo3);
+
+                Element hijo4 = doc.createElement("email");
+                hijo4.appendChild(doc.createTextNode(cliente.getEmail()));
+                cliElement.appendChild(hijo4);
+
+                root.appendChild(cliElement);
             }
-
-            writer.close();
-        } catch (Exception e) {
+        } catch (EOFException eof) {
             // TODO: handle exception
+            fichero.close();
         }
-        /*
-         * DataOutputStream writer = new DataOutputStream(
-         * new FileOutputStream("controles/control04/CLIENTES2.dat"));
-         */
 
     }
 
