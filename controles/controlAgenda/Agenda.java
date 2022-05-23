@@ -1,10 +1,11 @@
 import java.util.ArrayList;
+import java.util.Scanner;
 
 public class Agenda {
     //Atributos
     String nombre, apellidos, email;
     int telefono;
-    static ArrayList contactos = new ArrayList<String>();
+    public static ArrayList contactos = new ArrayList<String>();
 
     //Constructor user pedido por terminal
         public Agenda(String nombre, String apellidos, String email, int telefono) {
@@ -14,13 +15,28 @@ public class Agenda {
             this.telefono = telefono;
             contactos.add(this);
         }
+    //CONSTRUCTOR MANUAL
         public Agenda() {
             this.nombre = "CambiarLuego";
             this.apellidos = "CambiarLuego";
             this.email = "CambiarLuego";
             this.telefono = 000000000;
         }
-    //GETTERS Y SETTERS
+    
+        //METODOS
+        
+        public void pedirUsuarios() {
+            
+        }
+        public void imprimirListadoTexto() {
+            
+        }
+    
+        public void imprimirListadoObjetos() {
+            
+        }
+
+        //GETTERS Y SETTERS
         public String getNombre() {
             return nombre;
         }
@@ -45,28 +61,23 @@ public class Agenda {
         public void setTelefono(int telefono) {
             this.telefono = telefono;
         }
-        //CONTINUAMOS CON LOS METODOS
-        public void añadirUserAlFich(){
-            File ficheroSalida = new File("controles/controlAgenda/agenda.dat");
-            FileWriter writer = new FileWriter(ficheroSalida);
-     
-        for (int i = 3; i <= 500; i++) {
-            if (esPrimo(i) == true) {
-                //cambiamos los numeros de int a string ya que sino el metodo write no los reconoce y saldran caracteres raros en el fichero
-                writer.write(i + "\n");
-                
-            }
-        }
-        writer.close();
-        }
-        public void pedirUsuarios() {
-            
-        }
-        public void imprimirListadoTexto() {
-            
+
+        //MAIN
+        public static void main(String[] args) {
+            //Le pedimos al usuario sus datos
+            Scanner sc = new Scanner(System.in);
+            System.out.print("Registrar Nombre: ");
+            String nombre = sc.nextLine();
+            System.out.print("Registrar Apellidos: ");
+            String apellidos = sc.nextLine();
+            System.out.print("Registrar Email: ");
+            String email = sc.nextLine();
+            System.out.print("Registrar Telefono: ");
+            int telefono = sc.nextInt();
+            sc.close();
+    
+            Agenda contacto = new Agenda(nombre,apellidos,email,telefono);
+            contacto.pedirUsuarios();
         }
     
-        public void imprimirListadoObjetos() {
-            
-        }
     }
