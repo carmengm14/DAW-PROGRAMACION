@@ -14,8 +14,7 @@ public class agendaMain{
         int telefono = sc.nextInt();
         sc.close();
 
-        Agenda contacto = new Agenda();
-        contacto.Agenda(nombre,apellidos,email,telefono);
+        Agenda contacto = new Agenda(nombre,apellidos,email,telefono);
     }
 
 }
