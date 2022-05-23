@@ -1,11 +1,14 @@
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
+import java.io.DataInputStream;
 import java.io.DataOutputStream;
 import java.io.File;
+import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.io.Serializable;
 import java.util.Scanner;
@@ -36,6 +39,7 @@ public class Agenda implements Serializable {
             linea += "Nombre = " + getNombre() + "\t\t" + "Apellidos = " + getApellidos() + "\t" + "Email = " + getEmail() + "\t"+ "Telefono = " + getTelefono() + "." + "\n";
             return linea;
         }
+        
         public void escribirFichero() throws IOException{
             BufferedWriter bw = null;
             File file = new File("Agenda.dat");
@@ -61,6 +65,7 @@ public class Agenda implements Serializable {
         }
 
         public void listarAgenda() throws IOException{
+            System.out.println("================");
             FileReader fileReader = new FileReader(
                 "Agenda.dat");
             BufferedReader lectorFich = new BufferedReader(fileReader);
@@ -78,8 +83,16 @@ public class Agenda implements Serializable {
             }
         lectorFich.close();
         }
-        public void listarObjetos() throws IOException{
-            
+        public void listarObjetos() throws IOException, ClassNotFoundException{
+            System.out.println("================");
+            DataInputStream f = new DataInputStream(new FileInputStream(
+                "AgendaObjetos.dat"));
+        ObjectInputStream entrada = new ObjectInputStream(f);
+
+        while (f.available() > 0) {
+            System.out.println(entrada.readObject());
+        }
+        f.close();
         }
       
 
@@ -129,6 +142,7 @@ public class Agenda implements Serializable {
                contacto.escribirFichero();
                contacto.listarAgenda();
                contacto.escribirObjetos();
+               contacto.listarObjetos();
             } catch (Exception e) {
                 //TODO: handle exception
                 System.out.println(e.getLocalizedMessage());
