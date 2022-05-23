@@ -47,7 +47,17 @@ public class Agenda {
         }
         //CONTINUAMOS CON LOS METODOS
         public void añadirUserAlFich(){
-            
+            File ficheroSalida = new File("controles/controlAgenda/agenda.dat");
+            FileWriter writer = new FileWriter(ficheroSalida);
+     
+        for (int i = 3; i <= 500; i++) {
+            if (esPrimo(i) == true) {
+                //cambiamos los numeros de int a string ya que sino el metodo write no los reconoce y saldran caracteres raros en el fichero
+                writer.write(i + "\n");
+                
+            }
+        }
+        writer.close();
         }
         public void pedirUsuarios() {
             
