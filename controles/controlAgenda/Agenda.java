@@ -1,9 +1,12 @@
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
+import java.io.DataOutputStream;
 import java.io.File;
+import java.io.FileOutputStream;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.io.ObjectOutputStream;
 import java.util.Scanner;
 
 public class Agenda {
@@ -34,21 +37,18 @@ public class Agenda {
             bw = new BufferedWriter(fw);
 
             String linea = " ";
-                linea += "Nombre = " + getNombre() + ",\t" + "Apellidos = " + getApellidos() + ",\t" + "Email = " + getEmail() + ",\t"+ "Telefono = " + getTelefono();
-                bw.write(linea + "\n");
+                linea += "Nombre = " + getNombre() + "\t\t" + "Apellidos = " + getApellidos() + "\t" + "Email = " + getEmail() + "\t"+ "Telefono = " + getTelefono();
+                bw.write(linea+ "." + "\n");
             bw.close();
         }
 
         public void escribirObjetos() throws IOException{
-            BufferedWriter bw = null;
-            File file = new File("AgendaObjetos.dat");
-            FileWriter fw = new FileWriter(file.getAbsoluteFile(),true);
-            bw = new BufferedWriter(fw);
+            DataOutputStream writer = new DataOutputStream(
+                new FileOutputStream("/home/alumno/Desktop/discoExtra/DAW-PROGRAMACION/controles/controlAgenda/AgendaObjetos.dat"));
+                ObjectOutputStream salida = new ObjectOutputStream(writer);
+                salida.writeObject(getNombre() + getApellidos() + getEmail() + getTelefono());
 
-            String linea = " ";
-                linea += "Nombre = " + getNombre() + "\t" + "Apellidos = " + getApellidos() + "\t" + "Email = " + getEmail() + "\t"+ "Telefono = " + getTelefono() + ".";
-                bw.write(linea + "\n");
-            bw.close();
+            writer.close();
         }
         public void listarAgenda() throws IOException{
             FileReader fileReader = new FileReader(
