@@ -43,12 +43,15 @@ public class Agenda {
         }
 
         public void escribirObjetos() throws IOException{
+            File file = new File("AgendaObjetos.dat");
+            if(!file.exists()){
+                file.createNewFile();
+            }
             try (DataOutputStream writer = new DataOutputStream(
-                new FileOutputStream("AgendaObjetos.dat"));
+                new FileOutputStream(file));
                 ObjectOutputStream salida = new ObjectOutputStream(writer)){
                     salida.writeObject(getNombre() + getApellidos() + getEmail() + getTelefono());
-                
-            writer.close();
+                    writer.close();
             } catch (Exception e) {
             // TODO: handle exception
             }
