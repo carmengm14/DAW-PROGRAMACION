@@ -7,9 +7,10 @@ import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.ObjectOutputStream;
+import java.io.Serializable;
 import java.util.Scanner;
 
-public class Agenda {
+public class Agenda implements Serializable {
     //Atributos
     String nombre, apellidos, email;
     int telefono;
@@ -30,15 +31,17 @@ public class Agenda {
         }
     
         //METODOS
+        public String toString(){
+            String linea = " ";
+            linea += "Nombre = " + getNombre() + "\t\t" + "Apellidos = " + getApellidos() + "\t" + "Email = " + getEmail() + "\t"+ "Telefono = " + getTelefono() + "." + "\n";
+            return linea;
+        }
         public void escribirFichero() throws IOException{
             BufferedWriter bw = null;
             File file = new File("Agenda.dat");
             FileWriter fw = new FileWriter(file.getAbsoluteFile(),true);
             bw = new BufferedWriter(fw);
-
-            String linea = " ";
-                linea += "Nombre = " + getNombre() + "\t\t" + "Apellidos = " + getApellidos() + "\t" + "Email = " + getEmail() + "\t"+ "Telefono = " + getTelefono();
-                bw.write(linea+ "." + "\n");
+                bw.write(toString());
             bw.close();
         }
 
@@ -125,6 +128,7 @@ public class Agenda {
             
                contacto.escribirFichero();
                contacto.listarAgenda();
+               contacto.escribirObjetos();
             } catch (Exception e) {
                 //TODO: handle exception
                 System.out.println(e.getLocalizedMessage());
