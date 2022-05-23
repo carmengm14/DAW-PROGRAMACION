@@ -1,11 +1,15 @@
-import java.util.ArrayList;
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.Scanner;
 
 public class Agenda {
     //Atributos
     String nombre, apellidos, email;
     int telefono;
-    public static ArrayList contactos = new ArrayList<String>();
 
     //Constructor user pedido por terminal
         public Agenda(String nombre, String apellidos, String email, int telefono) {
@@ -13,7 +17,6 @@ public class Agenda {
             this.apellidos = apellidos;
             this.email = email;
             this.telefono = telefono;
-            contactos.add(this);
         }
     //CONSTRUCTOR MANUAL
         public Agenda() {
@@ -24,17 +27,51 @@ public class Agenda {
         }
     
         //METODOS
-        
-        public void pedirUsuarios() {
+        public void escribirFichero() throws IOException{
+            BufferedWriter bw = null;
+            File file = new File("Agenda.dat");
+            FileWriter fw = new FileWriter(file.getAbsoluteFile(),true);
+            bw = new BufferedWriter(fw);
+
+            String linea = " ";
+                linea += "Nombre = " + getNombre() + ",\t" + "Apellidos = " + getApellidos() + ",\t" + "Email = " + getEmail() + ",\t"+ "Telefono = " + getTelefono();
+                bw.write(linea + "\n");
+            bw.close();
+        }
+
+        public void escribirObjetos() throws IOException{
+            BufferedWriter bw = null;
+            File file = new File("AgendaObjetos.dat");
+            FileWriter fw = new FileWriter(file.getAbsoluteFile(),true);
+            bw = new BufferedWriter(fw);
+
+            String linea = " ";
+                linea += "Nombre = " + getNombre() + "\t" + "Apellidos = " + getApellidos() + "\t" + "Email = " + getEmail() + "\t"+ "Telefono = " + getTelefono() + ".";
+                bw.write(linea + "\n");
+            bw.close();
+        }
+        public void listarAgenda() throws IOException{
+            FileReader fileReader = new FileReader(
+                "Agenda.dat");
+            BufferedReader lectorFich = new BufferedReader(fileReader);
+            String cadena = lectorFich.readLine();
+
+            while (cadena != null) {
+
+                String lineaFinal = cadena.trim();
+
+                if (lineaFinal.endsWith(".")) {
+                    System.out.println(cadena);
+                }
+
+                cadena = lectorFich.readLine();
+            }
+        lectorFich.close();
+        }
+        public void listarObjetos() throws IOException{
             
         }
-        public void imprimirListadoTexto() {
-            
-        }
-    
-        public void imprimirListadoObjetos() {
-            
-        }
+      
 
         //GETTERS Y SETTERS
         public String getNombre() {
@@ -64,6 +101,7 @@ public class Agenda {
 
         //MAIN
         public static void main(String[] args) {
+            try {
             //Le pedimos al usuario sus datos
             Scanner sc = new Scanner(System.in);
             System.out.print("Registrar Nombre: ");
@@ -77,7 +115,14 @@ public class Agenda {
             sc.close();
     
             Agenda contacto = new Agenda(nombre,apellidos,email,telefono);
-            contacto.pedirUsuarios();
+            
+               contacto.escribirFichero();
+               contacto.listarAgenda();
+            } catch (Exception e) {
+                //TODO: handle exception
+                System.out.println(e.getLocalizedMessage());
+            }
+
         }
     
     }
