@@ -12,6 +12,7 @@
         "controles/control02",
         "controles/control03",
         "controles/control04",
+        "controles/controlAgenda",
         "porMiCuenta",
         "repasoexamen",
         "repasoexamen/estructurascondicionales",
