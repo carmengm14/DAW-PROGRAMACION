@@ -43,13 +43,17 @@ public class Agenda {
         }
 
         public void escribirObjetos() throws IOException{
-            DataOutputStream writer = new DataOutputStream(
-                new FileOutputStream("/home/alumno/Desktop/discoExtra/DAW-PROGRAMACION/controles/controlAgenda/AgendaObjetos.dat"));
-                ObjectOutputStream salida = new ObjectOutputStream(writer);
-                salida.writeObject(getNombre() + getApellidos() + getEmail() + getTelefono());
-
+            try (DataOutputStream writer = new DataOutputStream(
+                new FileOutputStream("AgendaObjetos.dat"));
+                ObjectOutputStream salida = new ObjectOutputStream(writer)){
+                    salida.writeObject(getNombre() + getApellidos() + getEmail() + getTelefono());
+                
             writer.close();
+            } catch (Exception e) {
+            // TODO: handle exception
+            }
         }
+
         public void listarAgenda() throws IOException{
             FileReader fileReader = new FileReader(
                 "Agenda.dat");
