@@ -1,6 +1,5 @@
-import java.util.ArrayList;
-
-public class Usuario {
+import java.io.Serializable;
+public class Usuario implements Serializable{
      //Atributos
      protected String nombre;
     protected String apellidos;
