@@ -32,7 +32,7 @@ public class Agenda {
         return nuevoUser;
      }
     
-        //METODOS
+        //METODO
         
         public void escribirFichero(Usuario usuario) throws IOException{
             BufferedWriter bw = null;
@@ -79,15 +79,25 @@ public class Agenda {
         }
         public void listarObjetos() throws IOException, ClassNotFoundException{
             System.out.println("================");
-            DataInputStream f = new DataInputStream(new FileInputStream(
-                "AgendaObjetos.dat"));
-        ObjectInputStream entrada = new ObjectInputStream(f);
+            ObjectInputStream entrada = new ObjectInputStream(new FileInputStream(
+            "AgendaObjetos.dat"));
+            Usuario user = (Usuario) entrada.readObject();
+            while (user != null) {
+                try {
+                    System.out.println(user.getNombre() + ", " + 
+                                        user.getApellidos() + ", " +
+                                        user.getEmail() + ", " +
+                                        user.getTelefono() );
+                    entrada.readObject();
+                } catch (Exception e) {
+                    //TODO: handle exception
+                    System.out.println(e.getLocalizedMessage());
+                }
+                entrada.close();
 
-        while (f.available() > 0) {
-            System.out.println(entrada.readObject());
+            } 
         }
-        f.close();
-        }
+        
 
         //MAIN
         public static void main(String[] args) {
