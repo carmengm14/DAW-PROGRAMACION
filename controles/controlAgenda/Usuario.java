@@ -14,9 +14,9 @@ public class Usuario implements Serializable{
          }
      //CONSTRUCTOR MANUAL
          public Usuario() {
-             this.nombre = "CambiarLuego";
-             this.apellidos = "CambiarLuego";
-             this.email = "CambiarLuego";
+             this.nombre = " ";
+             this.apellidos = " ";
+             this.email = " ";
              this.telefono = 000000000;
          }
 

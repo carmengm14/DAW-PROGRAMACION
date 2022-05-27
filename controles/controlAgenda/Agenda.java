@@ -13,6 +13,24 @@ import java.io.ObjectOutputStream;
 import java.util.Scanner;
 
 public class Agenda {
+    Scanner lector;
+    //lector
+    public Agenda(){
+        this.lector = new Scanner(System.in);
+    }
+     //rellenar el constructor vacio
+     public Usuario pedirUser(){
+         Usuario nuevoUser = new Usuario();
+         System.out.print("Nombre: ");
+         nuevoUser.setNombre(lector.nextLine());
+         System.out.print("Apellidos: ");
+         nuevoUser.setApellidos(lector.nextLine());
+         System.out.print("Email: ");
+         nuevoUser.setEmail(lector.nextLine());
+         System.out.print("Telefono: ");
+         nuevoUser.setTelefono(lector.nextInt());
+        return nuevoUser;
+     }
     
         //METODOS
         
