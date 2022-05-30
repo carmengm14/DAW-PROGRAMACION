@@ -6,4 +6,5 @@ El formato del fichero sera:
 Cada vez que pedimos datos nuevos se deben añadir al final del fichero. No se debe borrar en cada ejecución.
     Crear un método que muestre un listado utilizando "agenda.dat".
     Crear un método que muestre un listado utilizando "agendaObjetos.dat". 
-El programa se puede usar de forma NO iteractiva, se le puede pasar la información sobre el usuario en la linea de comandos.
+El programa se puede usar de forma NO iteractiva, se le puede pasar la información sobre el usuario en la linea de comandos.ç
+Hecho
