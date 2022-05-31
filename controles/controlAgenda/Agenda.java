@@ -11,7 +11,7 @@ import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.util.Scanner;
 
-public class Agenda {
+public class Agenda{
     Scanner lector;
     //lector
     public Agenda(){

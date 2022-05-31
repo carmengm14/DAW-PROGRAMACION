@@ -1,9 +1,7 @@
 import java.io.File;
-import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.ArrayList;
-import java.util.Iterator;
 
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
@@ -173,6 +171,7 @@ public class Usuario implements ParserXML {
             
             return newUser;
         }
+
     }
 
 
