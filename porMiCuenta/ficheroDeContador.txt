@@ -1,0 +1,2 @@
+La palabra: caca se repite = 0 veces.
+La palabra: palabra se repite = 7 veces.
