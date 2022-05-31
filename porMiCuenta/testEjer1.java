@@ -10,6 +10,7 @@ public class testEjer1 {
         int telefono;
         boolean salir = true;
         Agenda agendaTelefonica = new Agenda();
+        Contacto contacto;
         do {
             System.out.print(
                     "OPCIONES:\n 1- Añadir contacto\n 2- Comprobar si existe un contacto\n 3- Buscar un contacto\n 4- Eliminar un contacto\n 5- Saber cuántos huecos libres quedan\n 6- Salir\n OPCION = ");
@@ -17,14 +18,19 @@ public class testEjer1 {
 
             switch (respuesta) {
                 case 1:
-                    System.out.print("Nombre = ");
-                    nombre = sc2.nextLine();
+                    if (agendaTelefonica.agendaLlena(agendaTelefonica) == true) {
+                        System.out.print("Nombre = ");
+                        nombre = sc2.nextLine();
 
-                    System.out.print("Telefono = ");
-                    telefono = sc2.nextInt();
+                        System.out.print("Telefono = ");
+                        telefono = sc2.nextInt();
 
-                    Contacto contacto = new Contacto(nombre, telefono);
-                    agendaTelefonica.anyadirContacto(contacto);
+                        contacto = new Contacto(nombre, telefono);
+                        agendaTelefonica.anyadirContacto(contacto);
+                    }else{
+                        System.out.println(agendaTelefonica.agendaLlena(agendaTelefonica));
+                    }
+
                     break;
                 case 2:
                     System.out.print("Escribe el nombre del contacto a comprobar= ");
@@ -46,7 +52,7 @@ public class testEjer1 {
                     agendaTelefonica.eliminarContacto(contacto);
                     break;
                 case 5:
-                    System.out.println(agendaTelefonica.huecosLibres()); 
+                    System.out.println(agendaTelefonica.huecosLibres());
                     break;
                 case 6:
                     salir = false;

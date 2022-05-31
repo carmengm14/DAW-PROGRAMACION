@@ -17,13 +17,17 @@ public class Agenda {
 
     // AÑADIR CONTACTO
     public void anyadirContacto(Contacto contacto) {
-        if (listaContactos.length > 10) {
-            System.out.println("SOLO PUEDEN HABER 10 USUARIOS EN LA AGENDA");
-        } else {
-            for (int i = 0; i < listaContactos.length; i++) {
-                    listaContactos[i] = contacto;
-                    System.out.println("CONTACTO AÑADIDO CORRECTAMENTE");
+        boolean encontrado = false;
+        for (int i = 0; i < listaContactos.length; i++) {
+            if (listaContactos[i] == null) {
+                listaContactos[i] = contacto;
+                encontrado = true;
             }
+        }
+        if(encontrado){
+            System.out.println("CONTACTO AÑADIDO");
+        }else{
+            System.out.println("NO SE HA AÑADIDO EL CONTACTO");
         }
     }
 
@@ -69,6 +73,16 @@ public class Agenda {
             } else {
                 System.out.println("NO SE HA ENCONTRADO ESTE CONTACTO");
             }
+        }
+    }
+
+    // AGENDA LLENA
+
+    public boolean agendaLlena(Agenda agenda){
+        if (agenda.listaContactos.length > 10) {
+            return false;
+        }else{
+            return true;
         }
     }
 
