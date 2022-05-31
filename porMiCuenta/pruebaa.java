@@ -12,3 +12,9 @@ Los métodos de la agenda serán los siguientes:
 • huecosLibres(): indica cuantos contactos más podemos meter.
 Crea un menú con opciones por consola para probar todas estas funcionalidades. */
 
+public class pruebaa{
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        
+    }
+}
