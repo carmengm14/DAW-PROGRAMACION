@@ -100,8 +100,6 @@ public class Agenda {
 
     // ELIMINAR UN CONTACTO
     public void eliminarContacto(Contacto contacto) {
-       if (contacto) {
-           
-       }
+       
     }
 }
