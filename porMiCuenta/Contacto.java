@@ -53,16 +53,15 @@ public class Contacto {
     }
 
     // METODOS
+    @Override
     public String toString() {
         return "Nombre =\t" + nombre + "Telefono =\t" + telefono;
     }
-
-    public String contactosIguales(Contacto contacto) {
-
+    
+    public boolean equals(Contacto contacto) {
         if (contacto.getNombre().toLowerCase().equals(this.nombre.toLowerCase())) {
-            return nombre;
-        } else {
-            return "NO SON IGUALES";
-        }
+            return true;
+        } 
+            return false;
     }
 }

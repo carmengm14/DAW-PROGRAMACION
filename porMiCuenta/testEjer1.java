@@ -35,12 +35,20 @@
                     case 2:
                         System.out.print("Escribe el nombre del contacto a comprobar= ");
                         nombre = sc2.next();
-                        agendaTelefonica.contactoExistente(nombre);
+                        System.out.print("Escribe el telefono del contacto a eliminar = ");
+                        telefono = sc2.nextInt();
+
+                        contacto = new Contacto(nombre, telefono);
+                        agendaTelefonica.contactoExistente(contacto);
                         break;
                     case 3:
                         System.out.print("Escribe el nombre del contacto a buscar = ");
                         nombre = sc2.next();
-                        agendaTelefonica.buscarContacto(nombre);
+                        System.out.print("Escribe el telefono del contacto a eliminar = ");
+                        telefono = sc2.nextInt();
+
+                        contacto = new Contacto(nombre, telefono);
+                       System.out.println(agendaTelefonica.buscarContacto(contacto));
                         break;
                     case 4:
                         System.out.print("Escribe el nombre del contacto a eliminar = ");

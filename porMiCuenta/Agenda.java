@@ -11,32 +11,32 @@ public class Agenda {
 
     // CONSTRUCTOR TAMAÑO NO DEFINIDO
     public Agenda(int tamanyo) {
-        listaContactos = new Contacto[tamanyo];
+        if (tamanyo >= 0 || tamanyo <= 10) {
+            listaContactos = new Contacto[tamanyo];
+        } else {
+            System.out.println("Tamaño menor que 0 no permitido");
+        }
+
     }
     // METODOS
 
     // AÑADIR CONTACTO
-    public void anyadirContacto(Contacto contacto) {
-        boolean encontrado = false;
-        for (int i = 0; i < listaContactos.length; i++) {
-            if (listaContactos[i] == null) {
-                listaContactos[i] = contacto;
-                encontrado = true;
-            }
-        }
-        if(encontrado){
-            System.out.println("CONTACTO AÑADIDO");
+    public boolean anyadirContacto(Contacto contacto) {
+        if(contadorContactos >= 10){
+            return false;
         }else{
-            System.out.println("NO SE HA AÑADIDO EL CONTACTO");
+            listaContactos[contadorContactos] = contacto;
+            contadorContactos ++;
+            return true;
         }
     }
 
     // CONTACTO EXISTENTE
-    public void contactoExistente(String nombre) {
+    public void contactoExistente(Contacto contacto) {
         boolean respuesta = false;
         try {
-            for (int i = 0; i < listaContactos.length; i++) {
-                if (listaContactos[i].getNombre() == nombre) {
+            for (int i = 0; i < contadorContactos; i++) {
+                if (listaContactos[i].equals(contacto)) {
                     respuesta = true;
                 } else {
                     respuesta = false;
@@ -45,7 +45,7 @@ public class Agenda {
 
             if (respuesta == true) {
                 System.out.println("EL CONTACTO EXISTE");
-            }else{
+            } else {
                 System.out.println("EL CONTACTO NO EXISTE");
             }
         } catch (Exception e) {
@@ -66,22 +66,23 @@ public class Agenda {
     }
 
     // BUSCAR CONTACTO
-    public void buscarContacto(String nombreContacto) {
+    public boolean buscarContacto(Contacto contacto) {
+        boolean existe = false;
         for (int i = 0; i < listaContactos.length; i++) {
-            if (listaContactos[i].getNombre() == (nombreContacto)) {
-                System.out.println(listaContactos[i].getNombre() + " " + listaContactos[i].getTelefono());
-            } else {
-                System.out.println("NO SE HA ENCONTRADO ESTE CONTACTO");
+            if (listaContactos[i].equals(contacto)) {
+                existe = true;
+                return existe;
             }
         }
+        return existe;
     }
 
     // AGENDA LLENA
 
-    public boolean agendaLlena(Agenda agenda){
+    public boolean agendaLlena(Agenda agenda) {
         if (agenda.listaContactos.length > 10) {
             return false;
-        }else{
+        } else {
             return true;
         }
     }
@@ -99,10 +100,8 @@ public class Agenda {
 
     // ELIMINAR UN CONTACTO
     public void eliminarContacto(Contacto contacto) {
-        for (int i = 0; i < listaContactos.length; i++) {
-            if (listaContactos[i] == contacto) {
-                listaContactos[i] = null;
-            }
-        }
+       if (contacto) {
+           
+       }
     }
 }
