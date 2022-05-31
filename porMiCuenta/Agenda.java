@@ -21,25 +21,28 @@ public class Agenda {
             System.out.println("SOLO PUEDEN HABER 10 USUARIOS EN LA AGENDA");
         } else {
             for (int i = 0; i < listaContactos.length; i++) {
-                if (listaContactos[i] != contacto) {
-                    for (int j = contadorContactos; j < listaContactos.length; j++) {
-                        listaContactos[j] = contacto;
-                    }
+                    listaContactos[i] = contacto;
                     System.out.println("CONTACTO AÑADIDO CORRECTAMENTE");
-                }
             }
         }
     }
 
     // CONTACTO EXISTENTE
     public void contactoExistente(String nombre) {
+        boolean respuesta = false;
         try {
             for (int i = 0; i < listaContactos.length; i++) {
                 if (listaContactos[i].getNombre() == nombre) {
-                    System.out.println("CONTACTO EXISTENTE");
+                    respuesta = true;
                 } else {
-                    System.out.println("CONTACTO NO EXISTENTE");
+                    respuesta = false;
                 }
+            }
+
+            if (respuesta == true) {
+                System.out.println("EL CONTACTO EXISTE");
+            }else{
+                System.out.println("EL CONTACTO NO EXISTE");
             }
         } catch (Exception e) {
             // TODO: handle exception
