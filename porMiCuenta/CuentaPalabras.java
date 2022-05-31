@@ -14,7 +14,7 @@ public class CuentaPalabras {
     public static void main(String[] args) throws IOException {
         int contador = 0;
         Scanner sc = new Scanner(System.in);
-        System.out.print("Escribe el nombre o ruta del fichero que quieres = ");
+        //System.out.print("Escribe el nombre o ruta del fichero que quieres = ");
         // String fichero = sc.nextLine();
 
         System.out.print("Escribe la palabra que a contar = ");
