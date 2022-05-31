@@ -15,7 +15,7 @@ import javax.xml.transform.stream.StreamResult;
 import org.w3c.dom.*;
 import org.xml.sax.SAXException;
 
-public class PersistenciaCliente3XML {
+public class PersistenciaCliente3XML{
     // Atributos
     private List<Cliente> listado;
 
