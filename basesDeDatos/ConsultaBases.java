@@ -8,9 +8,9 @@ public class ConsultaBases {
 
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
-        } catch (ClassNotFoundException e1) {
+        } catch (ClassNotFoundException e) {
             // TODO Auto-generated catch block
-            e1.printStackTrace();
+            e.printStackTrace();
         }
 
         try (Connection conection = DriverManager.getConnection(connectionLink, "phpmyadmin", "phpmyadmin");
@@ -22,7 +22,9 @@ public class ConsultaBases {
                 System.out.println("Total = " + total);
             }
         } catch (SQLException e) {
-           System.out.println(e.printStackTrace());
+            e.printStackTrace();
+            System.out.println(e.getErrorCode());
+            System.out.println(e.getLocalizedMessage());
         }
     }
 }
