@@ -4,7 +4,7 @@ public class ConsultaBases {
 
     public static void main(String[] args) {
         String consulta = "SELECT count(*) as total FROM Cliente";
-        String connectionLink = "jdbc:mysql://192.168.204.160/clientes";
+        String connectionLink = "jdbc:mysql://192.168.204.140/clientes";
 
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
